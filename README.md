@@ -1,0 +1,2 @@
+# ckeditor5-build-multies
+这个是一个基于CKEditor5的自定义构建项目，它同时包含了官方的Classic、Decoupled、Inline构建，以及一些适用于中国富文本编辑排版的自定义插件。
