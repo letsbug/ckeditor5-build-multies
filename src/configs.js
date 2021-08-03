@@ -20,19 +20,19 @@ import { Indent } from '@ckeditor/ckeditor5-indent/src';
 import { Highlight } from '@ckeditor/ckeditor5-highlight';
 
 // custom plugins with @hlw/ckeditor5-plugins
-import IndentFirst from '@hlx/ckeditor5-plugins/src/indent-first';
-import ParagraphSpacing from '@hlx/ckeditor5-plugins/src/paragraph-style/spacing';
-import LineHeight from '@hlx/ckeditor5-plugins/src/paragraph-style/line-height';
-import FormatPainter from '@hlx/ckeditor5-plugins/src/format-painter';
-import ClearEmpty from '@hlx/ckeditor5-plugins/src/clear-empty';
-import ClearSpace from '@hlx/ckeditor5-plugins/src/clear-space';
-import SoftBreakToEnter from '@hlx/ckeditor5-plugins/src/soft-break-to-enter';
-import QuickStyle from '@hlx/ckeditor5-plugins/src/quick-style';
-import ConvertFullHalf from '@hlx/ckeditor5-plugins/src/convert-full-half';
-import Extensions from '@hlx/ckeditor5-plugins/src/extensions';
-import SimpleAdapter from '@hlx/ckeditor5-plugins/src/simple-adapter';
-import Counter from '@hlx/ckeditor5-plugins/src/counter';
-import FindReplace from '@hlx/ckeditor5-plugins/src/find-replace';
+import { IndentFirst } from '../packages/src/indent-first';
+import { ParagraphSpacing } from '../packages/src/paragraph-style/spacing';
+import { LineHeight } from '../packages/src/paragraph-style/line-height';
+import { FormatPainter } from '../packages/src/format-painter';
+import { ClearEmpty } from '../packages/src/clear-empty';
+import { ClearSpace } from '../packages/src/clear-space';
+import { SoftBreakToEnter } from '../packages/src/soft-break-to-enter';
+import { QuickStyle } from '../packages/src/quick-style';
+import { ConvertFullHalf } from '../packages/src/convert-full-half';
+import { Extensions } from '../packages/src/extensions';
+import { SimpleAdapter } from '../packages/src/simple-adapter';
+import { Counter } from '../packages/src/counter';
+import { FindReplace } from '../packages/src/find-replace';
 
 export const builtins = [
 	Essentials,
