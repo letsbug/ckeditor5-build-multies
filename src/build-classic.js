@@ -4,7 +4,7 @@
  */
 
 // global configs
-import { builtins, fontSize, toolbarer, image, language, table, fontFamily } from './configs';
+import { builtins, fontSize, toolbarer, image, language, table, fontFamily, htmlEmbed } from './configs';
 import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 
 // The editor creator to use.
@@ -26,7 +26,7 @@ ClassicEditor.defaultConfig = {
 			fontFamily, fontSize, fontColor, fontBackgroundColor, |,
 			bold, italic, underline, strikethrough, bulletedList, numberedList, |,
 			lineHeight, paragraphSpacing, indentFirst, alignment, |,
-			link, uploadImage, blockQuote, insertTable, mediaEmbed, |,
+			link, uploadImage, blockQuote, insertTable, mediaEmbed, htmlEmbed, |,
 			removeFormat, convertFullHalf, clearSpace, softBreakToEnter, clearEmpty`
 		),
 		shouldNotGroupWhenFull: true,
@@ -35,6 +35,7 @@ ClassicEditor.defaultConfig = {
 	fontFamily,
 	image,
 	table,
+	htmlEmbed,
 
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language,

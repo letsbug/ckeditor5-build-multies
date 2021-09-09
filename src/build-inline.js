@@ -4,7 +4,7 @@
  */
 
 // global configs
-import { builtins, fontFamily, fontSize, toolbarer, image, language, table } from './configs';
+import { builtins, fontFamily, fontSize, toolbarer, image, language, table, htmlEmbed } from './configs';
 
 // The editor creator to use.
 import InlineEditorBase from '@ckeditor/ckeditor5-editor-inline/src/inlineeditor';
@@ -23,7 +23,7 @@ InlineEditor.defaultConfig = {
 			heading, |,
 			bold, italic, underline, bulletedList, numberedList, |,
 			indentFirst, alignment, |,
-			link, uploadImage, mediaEmbed, insertTable, blockQuote, |,
+			link, uploadImage, mediaEmbed, insertTable, htmlEmbed, blockQuote, |,
 			clearEmpty, clearSpace, softBreakToEnter`
 		),
 		shouldNotGroupWhenFull: true,
@@ -32,6 +32,8 @@ InlineEditor.defaultConfig = {
 	fontFamily,
 	image,
 	table,
+	htmlEmbed,
+
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language,
 };

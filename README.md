@@ -7,7 +7,7 @@
 [![Dependency Status](https://david-dm.org/letsbug/ckeditor5-build-full/status.svg)](https://david-dm.org/letsbug/ckeditor5-build-full)
 [![devDependency Status](https://david-dm.org/letsbug/ckeditor5-build-full/dev-status.svg)](https://david-dm.org/letsbug/ckeditor5-build-full?type=dev)
 
-此包基于 CKEditor5 进行构建，文档请移步 [build overview](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html)。
+此包基于 CKEditor5 进行构建，文档请移步 [build overview](https://ckeditor.com/docs/ckeditor5/latest/builds/index.html) 。
 
 ![CKEditor 5 classic editor build screenshot](./demo.png)
 
@@ -70,4 +70,4 @@ CKEditor.ClassicBuild
 
 ## License
 
-Licensed under the terms of [GNU General Public License Version 2 or later](http://www.gnu.org/licenses/gpl.html). For full details about the license, please check the `LICENSE.md` file or [https://ckeditor.com/legal/ckeditor-oss-license](https://ckeditor.com/legal/ckeditor-oss-license).
+Licensed under the terms of [GNU General Public License Version 2 or later](http://www.gnu.org/licenses/gpl.html). For full details about the license, please check the `LICENSE.md` file or [https://ckeditor.com/legal/ckeditor-oss-license](https://ckeditor.com/legal/ckeditor-oss-license) 。

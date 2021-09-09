@@ -4,7 +4,7 @@
  */
 
 // global configs
-import { builtins, fontFamily, fontSize, toolbarer, image, language, table } from './configs';
+import { builtins, fontFamily, fontSize, toolbarer, image, language, table, htmlEmbed } from './configs';
 
 // The editor creator to use.
 import DecoupledEditorBase from '@ckeditor/ckeditor5-editor-decoupled/src/decouplededitor';
@@ -25,7 +25,7 @@ DecoupledEditor.defaultConfig = {
 			fontfamily, fontsize, fontColor, fontBackgroundColor, |,
 			bold, italic, underline, strikethrough, numberedList, bulletedList, |,
 			indentFirst, paragraphSpacing, lineHeight, alignment, |,
-			link, blockquote, imageUpload, insertTable, mediaEmbed, pageBreak, |,
+			link, blockquote, imageUpload, insertTable, mediaEmbed, htmlEmbed, pageBreak, |,
 			removeFormat, convertFullHalf, clearSpace, softBreakToEnter, clearEmpty, |,
 			quickStyle`
 		),
@@ -35,6 +35,8 @@ DecoupledEditor.defaultConfig = {
 	fontFamily,
 	image,
 	table,
+	htmlEmbed,
+
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language,
 };

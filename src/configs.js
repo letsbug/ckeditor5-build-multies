@@ -10,6 +10,7 @@ import { ImageCaption, ImageStyle, ImageToolbar, ImageResize, ImageUpload } from
 import { Link, LinkImage } from '@ckeditor/ckeditor5-link/src';
 import { List, ListStyle } from '@ckeditor/ckeditor5-list/src';
 import { MediaEmbed, MediaEmbedToolbar } from '@ckeditor/ckeditor5-media-embed/src';
+import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed/src';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph/src';
 import { PageBreak } from '@ckeditor/ckeditor5-page-break/src';
 import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office/src';
@@ -58,6 +59,7 @@ export const builtins = [
 	ListStyle,
 	MediaEmbed,
 	MediaEmbedToolbar,
+	HtmlEmbed,
 	Paragraph,
 	PageBreak,
 	PasteFromOffice,
@@ -152,9 +154,12 @@ export const table = {
 	contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells'],
 };
 
+export const htmlEmbed = {
+	showPreviews: true,
+};
+
 export const language = 'zh-cn';
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function toolbarer(preset) {
 	return preset
 		.replace(/[\s]+/g, '')
