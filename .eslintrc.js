@@ -7,6 +7,10 @@
 
 'use strict';
 
+/**
+ *
+ * @type {import('eslint/lib/shared/types').ConfigData}
+ */
 module.exports = {
 	env: {
 		browser: true,
@@ -19,6 +23,7 @@ module.exports = {
 		'prettier',
 	],
 	plugins: [
+		'html',
 		'@typescript-eslint',
 		'prettier'
 	],

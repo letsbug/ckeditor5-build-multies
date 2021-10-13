@@ -2,5 +2,6 @@ build/
 /*.js
 
 tests/
+sample/
 
 package-lock.json
