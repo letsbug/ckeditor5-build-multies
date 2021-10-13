@@ -1,11 +1,16 @@
-import { Editor, EditorUI, Plugin, ContextPlugin } from '@ckeditor/ckeditor5-core';
-import { Element } from '@ckeditor/ckeditor5-engine';
-import { EditorConfig } from '@ckeditor/ckeditor5-core/src/editor/editorconfig';
-import { DataApi } from '@ckeditor/ckeditor5-core/src/editor/utils/dataapimixin';
-import { EditorWithUI } from '@ckeditor/ckeditor5-core/src/editor/editorwithui';
-import { ElementApi } from '@ckeditor/ckeditor5-core/src/editor/utils/elementapimixin';
-import { Emitter } from '@ckeditor/ckeditor5-utils/src/emittermixin';
-import { Observable } from '@ckeditor/ckeditor5-utils/src/observablemixin';
+import type { ContextPlugin, Editor, EditorUI, Plugin } from '@ckeditor/ckeditor5-core';
+import type { Element } from '@ckeditor/ckeditor5-engine';
+import type { EditorConfig } from '@ckeditor/ckeditor5-core/src/editor/editorconfig';
+import type { DataApi } from '@ckeditor/ckeditor5-core/src/editor/utils/dataapimixin';
+import type { EditorWithUI } from '@ckeditor/ckeditor5-core/src/editor/editorwithui';
+import type { ElementApi } from '@ckeditor/ckeditor5-core/src/editor/utils/elementapimixin';
+import type { Emitter } from '@ckeditor/ckeditor5-utils/src/emittermixin';
+import type { Observable } from '@ckeditor/ckeditor5-utils/src/observablemixin';
+import type { ClassicMceUI, DecoupledMceUI, InlineMceUI } from './ui';
+
+export type { InlineMceUI, ClassicMceUI, DecoupledMceUI } from './ui';
+
+export type { PositioningFunc, InlineMceUIView, ClassicMceUIView, DecoupledMceUIView } from './view';
 
 export interface SimpleUploadConfig {
 	headers?: Record<string, string>;
@@ -76,12 +81,12 @@ export interface HlxMceConfig extends EditorConfig {
 }
 
 /**
- * HlxMce
+ * Base MCE
  */
-export class HlxMce extends Editor implements Observable, DataApi, EditorWithUI, ElementApi, Emitter {
+export class MceBase extends Editor implements Observable, DataApi, EditorWithUI, ElementApi, Emitter {
 	static builtinPlugins: Array<typeof Plugin | typeof ContextPlugin | string>;
 	static defaultConfig?: HlxMceConfig;
-	static create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<HlxMce>;
+	static create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceBase>;
 
 	readonly ui: EditorUI;
 	readonly sourceElement: HTMLElement;
@@ -93,10 +98,34 @@ export class HlxMce extends Editor implements Observable, DataApi, EditorWithUI,
 	updateSourceElement(): void;
 }
 
+/**
+ * Inline Mce
+ */
+export class MceInline extends MceBase {
+	static create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceInline>;
+	readonly ui: InlineMceUI;
+}
+
+/**
+ * Classic Mce
+ */
+export class MceClassic extends MceBase {
+	static create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceClassic>;
+	readonly ui: ClassicMceUI;
+}
+
+/**
+ * Classic Mce
+ */
+export class MceDecoupled extends MceBase {
+	static create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceDecoupled>;
+	readonly ui: DecoupledMceUI;
+}
+
 declare const HlxMceBuilds: {
-	BuildDecoupled: typeof HlxMce;
-	BuildInline: typeof HlxMce;
-	BuildClassic: typeof HlxMce;
+	BuildInline: typeof MceInline;
+	BuildClassic: typeof MceClassic;
+	BuildDecoupled: typeof MceDecoupled;
 };
 
 export default HlxMceBuilds;
