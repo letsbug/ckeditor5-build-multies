@@ -81,12 +81,12 @@ export interface HlxMceConfig extends EditorConfig {
 export class HlxMce extends Editor implements Observable, DataApi, EditorWithUI, ElementApi, Emitter {
 	static builtinPlugins: Array<typeof Plugin | typeof ContextPlugin | string>;
 	static defaultConfig?: HlxMceConfig;
+	static create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<HlxMce>;
 
 	readonly ui: EditorUI;
 	readonly sourceElement: HTMLElement;
 
 	constructor(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig);
-	create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<HlxMce>;
 
 	getData(options?: { rootName?: string; trim?: 'empty' | 'none' }): string;
 	setData(data: string): void;
