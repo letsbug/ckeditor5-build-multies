@@ -1,6 +1,6 @@
 # CKEditor5-build-full
 
-此包同时包含了document、inline、classic这3个官方构建，且每个构建都使用的是同一个配置清单，功能上使用了 [ckeditor5-plugins](https://github.com/letsbug/ckeditor5-plugins) 插件包，该插件包包含了首行缩进、行高、段落间距、清除空行、清除多余空格、全半角转换、自定义图片上传文件key、软换行转硬断行、快速排版、自定义扩展等功能。
+此包同时包含了`decoupled`、`inline`、`classic`这3个官方构建，且每个构建都使用的是同一个配置清单，功能上使用了 [ckeditor5-plugins](https://github.com/letsbug/ckeditor5-plugins) 插件包，该插件包包含了首行缩进、行高、段落间距、清除空行、清除多余空格、全半角转换、自定义图片上传文件key、软换行转硬断行、快速排版、自定义扩展等功能。
 
 
 [![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-build-classic.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-build-classic)
@@ -37,7 +37,7 @@ cdn使用:
 </div>
 <script src="./node_modules/@hlw/ckeditor5-build-full/build/ckeditor.js"></script>
 <script>
-	CKEDITOR.ClassicBuild
+	CKEDITOR.BuildClassic
 		.create( document.querySelector( '#editor' ) )
 		.then( editor => {
 			window.editor = editor;
@@ -56,7 +56,7 @@ import CKEditor from '@hlw/ckeditor5-build-full';
 // 如果你使用的是 CommonJS:
 // const CKEditor = require( '@ckeditor/ckeditor5-build-classic' );
 
-CKEditor.ClassicBuild
+CKEditor.BuildClassic
 	.create( document.querySelector( '#editor' ) )
 	.then( editor => {
 		window.editor = editor;

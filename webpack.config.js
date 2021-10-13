@@ -22,7 +22,7 @@ module.exports = {
 
 	output: {
 		// The name under which the editor will be exported.
-		library: 'HlxRichPkg',
+		library: 'HlxRichMce',
 
 		path: path.resolve(__dirname, 'build'),
 		filename: 'ckeditor.js',
@@ -33,7 +33,7 @@ module.exports = {
 	optimization: {
 		minimizer: [
 			new TerserPlugin({
-				sourceMap: true,
+				// sourceMap: true,
 				terserOptions: {
 					output: {
 						// Preserve CKEditor 5 license comments.
@@ -85,12 +85,14 @@ module.exports = {
 					'css-loader',
 					{
 						loader: 'postcss-loader',
-						options: styles.getPostCssConfig({
-							themeImporter: {
-								themePath: require.resolve('@ckeditor/ckeditor5-theme-lark')
-							},
-							minify: true
-						})
+						options: {
+							postcssOptions: styles.getPostCssConfig({
+								themeImporter: {
+									themePath: require.resolve('@ckeditor/ckeditor5-theme-lark')
+								},
+								minify: true
+							})
+						}
 					}
 				]
 			}

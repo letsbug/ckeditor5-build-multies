@@ -1,11 +1,11 @@
-import ClassicBuild from './build-classic';
-import InlineBuild from './build-inline';
-import DocumentBuild from './build-decoupled-document';
+import BuildClassic from './build-classic';
+import BuildInline from './build-inline';
+import BuildDecoupled from './build-decoupled';
 
-const HlxRichPkg = {
-	DocumentBuild,
-	ClassicBuild,
-	InlineBuild,
+const HlxRichMce = {
+	BuildClassic,
+	BuildInline,
+	BuildDecoupled,
 };
 
-export default HlxRichPkg;
+export default HlxRichMce;

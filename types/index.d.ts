@@ -95,12 +95,12 @@ export interface HlxRichBuilder {
 	create(sourceElementOrData: HTMLElement | string, config?: HlxRichConfig): Promise<HlxRichEditor>;
 }
 
-export interface HlxRichPackage {
-	DocumentBuild: HlxRichBuilder;
-	InlineBuild: HlxRichBuilder;
-	ClassicBuild: HlxRichBuilder;
+export interface HlxRichMcePkg {
+	BuildDecoupled: HlxRichBuilder;
+	BuildInline: HlxRichBuilder;
+	BuildClassic: HlxRichBuilder;
 }
 
-declare const HlxRichPkg: HlxRichPackage;
+declare const HlxRichMce: HlxRichMcePkg;
 
-export default HlxRichPkg;
+export default HlxRichMce;

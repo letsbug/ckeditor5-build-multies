@@ -41,7 +41,7 @@
 </div>
 
 <script src="../build/ckeditor.js"></script>
-<script>
+<script lang="">
 	const extensions = [
 		{
 			name: 'testButton1',
@@ -55,14 +55,14 @@
 
 	const extToolbar = extensions.map(v => v.name);
 
-	HlxRichPkg.ClassicBuild.create(document.querySelector('#editor'), {
+	HlxRichMce.BuildClassic.create(document.querySelector('#editor'), {
 		extensions,
 		toolbar: {
-			items: [...HlxRichPkg.ClassicBuild.defaultConfig.toolbar.items, '|'].concat(extToolbar),
+			items: [...HlxRichMce.BuildClassic.defaultConfig.toolbar.items, '|'].concat(extToolbar),
 			shouldNotGroupWhenFull: true
 		},
 		image: {
-			toolbar: [...HlxRichPkg.ClassicBuild.defaultConfig.image.toolbar].concat(extToolbar)
+			toolbar: [...HlxRichMce.BuildClassic.defaultConfig.image.toolbar].concat(extToolbar)
 		},
 		mediaEmbed: {
 			toolbar: extToolbar
