@@ -76,7 +76,7 @@
 <script src="../build/ckeditor.js"></script>
 
 <script>
-	HlxRichMce.BuildDecoupled.create(document.querySelector('.editor-body')).then(editor => {
+	HlxMceBuilds.BuildDecoupled.create(document.querySelector('.editor-body')).then(editor => {
 		document.querySelector('.editor-toolbar').appendChild(editor.ui.view.toolbar.element);
 		document.querySelector('.editor-footer').appendChild(editor.plugins.get('Counter').CounterContainer);
 		window.editor = editor;

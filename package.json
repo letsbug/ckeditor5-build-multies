@@ -8,7 +8,8 @@
     "ckeditor5",
     "ckeditor 5",
     "wysiwyg",
-    "rich text",
+    "rich",
+    "mce",
     "editor",
     "html",
     "contentEditable",
@@ -96,8 +97,8 @@
     "url": "https://github.com/letsbug/ckeditor5-build-multies.git"
   },
   "scripts": {
-    "clean:depe": "rm -rf node_modules && rm -rf package-lock.json && npm cache clean --force",
-    "clean:packages": "rm -rf packages/node_modules && rm -rf packages/package-lock.json && npm cache clean --force",
+    "clean:depe": "rm -rf node_modules package-lock.json yarn.lock && npm cache clean --force",
+    "clean:packages": "rm -rf packages/node_modules packages/package-lock.json packages/yarn.lock && npm cache clean --force",
     "build:prod": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "lint": "eslint --quiet '**/*.js' --fix",

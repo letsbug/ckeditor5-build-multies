@@ -2,10 +2,10 @@ import BuildClassic from './build-classic';
 import BuildInline from './build-inline';
 import BuildDecoupled from './build-decoupled';
 
-const HlxRichMce = {
+const HlxMceBuilds = {
 	BuildClassic,
 	BuildInline,
 	BuildDecoupled,
 };
 
-export default HlxRichMce;
+export default HlxMceBuilds;

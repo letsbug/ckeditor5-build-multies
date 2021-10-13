@@ -1,10 +1,11 @@
-import { Editor, EditorUI } from '@ckeditor/ckeditor5-core';
+import { Editor, EditorUI, Plugin, ContextPlugin } from '@ckeditor/ckeditor5-core';
 import { Element } from '@ckeditor/ckeditor5-engine';
-import { PluginInterface } from '@ckeditor/ckeditor5-core/src/plugin';
 import { EditorConfig } from '@ckeditor/ckeditor5-core/src/editor/editorconfig';
 import { DataApi } from '@ckeditor/ckeditor5-core/src/editor/utils/dataapimixin';
 import { EditorWithUI } from '@ckeditor/ckeditor5-core/src/editor/editorwithui';
 import { ElementApi } from '@ckeditor/ckeditor5-core/src/editor/utils/elementapimixin';
+import { Emitter } from '@ckeditor/ckeditor5-utils/src/emittermixin';
+import { Observable } from '@ckeditor/ckeditor5-utils/src/observablemixin';
 
 export interface SimpleUploadConfig {
 	headers?: Record<string, string>;
@@ -53,19 +54,19 @@ export interface LineHeightConfig {
 	unit?: 'px';
 }
 
-export interface ParagraphSpacingConfig {
-	options?: number[];
-	unit?: 'px' | '%';
-}
+// export interface ParagraphSpacingConfig {
+// 	options?: number[];
+// 	unit?: 'px' | '%';
+// }
+//
+// export interface FindReplaceConfig {
+// 	type?: 'find' | 'replace' | 'replaceAll' | 'reset';
+// 	position?: 'prev' | 'next' | 'none';
+// 	key?: string[];
+// 	replace?: string;
+// }
 
-export interface FindReplaceConfig {
-	type?: 'find' | 'replace' | 'replaceAll' | 'reset';
-	position?: 'prev' | 'next' | 'none';
-	key?: string[];
-	replace?: string;
-}
-
-export interface HlxRichConfig extends EditorConfig {
+export interface HlxMceConfig extends EditorConfig {
 	fontColor?: FontColorConfig;
 	mediaEmbed?: MediaEmbedConfig;
 	simpleUpload?: SimpleUploadConfig;
@@ -74,33 +75,28 @@ export interface HlxRichConfig extends EditorConfig {
 	extensions?: Array<ExtensionsConfig>;
 }
 
-export class HlxRichEditor extends Editor implements DataApi, EditorWithUI, ElementApi {
-	readonly ui: EditorUI;
+/**
+ * HlxMce
+ */
+export class HlxMce extends Editor implements Observable, DataApi, EditorWithUI, ElementApi, Emitter {
+	static builtinPlugins: Array<typeof Plugin | typeof ContextPlugin | string>;
+	static defaultConfig?: HlxMceConfig;
 
+	readonly ui: EditorUI;
 	readonly sourceElement: HTMLElement;
 
+	constructor(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig);
+	create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<HlxMce>;
+
 	getData(options?: { rootName?: string; trim?: 'empty' | 'none' }): string;
-
 	setData(data: string): void;
-
 	updateSourceElement(): void;
 }
 
-/**
- * The CKEditor5 editor constructor.
- */
-export interface HlxRichBuilder {
-	builtinPlugins: Array<PluginInterface>;
-	defaultConfig: HlxRichConfig;
-	create(sourceElementOrData: HTMLElement | string, config?: HlxRichConfig): Promise<HlxRichEditor>;
-}
+declare const HlxMceBuilds: {
+	BuildDecoupled: typeof HlxMce;
+	BuildInline: typeof HlxMce;
+	BuildClassic: typeof HlxMce;
+};
 
-export interface HlxRichMcePkg {
-	BuildDecoupled: HlxRichBuilder;
-	BuildInline: HlxRichBuilder;
-	BuildClassic: HlxRichBuilder;
-}
-
-declare const HlxRichMce: HlxRichMcePkg;
-
-export default HlxRichMce;
+export default HlxMceBuilds;

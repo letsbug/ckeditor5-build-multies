@@ -52,7 +52,7 @@
 <script>
 	const roots = document.querySelectorAll('.multi-root-node');
 	Array.from(roots).forEach(el => {
-		HlxRichMce.BuildInline.create(el).then(editor => {
+		HlxMceBuilds.BuildInline.create(el).then(editor => {
 			// window.editor = editor;
 			console.log(editor);
 		}).catch(err => {

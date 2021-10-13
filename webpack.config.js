@@ -22,7 +22,7 @@ module.exports = {
 
 	output: {
 		// The name under which the editor will be exported.
-		library: 'HlxRichMce',
+		library: 'HlxMceBuilds',
 
 		path: path.resolve(__dirname, 'build'),
 		filename: 'ckeditor.js',

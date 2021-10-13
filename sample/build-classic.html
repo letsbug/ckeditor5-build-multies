@@ -55,14 +55,14 @@
 
 	const extToolbar = extensions.map(v => v.name);
 
-	HlxRichMce.BuildClassic.create(document.querySelector('#editor'), {
+	HlxMceBuilds.BuildClassic.create(document.querySelector('#editor'), {
 		extensions,
 		toolbar: {
-			items: [...HlxRichMce.BuildClassic.defaultConfig.toolbar.items, '|'].concat(extToolbar),
+			items: [...HlxMceBuilds.BuildClassic.defaultConfig.toolbar.items, '|'].concat(extToolbar),
 			shouldNotGroupWhenFull: true
 		},
 		image: {
-			toolbar: [...HlxRichMce.BuildClassic.defaultConfig.image.toolbar].concat(extToolbar)
+			toolbar: [...HlxMceBuilds.BuildClassic.defaultConfig.image.toolbar].concat(extToolbar)
 		},
 		mediaEmbed: {
 			toolbar: extToolbar
