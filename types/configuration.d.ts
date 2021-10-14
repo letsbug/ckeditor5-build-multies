@@ -69,7 +69,7 @@ export interface FigureAttrConfig {
 // }
 
 export interface HlxMceConfig extends EditorConfig {
-	figureAttributes: FigureAttrConfig;
+	figureAttributes?: FigureAttrConfig;
 	fontColor?: FontColorConfig;
 	mediaEmbed?: MediaEmbedConfig;
 	simpleUpload?: SimpleUploadConfig;
