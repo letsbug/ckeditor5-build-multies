@@ -34,7 +34,7 @@ import { Extensions } from '../packages/src/extensions';
 import { SimpleAdapter } from '../packages/src/simple-adapter';
 import { Counter } from '../packages/src/counter';
 import { FindReplace } from '../packages/src/find-replace';
-import { FigureAttributes } from '../packages/src/extends-figure-attributes';
+import { FigureAttributes } from '../packages/src/figure-attributes';
 
 export const builtins = [
 	Essentials,
