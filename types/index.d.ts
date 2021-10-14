@@ -123,9 +123,9 @@ export class MceDecoupled extends MceBase {
 }
 
 declare const HlxMceBuilds: {
-	BuildInline: typeof MceInline;
-	BuildClassic: typeof MceClassic;
-	BuildDecoupled: typeof MceDecoupled;
+	BuildInline: MceInline;
+	BuildClassic: MceClassic;
+	BuildDecoupled: MceDecoupled;
 };
 
 export default HlxMceBuilds;
