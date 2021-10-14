@@ -65,8 +65,10 @@
 			toolbar: [...HlxMceBuilds.BuildClassic.defaultConfig.image.toolbar].concat(extToolbar)
 		},
 		mediaEmbed: {
-			toolbar: extToolbar
-		}
+			toolbar: extToolbar,
+			// previewsInData: true
+		},
+		figureAttributes: { image: 'data-target', table: 'data-target' },
 	})
 		.then(editor => {
 			window.editor = editor;

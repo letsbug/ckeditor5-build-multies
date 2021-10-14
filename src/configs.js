@@ -34,6 +34,7 @@ import { Extensions } from '../packages/src/extensions';
 import { SimpleAdapter } from '../packages/src/simple-adapter';
 import { Counter } from '../packages/src/counter';
 import { FindReplace } from '../packages/src/find-replace';
+import { FigureAttributes } from '../packages/src/extends-figure-attributes';
 
 export const builtins = [
 	Essentials,
@@ -73,6 +74,7 @@ export const builtins = [
 	Highlight,
 
 	// custom plugins with @hlw/ckeditor5-plugins
+	FigureAttributes,
 	FindReplace,
 	IndentFirst,
 	ParagraphSpacing,
