@@ -96,8 +96,6 @@
     "terser-webpack-plugin": "^5.2.4",
     "typescript": "^4.4.4",
     "vite": "^2.6.11",
-    "vite-raw-plugin": "^1.0.1",
-    "vite-svg-loader": "^2.2.0",
     "vue": "^3.2.20",
     "vue-eslint-parser": "^8.0.0",
     "vue-loader": "^16.8.2",

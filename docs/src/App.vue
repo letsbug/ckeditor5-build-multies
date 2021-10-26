@@ -71,15 +71,23 @@ export default defineComponent({
 	},
 	setup() {
 		const type = ref<MceBuildType>('BuildClassic');
-		const instance = ref<typeof MceBase>(null);
+		const instance = ref<MceBase>(null);
 
 		const initial = async () => {
 			const ckRoot = document.querySelector('.ck-content');
 			instance.value = await (HlxMceBuilds[type.value] as any).create(ckRoot);
 		};
 
+		const dispose = async () => {
+			const _ist = instance.value;
+			if (!_ist) return;
+			await instance.value.destroy();
+			instance.value = null;
+		};
+
 		const checkType = async (t: MceBuildType) => {
 			type.value = t;
+			await dispose();
 			await initial();
 		};
 
@@ -91,9 +99,3 @@ export default defineComponent({
 	},
 });
 </script>
-
-<style scoped>
-.navi {
-	height: 56px;
-}
-</style>
