@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"target": "es6",
+		"module": "esnext",
+		"baseUrl": "./",
+		"outDir": "dist/**/*.js",
+		"paths": {
+			"@hlx/ckeditor5-build-multies": ["src/ckeditor.js"],
+			"@hlx/ckeditor5-build-multies/es/*": ["src/*"]
+		},
+		"strictNullChecks": false,
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"jsx": "preserve",
+		"noUnusedParameters": true,
+		"noUnusedLocals": true,
+		"noImplicitAny": false,
+		"lib": ["DOM", "ESNext", "DOM.Iterable"],
+		"skipLibCheck": true,
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"importsNotUsedAsValues": "error"
+	},
+	"exclude": ["node_modules", "dist"]
+}

@@ -26,6 +26,15 @@
     "types",
     "src"
   ],
+  "scripts": {
+    "serve:dev": "vite serve docs --host 0.0.0.0",
+    "build:prod": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "lint": "eslint -c ./.eslintrc.js --fix --ext .jsx,.js,.vue,.ts,.tsx",
+    "preversion": "npm run build:prod",
+    "clean:depe": "rm -rf node_modules package-lock.json yarn.lock && npm cache clean --force",
+    "clean:packages": "rm -rf packages/node_modules packages/package-lock.json packages/yarn.lock && npm cache clean --force"
+  },
   "peerDependencies": {
     "@ckeditor/ckeditor5-core": "^30.0.0",
     "@ckeditor/ckeditor5-engine": "^30.0.0",
@@ -66,18 +75,33 @@
     "@ckeditor/ckeditor5-utils": "^30.0.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@vue/cli-plugin-eslint": "^5.0.0-beta.6",
+    "@vue/compiler-sfc": "^3.2.20",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^8.0.0",
     "css-loader": "^6.4.0",
-    "eslint": "^8.0.0",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-html": "^6.2.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-vue": "^7.20.0",
     "mini-css-extract-plugin": "^2.4.2",
     "postcss-loader": "^6.1.1",
     "prettier": "^2.4.1",
     "raw-loader": "^4.0.2",
     "style-loader": "^3.3.0",
+    "svg-inline-loader": "^0.8.2",
     "terser-webpack-plugin": "^5.2.4",
     "typescript": "^4.4.4",
+    "vite": "^2.6.11",
+    "vite-raw-plugin": "^1.0.1",
+    "vite-svg-loader": "^2.2.0",
+    "vue": "^3.2.20",
+    "vue-eslint-parser": "^8.0.0",
+    "vue-loader": "^16.8.2",
+    "vue-tsc": "^0.28.9",
     "webpack": "^5.58.1",
     "webpack-cli": "^4.9.0"
   },
@@ -95,14 +119,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/letsbug/ckeditor5-build-multies.git"
-  },
-  "scripts": {
-    "clean:depe": "rm -rf node_modules package-lock.json yarn.lock && npm cache clean --force",
-    "clean:packages": "rm -rf packages/node_modules packages/package-lock.json packages/yarn.lock && npm cache clean --force",
-    "build:prod": "webpack --mode production",
-    "build:dev": "webpack --mode development",
-    "lint": "eslint --quiet '**/*.js' --fix",
-    "preversion": "npm run build:prod"
   },
   "lint-staged": {
     "**/*.js": [
