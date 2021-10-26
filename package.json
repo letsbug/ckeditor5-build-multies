@@ -52,7 +52,7 @@
     "@ckeditor/ckeditor5-easy-image": "^30.0.0",
     "@ckeditor/ckeditor5-editor-classic": "^30.0.0",
     "@ckeditor/ckeditor5-editor-decoupled": "^30.0.0",
-    "@ckeditor/ckeditor5-editor-inline": "^30.0.0",
+    "@ckeditor/ckeditor5-editor-inline": "31.0.0",
     "@ckeditor/ckeditor5-essentials": "^30.0.0",
     "@ckeditor/ckeditor5-font": "^30.0.0",
     "@ckeditor/ckeditor5-heading": "^30.0.0",
