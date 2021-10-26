@@ -61,7 +61,7 @@
     "@ckeditor/ckeditor5-image": "^30.0.0",
     "@ckeditor/ckeditor5-indent": "^30.0.0",
     "@ckeditor/ckeditor5-link": "^30.0.0",
-    "@ckeditor/ckeditor5-list": "^30.0.0",
+    "@ckeditor/ckeditor5-list": "31.0.0",
     "@ckeditor/ckeditor5-media-embed": "^30.0.0",
     "@ckeditor/ckeditor5-page-break": "^30.0.0",
     "@ckeditor/ckeditor5-paragraph": "^30.0.0",
