@@ -1,7 +1,7 @@
 build/
 /*.js
+/*.html
 
 tests/
-sample/
 
 package-lock.json
