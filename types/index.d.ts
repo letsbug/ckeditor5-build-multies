@@ -16,15 +16,15 @@ export type { PositioningFunc, InlineMceUIView, ClassicMceUIView, DecoupledMceUI
 /**
  * Base MCE
  */
-export class MceBase extends Editor implements Observable, DataApi, EditorWithUI, ElementApi, Emitter {
-	static builtinPlugins: Array<typeof Plugin | typeof ContextPlugin | string>;
-	static defaultConfig?: HlxMceConfig;
-	static create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceBase>;
+export interface MceBase extends Editor, Observable, DataApi, EditorWithUI, ElementApi, Emitter {
+	builtinPlugins: Array<typeof Plugin | typeof ContextPlugin | string>;
+	defaultConfig?: HlxMceConfig;
+	create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceBase>;
 
 	readonly ui: EditorUI;
 	readonly sourceElement: HTMLElement;
 
-	constructor(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig);
+	(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig);
 
 	getData(options?: { rootName?: string; trim?: 'empty' | 'none' }): string;
 	setData(data: string): void;
@@ -34,31 +34,31 @@ export class MceBase extends Editor implements Observable, DataApi, EditorWithUI
 /**
  * Inline Mce
  */
-export class MceInline extends MceBase {
-	static create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceInline>;
+export interface MceInline extends MceBase {
+	create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceInline>;
 	readonly ui: InlineMceUI;
 }
 
 /**
  * Classic Mce
  */
-export class MceClassic extends MceBase {
-	static create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceClassic>;
+export interface MceClassic extends MceBase {
+	create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceClassic>;
 	readonly ui: ClassicMceUI;
 }
 
 /**
  * Classic Mce
  */
-export class MceDecoupled extends MceBase {
-	static create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceDecoupled>;
+export interface MceDecoupled extends MceBase {
+	create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceDecoupled>;
 	readonly ui: DecoupledMceUI;
 }
 
 declare const HlxMceBuilds: {
-	BuildInline: typeof MceInline;
-	BuildClassic: typeof MceClassic;
-	BuildDecoupled: typeof MceDecoupled;
+	BuildInline: MceInline;
+	BuildClassic: MceClassic;
+	BuildDecoupled: MceDecoupled;
 };
 
 export default HlxMceBuilds;

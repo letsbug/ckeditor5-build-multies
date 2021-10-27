@@ -6,13 +6,13 @@ import type {
 	ToolbarView,
 	ViewCollection,
 } from '@ckeditor/ckeditor5-ui';
-import { Rect } from '@ckeditor/ckeditor5-utils';
+import type { Rect } from '@ckeditor/ckeditor5-utils';
 
-export function PositioningFunc(
+export type PositioningFunc = (
 	elRect: Rect,
 	tarRect: Rect,
 	viewportRect?: Rect
-): {
+) => {
 	top: number;
 	left: number;
 	name: number;
@@ -22,10 +22,10 @@ export function PositioningFunc(
 /**
  * Inline Mce UI View
  */
-export class InlineMceUIView extends EditorUIView {
+export interface InlineMceUIView extends EditorUIView {
 	editable: InlineEditableUIView;
 	panel: BalloonPanelView;
-	panelPosition: Array<typeof PositioningFunc>;
+	panelPosition: Array<PositioningFunc>;
 	toolbar: ToolbarView;
 	viewportTopOffset: number;
 }
@@ -33,7 +33,7 @@ export class InlineMceUIView extends EditorUIView {
 /**
  * Classic Mce UI View
  */
-export class ClassicMceUIView extends EditorUIView {
+export interface ClassicMceUIView extends EditorUIView {
 	editable: InlineEditableUIView;
 	main?: ViewCollection;
 	stickyPanel?: StickyPanelView;
@@ -44,7 +44,7 @@ export class ClassicMceUIView extends EditorUIView {
 /**
  * Decoupled MCE UI View
  */
-export class DecoupledMceUIView extends EditorUIView {
+export interface DecoupledMceUIView extends EditorUIView {
 	editable: InlineEditableUIView;
 	toolbar: ToolbarView;
 }

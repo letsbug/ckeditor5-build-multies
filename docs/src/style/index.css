@@ -17,13 +17,13 @@ body {
 }
 
 #app {
-	min-height: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
 }
 
 .header {
-	position: sticky;
-	top: 0;
-	z-index: 10;
 	height: 56px;
 	line-height: 56px;
 	background-color: #1f9961;
@@ -31,9 +31,12 @@ body {
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navi, .main {
+.navi, .ck-decoupled-toolbar, .ck-main {
 	width: 1080px;
 	margin: 0 auto;
+}
+
+.navi {
 	padding: 0;
 }
 
@@ -54,7 +57,44 @@ body {
 	border-bottom-color: #84e6b9;
 }
 
-.main {
+.main-wrapper {
+	flex: 1;
+	height: 0;
 	padding-top: 24px;
 	padding-bottom: 24px;
+}
+
+.main {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.ck-decoupled-toolbar {
+	position: sticky;
+	z-index: 10;
+	top: 0;
+}
+
+.ck-main.build-classic, .ck-main.build-inline {
+	width: 800px;
+}
+
+.ck-main.build-decoupled {
+	background-color: #f2f2f2;
+	padding: 20px;
+	border-style: solid;
+	border-width: 0 1px 0 1px;
+	border-color: #ccc;
+}
+
+.ck-main.build-decoupled .ck-content {
+	background-color: white;
+	padding: 30px !important;
+	width: 800px !important;
+	margin: 0 auto;
+}
+
+.ck-main.build-decoupled .ck-content:not(:focus) {
+	border: solid 1px #ccc !important;
 }

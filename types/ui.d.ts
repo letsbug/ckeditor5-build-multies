@@ -4,20 +4,20 @@ import type { ClassicMceUIView, DecoupledMceUIView, InlineMceUIView } from './vi
 /**
  * Inline Mce UI
  */
-export class InlineMceUI extends EditorUI {
+export interface InlineMceUI extends EditorUI {
 	view: InlineMceUIView;
 }
 
 /**
  * Classic Mce UI
  */
-export class ClassicMceUI extends EditorUI {
+export interface ClassicMceUI extends EditorUI {
 	view: ClassicMceUIView;
 }
 
 /**
  * Decoupled Mce UI
  */
-export class DecoupledMceUI extends EditorUI {
+export interface DecoupledMceUI extends EditorUI {
 	view: DecoupledMceUIView;
 }

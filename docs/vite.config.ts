@@ -1,6 +1,7 @@
 import path from 'path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 import { svgLoader } from './scripts/svgLoader';
 import { styles } from '@ckeditor/ckeditor5-dev-utils';
 
@@ -17,7 +18,7 @@ export default defineConfig({
 			'@hlx/ckeditor5-build-multies/es': path.join(__dirname, '../src'),
 		},
 	},
-	plugins: [vue(), svgLoader()],
+	plugins: [vueJsx({ mergeProps: true, enableObjectSlots: true }), vue(), svgLoader()],
 	css: {
 		postcss: styles.getPostCssConfig({
 			themeImporter: {
