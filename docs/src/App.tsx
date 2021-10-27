@@ -4,9 +4,9 @@ import type { HlxMceConfig, MceBase, MceDecoupled } from '../../types';
 import { presetData } from './data';
 
 const navConf = [
-	{ name: 'Classic Build', type: 'BuildClassic' },
-	{ name: 'Decoupled Build', type: 'BuildDecoupled' },
-	{ name: 'Inline Build', type: 'BuildInline' },
+	{ name: 'Classic Build', type: 'classic' },
+	{ name: 'Decoupled Build', type: 'decoupled' },
+	{ name: 'Inline Build', type: 'inline' },
 ];
 
 let ckInstance: MceBase | null = null;
@@ -17,7 +17,7 @@ const App = defineComponent({
 		const ckToolbar = ref<HTMLElement>(null);
 		const ckContent = ref<HTMLElement>(null);
 
-		const type = ref('BuildClassic');
+		const type = ref('classic');
 		const config = computed(() => {
 			const baseConf: HlxMceConfig = {
 				toolbar: {
