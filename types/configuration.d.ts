@@ -56,18 +56,6 @@ export interface FigureAttrConfig {
 	// rawHtml: string | string[];
 }
 
-// export interface ParagraphSpacingConfig {
-// 	options?: number[];
-// 	unit?: 'px' | '%';
-// }
-//
-// export interface FindReplaceConfig {
-// 	type?: 'find' | 'replace' | 'replaceAll' | 'reset';
-// 	position?: 'prev' | 'next' | 'none';
-// 	key?: string[];
-// 	replace?: string;
-// }
-
 export interface HlxMceConfig extends EditorConfig {
 	figureAttributes?: FigureAttrConfig;
 	fontColor?: FontColorConfig;

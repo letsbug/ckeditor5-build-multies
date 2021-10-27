@@ -18,8 +18,7 @@ DecoupledEditor.builtinPlugins = builtins;
 DecoupledEditor.defaultConfig = {
 	toolbar: {
 		items: toolbarer(
-			`findReplace, |,
-			undo, redo, |,
+			`findAndReplace, |,
 			formatPainter, |,
 			heading, |,
 			fontfamily, fontsize, fontColor, fontBackgroundColor, |,

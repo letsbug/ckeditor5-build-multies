@@ -19,6 +19,7 @@ import { TextTransformation } from '@ckeditor/ckeditor5-typing/src';
 import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format/src';
 import { Indent } from '@ckeditor/ckeditor5-indent/src';
 import { Highlight } from '@ckeditor/ckeditor5-highlight';
+import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
 
 // custom plugins with @hlw/ckeditor5-plugins
 import { IndentFirst } from '../packages/src/indent-first';
@@ -30,10 +31,8 @@ import { ClearSpace } from '../packages/src/clear-space';
 import { SoftBreakToEnter } from '../packages/src/soft-break-to-enter';
 import { QuickStyle } from '../packages/src/quick-style';
 import { ConvertFullHalf } from '../packages/src/convert-full-half';
-import { Extensions } from '../packages/src/extensions';
 import { SimpleAdapter } from '../packages/src/simple-adapter';
 import { Counter } from '../packages/src/counter';
-import { FindReplace } from '../packages/src/find-replace';
 import { FigureAttributes } from '../packages/src/figure-attributes';
 
 export const builtins = [
@@ -72,10 +71,10 @@ export const builtins = [
 	SimpleAdapter,
 	RemoveFormat,
 	Highlight,
+	FindAndReplace,
 
 	// custom plugins with @hlw/ckeditor5-plugins
 	FigureAttributes,
-	FindReplace,
 	IndentFirst,
 	ParagraphSpacing,
 	LineHeight,
@@ -85,7 +84,6 @@ export const builtins = [
 	SoftBreakToEnter,
 	QuickStyle,
 	ConvertFullHalf,
-	Extensions,
 	Counter,
 ];
 

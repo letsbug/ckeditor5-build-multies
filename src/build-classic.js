@@ -19,8 +19,7 @@ ClassicEditor.builtinPlugins = [...builtins, SourceEditing];
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: toolbarer(
-			`sourceEditing, |, findReplace, |,
-			undo, redo, |,
+			`sourceEditing, |, findAndReplace, |,
 			formatPainter, |,
 			heading, |,
 			fontFamily, fontSize, fontColor, fontBackgroundColor, |,
