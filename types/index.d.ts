@@ -56,9 +56,9 @@ export interface MceDecoupled extends MceBase {
 }
 
 declare const HlxMceBuilds: {
-	BuildInline: MceInline;
-	BuildClassic: MceClassic;
-	BuildDecoupled: MceDecoupled;
+	inline: MceInline;
+	classic: MceClassic;
+	decoupled: MceDecoupled;
 };
 
 export default HlxMceBuilds;

@@ -3,9 +3,9 @@ import BuildInline from './build-inline';
 import BuildDecoupled from './build-decoupled';
 
 const HlxMceBuilds = {
-	BuildClassic,
-	BuildInline,
-	BuildDecoupled,
+	classic: BuildClassic,
+	inline: BuildInline,
+	decoupled: BuildDecoupled,
 };
 
 export default HlxMceBuilds;
