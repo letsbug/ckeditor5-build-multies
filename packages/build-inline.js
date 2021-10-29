@@ -16,16 +16,33 @@ InlineEditor.builtinPlugins = builtins;
 
 // Editor configuration.
 InlineEditor.defaultConfig = {
+	balloonToolbar: [
+		'formatPainter',
+		'|',
+		'heading',
+		'|',
+		'bold',
+		'italic',
+		'underline',
+		'bulletedList',
+		'numberedList',
+		'link',
+	],
 	toolbar: {
-		items: toolbarer(
-			`
-			formatPainter, |,
-			heading, |,
-			bold, italic, underline, bulletedList, numberedList, |,
-			indentFirst, alignment, |,
-			link, uploadImage, mediaEmbed, insertTable, htmlEmbed, blockQuote, |,
-			clearEmpty, clearSpace, softBreakToEnter`
-		),
+		items: [
+			'indentFirst',
+			'alignment',
+			'|',
+			'uploadImage',
+			'mediaEmbed',
+			'insertTable',
+			'htmlEmbed',
+			'blockQuote',
+			'|',
+			'clearEmpty',
+			'clearSpace',
+			'softBreakToEnter',
+		],
 		shouldNotGroupWhenFull: true,
 	},
 	fontSize,

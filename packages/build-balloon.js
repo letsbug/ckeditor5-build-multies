@@ -16,15 +16,26 @@ InlineEditor.builtinPlugins = builtins;
 
 // Editor configuration.
 InlineEditor.defaultConfig = {
+	blockToolbar: [
+		'indentFirst',
+		'alignment',
+		'|',
+		'uploadImage',
+		'mediaEmbed',
+		'insertTable',
+		'htmlEmbed',
+		'blockQuote',
+		'|',
+		'clearEmpty',
+		'clearSpace',
+		'softBreakToEnter',
+	],
 	toolbar: {
 		items: toolbarer(
 			`
 			formatPainter, |,
 			heading, |,
-			bold, italic, underline, bulletedList, numberedList, |,
-			indentFirst, alignment, |,
-			link, uploadImage, mediaEmbed, insertTable, htmlEmbed, blockQuote, |,
-			clearEmpty, clearSpace, softBreakToEnter`
+			bold, italic, underline, bulletedList, numberedList, link,`
 		),
 		shouldNotGroupWhenFull: true,
 	},

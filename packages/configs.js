@@ -34,9 +34,12 @@ import { ConvertFullHalf } from '../plugins/src/convert-full-half';
 import { SimpleAdapter } from '../plugins/src/simple-adapter';
 import { Counter } from '../plugins/src/counter';
 import { FigureAttributes } from '../plugins/src/figure-attributes';
+import { BalloonToolbar, BlockToolbar } from '@ckeditor/ckeditor5-ui';
 
 export const builtins = [
 	Essentials,
+	BlockToolbar,
+	BalloonToolbar,
 	Alignment,
 	Autoformat,
 	Bold,
