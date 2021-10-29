@@ -6,8 +6,8 @@
 		"baseUrl": "./",
 		"outDir": "dist/**/*.js",
 		"paths": {
-			"@hlx/ckeditor5-build-multies": ["src/ckeditor.js"],
-			"@hlx/ckeditor5-build-multies/es/*": ["src/*"]
+			"@hlx/ckeditor5-build-multies": ["packages/index.js"],
+			"@hlx/ckeditor5-build-multies/es/*": ["packages/*"]
 		},
 		"strictNullChecks": false,
 		"moduleResolution": "node",

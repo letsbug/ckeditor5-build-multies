@@ -18,7 +18,7 @@ module.exports = {
 	devtool: 'source-map',
 	performance: { hints: false },
 
-	entry: [/*require.resolve('regenerator-runtime/runtime.js'),*/ path.resolve(__dirname, 'src', 'ckeditor.js')],
+	entry: [/*require.resolve('regenerator-runtime/runtime.js'),*/ path.resolve(__dirname, 'packages', 'index.js')],
 
 	output: {
 		// The name under which the editor will be exported.

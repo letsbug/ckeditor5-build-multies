@@ -1,11 +1,11 @@
 import { computed, defineComponent, nextTick, onMounted, ref, unref } from 'vue';
 import HlxMceBuilds from '@hlx/ckeditor5-build-multies';
-import type { HlxMceConfig, MceBase, MceDecoupled } from '../../types';
+import type { HlxMceConfig, MceBase } from '../../types';
 import { presetData } from './data';
 
 const navConf = [
 	{ name: 'Classic Build', type: 'classic' },
-	{ name: 'Decoupled Build', type: 'decoupled' },
+	{ name: 'Balloon Build', type: 'balloon' },
 	{ name: 'Inline Build', type: 'inline' },
 ];
 
@@ -30,9 +30,9 @@ const App = defineComponent({
 
 		const initial = async () => {
 			ckInstance = await HlxMceBuilds[type.value].create(unref(ckContent), config);
-			if (type.value === 'BuildDecoupled') {
-				ckToolbar.value.appendChild((ckInstance as MceDecoupled).ui.view.toolbar.element);
-			}
+			// if (type.value === 'BuildDecoupled') {
+			// 	ckToolbar.value.appendChild((ckInstance as MceDecoupled).ui.view.toolbar.element);
+			// }
 		};
 
 		const dispose = async () => {
@@ -56,7 +56,8 @@ const App = defineComponent({
 		return () => {
 			const mainClass = {
 				'ck-main': true,
-				'build-decoupled': type.value === 'BuildDecoupled',
+				// 'build-decoupled': type.value === 'BuildDecoupled',
+				'build-balloon': type.value === 'BuildBalloon',
 				'build-classic': type.value === 'BuildClassic',
 				'build-inline': type.value === 'BuildInline',
 			};

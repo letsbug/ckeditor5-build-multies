@@ -48,3 +48,10 @@ export interface DecoupledMceUIView extends EditorUIView {
 	editable: InlineEditableUIView;
 	toolbar: ToolbarView;
 }
+
+/**
+ * Balloon MCE UI View
+ */
+export interface BalloonMceUIView extends EditorUIView {
+	editable: InlineEditableUIView;
+}

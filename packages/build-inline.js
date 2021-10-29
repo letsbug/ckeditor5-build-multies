@@ -7,7 +7,7 @@
 import { builtins, fontFamily, fontSize, toolbarer, image, language, table, htmlEmbed } from './configs';
 
 // The editor creator to use.
-import InlineEditorBase from '@ckeditor/ckeditor5-editor-inline/src/inlineeditor';
+import { InlineEditor as InlineEditorBase } from '@ckeditor/ckeditor5-editor-inline';
 
 export default class InlineEditor extends InlineEditorBase {}
 

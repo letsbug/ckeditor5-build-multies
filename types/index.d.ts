@@ -4,12 +4,12 @@ import type { EditorWithUI } from '@ckeditor/ckeditor5-core/src/editor/editorwit
 import type { ElementApi } from '@ckeditor/ckeditor5-core/src/editor/utils/elementapimixin';
 import type { Emitter } from '@ckeditor/ckeditor5-utils/src/emittermixin';
 import type { Observable } from '@ckeditor/ckeditor5-utils/src/observablemixin';
-import type { ClassicMceUI, DecoupledMceUI, InlineMceUI } from './ui';
+import type { BalloonMceUI, ClassicMceUI, DecoupledMceUI, InlineMceUI } from './ui';
 import type { HlxMceConfig } from './configuration';
 
 export * from './configuration';
 
-export type { InlineMceUI, ClassicMceUI, DecoupledMceUI } from './ui';
+export type { InlineMceUI, ClassicMceUI, DecoupledMceUI, BalloonMceUI } from './ui';
 
 export type { PositioningFunc, InlineMceUIView, ClassicMceUIView, DecoupledMceUIView } from './view';
 
@@ -50,15 +50,15 @@ export interface MceClassic extends MceBase {
 /**
  * Classic Mce
  */
-export interface MceDecoupled extends MceBase {
-	create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceDecoupled>;
-	readonly ui: DecoupledMceUI;
+export interface MceBalloon extends MceBase {
+	create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceBalloon>;
+	readonly ui: BalloonMceUI;
 }
 
 declare const HlxMceBuilds: {
 	inline: MceInline;
 	classic: MceClassic;
-	decoupled: MceDecoupled;
+	balloon: MceBalloon;
 };
 
 export default HlxMceBuilds;

@@ -7,26 +7,24 @@
 import { builtins, fontFamily, fontSize, toolbarer, image, language, table, htmlEmbed } from './configs';
 
 // The editor creator to use.
-import DecoupledEditorBase from '@ckeditor/ckeditor5-editor-decoupled/src/decouplededitor';
+import { BalloonEditor as BalloonEditorBase } from '@ckeditor/ckeditor5-editor-balloon';
 
-export default class DecoupledEditor extends DecoupledEditorBase {}
+export default class InlineEditor extends BalloonEditorBase {}
 
 // Plugins to include in the build.
-DecoupledEditor.builtinPlugins = builtins;
+InlineEditor.builtinPlugins = builtins;
 
 // Editor configuration.
-DecoupledEditor.defaultConfig = {
+InlineEditor.defaultConfig = {
 	toolbar: {
 		items: toolbarer(
-			`findAndReplace, |,
+			`
 			formatPainter, |,
 			heading, |,
-			fontfamily, fontsize, fontColor, fontBackgroundColor, |,
-			bold, italic, underline, strikethrough, numberedList, bulletedList, |,
-			indentFirst, paragraphSpacing, lineHeight, alignment, |,
-			link, blockquote, imageUpload, insertTable, mediaEmbed, htmlEmbed, pageBreak, |,
-			removeFormat, convertFullHalf, clearSpace, softBreakToEnter, clearEmpty, |,
-			quickStyle`
+			bold, italic, underline, bulletedList, numberedList, |,
+			indentFirst, alignment, |,
+			link, uploadImage, mediaEmbed, insertTable, htmlEmbed, blockQuote, |,
+			clearEmpty, clearSpace, softBreakToEnter`
 		),
 		shouldNotGroupWhenFull: true,
 	},

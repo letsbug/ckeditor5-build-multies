@@ -1,6 +1,6 @@
 {
   "name": "@hlx/ckeditor5-build-multies",
-  "version": "31.0.0",
+  "version": "31.0.1",
   "description": "The classic, decoupled, and inline editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -50,11 +50,12 @@
     "@ckeditor/ckeditor5-dev-utils": "25.4.5",
     "@ckeditor/ckeditor5-dev-webpack-plugin": "25.4.5",
     "@ckeditor/ckeditor5-easy-image": "31.0.0",
+    "@ckeditor/ckeditor5-editor-balloon": "31.0.0",
     "@ckeditor/ckeditor5-editor-classic": "31.0.0",
     "@ckeditor/ckeditor5-editor-decoupled": "31.0.0",
     "@ckeditor/ckeditor5-editor-inline": "31.0.0",
     "@ckeditor/ckeditor5-essentials": "31.0.0",
-    "@ckeditor/ckeditor5-find-and-replace": "^31.0.0",
+    "@ckeditor/ckeditor5-find-and-replace": "31.0.0",
     "@ckeditor/ckeditor5-font": "31.0.0",
     "@ckeditor/ckeditor5-heading": "31.0.0",
     "@ckeditor/ckeditor5-highlight": "31.0.0",

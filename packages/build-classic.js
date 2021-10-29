@@ -8,7 +8,7 @@ import { builtins, fontSize, toolbarer, image, language, table, fontFamily, html
 import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 
 // The editor creator to use.
-import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
+import { ClassicEditor as ClassicEditorBase } from '@ckeditor/ckeditor5-editor-classic';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 

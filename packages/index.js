@@ -1,11 +1,11 @@
 import BuildClassic from './build-classic';
 import BuildInline from './build-inline';
-import BuildDecoupled from './build-decoupled';
+import BuildBalloon from './build-balloon';
 
 const HlxMceBuilds = {
 	classic: BuildClassic,
 	inline: BuildInline,
-	decoupled: BuildDecoupled,
+	balloon: BuildBalloon,
 };
 
 export default HlxMceBuilds;
