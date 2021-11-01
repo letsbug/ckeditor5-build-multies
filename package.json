@@ -1,6 +1,6 @@
 {
   "name": "@hlx/ckeditor5-build-multies",
-  "version": "31.0.2",
+  "version": "31.0.3",
   "description": "The classic, decoupled, and inline editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -62,6 +62,7 @@
     "@ckeditor/ckeditor5-html-embed": "31.0.0",
     "@ckeditor/ckeditor5-image": "31.0.0",
     "@ckeditor/ckeditor5-indent": "31.0.0",
+    "@ckeditor/ckeditor5-inspector": "^2.2.2",
     "@ckeditor/ckeditor5-link": "31.0.0",
     "@ckeditor/ckeditor5-list": "31.0.0",
     "@ckeditor/ckeditor5-media-embed": "31.0.0",
@@ -90,6 +91,7 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-vue": "^7.20.0",
+    "lodash-es": "^4.17.21",
     "mini-css-extract-plugin": "^2.4.3",
     "postcss-loader": "^6.2.0",
     "prettier": "^2.4.1",
