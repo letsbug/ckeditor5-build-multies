@@ -23,7 +23,7 @@ ClassicEditor.defaultConfig = {
 			formatPainter, |,
 			heading, |,
 			fontFamily, fontSize, fontColor, fontBackgroundColor, |,
-			bold, italic, underline, strikethrough, bulletedList, numberedList, |,
+			bold, italic, underline, strikethrough, outline, bulletedList, numberedList, |,
 			lineHeight, paragraphSpacing, indentFirst, alignment, |,
 			link, uploadImage, blockQuote, insertTable, mediaEmbed, htmlEmbed, |,
 			removeFormat, convertFullHalf, clearSpace, softBreakToEnter, clearEmpty`

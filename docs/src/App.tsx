@@ -1,4 +1,5 @@
 import { computed, defineComponent, nextTick, onMounted, ref, unref } from 'vue';
+import CKInspector from '@ckeditor/ckeditor5-inspector';
 import HlxMceBuilds from '@hlx/ckeditor5-build-multies';
 import type { HlxMceConfig, MceBase } from '../../types';
 import { presetData } from './data';
@@ -29,10 +30,10 @@ const App = defineComponent({
 		});
 
 		const initial = async () => {
+			// eslint-disable-next-line no-console
+			// console.log(HlxMceBuilds[type.value].builtinPlugins);
 			ckInstance = await HlxMceBuilds[type.value].create(unref(ckContent), config);
-			// if (type.value === 'BuildDecoupled') {
-			// 	ckToolbar.value.appendChild((ckInstance as MceDecoupled).ui.view.toolbar.element);
-			// }
+			CKInspector.attach(ckInstance);
 		};
 
 		const dispose = async () => {
@@ -48,6 +49,15 @@ const App = defineComponent({
 			await nextTick();
 			await initial();
 		};
+
+		// const log = () => {
+		// 	ckInstance.execute('highlightSpecific', { words: ['this'] });
+		// };
+		//
+		// const checkResult = () => {
+		// 	// eslint-disable-next-line no-console
+		// 	console.log(ckInstance.getData());
+		// };
 
 		onMounted(async () => {
 			await initial();
@@ -73,6 +83,9 @@ const App = defineComponent({
 					</div>
 
 					<div class="main-wrapper">
+						{/*<button onClick={log}>log highlight specific operate</button>
+						<button onClick={checkResult}>log which highlight specific marker in data</button>*/}
+
 						<div ref={ckRoot} class="main">
 							<div ref={ckToolbar} class="ck-decoupled-toolbar" />
 							<div class={mainClass}>

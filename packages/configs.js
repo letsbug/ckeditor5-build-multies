@@ -35,6 +35,8 @@ import { SimpleAdapter } from '../plugins/src/simple-adapter';
 import { Counter } from '../plugins/src/counter';
 import { FigureAttributes } from '../plugins/src/figure-attributes';
 import { BalloonToolbar, BlockToolbar } from '@ckeditor/ckeditor5-ui';
+import { HighlightSpecific } from '../plugins/src/highlight-specific';
+import { Outline } from "../plugins/src/outline";
 
 export const builtins = [
 	Essentials,
@@ -77,6 +79,7 @@ export const builtins = [
 	FindAndReplace,
 
 	// custom plugins with @hlw/ckeditor5-plugins
+	Outline,
 	FigureAttributes,
 	IndentFirst,
 	ParagraphSpacing,
@@ -88,6 +91,7 @@ export const builtins = [
 	QuickStyle,
 	ConvertFullHalf,
 	Counter,
+	HighlightSpecific,
 ];
 
 export const fontSize = {

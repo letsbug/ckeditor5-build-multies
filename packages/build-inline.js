@@ -24,6 +24,7 @@ InlineEditor.defaultConfig = {
 		'bold',
 		'italic',
 		'underline',
+		'outline',
 		'bulletedList',
 		'numberedList',
 		'link',

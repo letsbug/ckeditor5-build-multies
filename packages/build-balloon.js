@@ -35,7 +35,7 @@ InlineEditor.defaultConfig = {
 			`
 			formatPainter, |,
 			heading, |,
-			bold, italic, underline, bulletedList, numberedList, link,`
+			bold, italic, underline, outline, bulletedList, numberedList, link,`
 		),
 		shouldNotGroupWhenFull: true,
 	},
