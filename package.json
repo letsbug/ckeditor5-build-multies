@@ -104,7 +104,7 @@
     "vue": "^3.2.20",
     "vue-eslint-parser": "^8.0.0",
     "vue-loader": "^16.8.2",
-    "vue-tsc": "^0.28.9",
+    "vue-tsc": "0.29.8",
     "webpack": "^5.60.0",
     "webpack-cli": "^4.9.1"
   },
