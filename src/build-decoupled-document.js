@@ -23,7 +23,7 @@ DecoupledEditor.defaultConfig = {
 			formatPainter, |,
 			heading, |,
 			fontfamily, fontsize, fontColor, fontBackgroundColor, |,
-			bold, italic, underline, strikethrough, numberedList, bulletedList, |,
+			bold, italic, underline, strikethrough, outline, numberedList, bulletedList, |,
 			indentFirst, paragraphSpacing, lineHeight, alignment, |,
 			link, blockquote, imageUpload, insertTable, mediaEmbed, htmlEmbed, pageBreak, |,
 			removeFormat, convertFullHalf, clearSpace, softBreakToEnter, clearEmpty, |,

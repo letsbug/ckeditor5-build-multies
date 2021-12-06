@@ -21,7 +21,7 @@ InlineEditor.defaultConfig = {
 			`
 			formatPainter, |,
 			heading, |,
-			bold, italic, underline, bulletedList, numberedList, |,
+			bold, italic, underline, outline, bulletedList, numberedList, |,
 			indentFirst, alignment, |,
 			link, uploadImage, mediaEmbed, insertTable, htmlEmbed, blockQuote, |,
 			clearEmpty, clearSpace, softBreakToEnter`
