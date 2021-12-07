@@ -37,7 +37,7 @@
     "clean:packages": "rm -rf packages/node_modules packages/package-lock.json packages/yarn.lock && npm cache clean --force"
   },
   "peerDependencies": {
-    "@ckeditor/ckeditor5-core": "31.0.0",
+    "@ckeditor/ckeditor5-core": "31.1.0",
     "@ckeditor/ckeditor5-engine": "31.0.0",
     "@ckeditor/ckeditor5-ui": "31.0.0",
     "@ckeditor/ckeditor5-widget": "31.0.0",
