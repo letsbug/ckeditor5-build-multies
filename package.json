@@ -38,7 +38,7 @@
   },
   "peerDependencies": {
     "@ckeditor/ckeditor5-core": "31.0.0",
-    "@ckeditor/ckeditor5-engine": "31.0.0",
+    "@ckeditor/ckeditor5-engine": "31.1.0",
     "@ckeditor/ckeditor5-ui": "31.0.0",
     "@ckeditor/ckeditor5-widget": "31.0.0",
     "@types/ckeditor__ckeditor5-core": "^28.0.9"
