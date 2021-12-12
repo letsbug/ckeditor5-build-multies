@@ -1,6 +1,8 @@
 export const presetData = (
 	<>
-		<h4>Sample&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+		<h4>
+			<span style="border:solid 1px #000000;">Sample</span>&nbsp;&nbsp;&nbsp;&nbsp;
+		</h4>
 
 		<figure class="media">
 			<oembed url="https://www.youtube.com/watch?v=H08tGjXNHO4" />
