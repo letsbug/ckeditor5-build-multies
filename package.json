@@ -34,7 +34,7 @@
     "lint": "eslint -c ./.eslintrc.js --fix --ext .jsx,.js,.vue,.ts,.tsx",
     "preversion": "npm run build:prod",
     "clean:depe": "rm -rf node_modules package-lock.json yarn.lock && npm cache clean --force",
-    "clean:packages": "rm -rf packages/node_modules packages/package-lock.json packages/yarn.lock && npm cache clean --force"
+    "clean:packages": "rm -rf plugins/node_modules plugins/package-lock.json plugins/yarn.lock && npm cache clean --force"
   },
   "peerDependencies": {
     "@ckeditor/ckeditor5-core": "31.0.0",

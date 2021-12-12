@@ -4,7 +4,7 @@
  */
 
 // global configs
-import { builtins, fontFamily, fontSize, toolbarer, image, language, table, htmlEmbed } from './configs';
+import { builtins, fontFamily, fontSize, htmlEmbed, image, language, table } from './configs';
 
 // The editor creator to use.
 import { InlineEditor as InlineEditorBase } from '@ckeditor/ckeditor5-editor-inline';

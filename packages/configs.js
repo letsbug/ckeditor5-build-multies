@@ -22,21 +22,21 @@ import { Highlight } from '@ckeditor/ckeditor5-highlight';
 import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
 
 // custom plugins with @hlw/ckeditor5-plugins
-import { IndentFirst } from '../plugins/src/indent-first';
-import { ParagraphSpacing } from '../plugins/src/paragraph-style/spacing';
-import { LineHeight } from '../plugins/src/paragraph-style/line-height';
-import { FormatPainter } from '../plugins/src/format-painter';
-import { ClearEmpty } from '../plugins/src/clear-empty';
-import { ClearSpace } from '../plugins/src/clear-space';
-import { SoftBreakToEnter } from '../plugins/src/soft-break-to-enter';
-import { QuickStyle } from '../plugins/src/quick-style';
-import { ConvertFullHalf } from '../plugins/src/convert-full-half';
-import { SimpleAdapter } from '../plugins/src/simple-adapter';
-import { Counter } from '../plugins/src/counter';
-import { FigureAttributes } from '../plugins/src/figure-attributes';
+import { IndentFirst } from './plugins/indent-first';
+import { ParagraphSpacing } from './plugins/paragraph-style/spacing';
+import { LineHeight } from './plugins/paragraph-style/line-height';
+import { FormatPainter } from './plugins/format-painter';
+import { ClearEmpty } from './plugins/clear-empty';
+import { ClearSpace } from './plugins/clear-space';
+import { SoftBreakToEnter } from './plugins/soft-break-to-enter';
+import { QuickStyle } from './plugins/quick-style';
+import { ConvertFullHalf } from './plugins/convert-full-half';
+import { SimpleAdapter } from './plugins/simple-adapter';
+import { Counter } from './plugins/counter';
+import { FigureAttributes } from './plugins/figure-attributes';
 import { BalloonToolbar, BlockToolbar } from '@ckeditor/ckeditor5-ui';
-import { HighlightSpecific } from '../plugins/src/highlight-specific';
-import { Outline } from '../plugins/src/outline';
+import { HighlightSpecific } from './plugins/highlight-specific';
+import { Outline } from './plugins/outline';
 
 export const builtins = [
 	Essentials,
