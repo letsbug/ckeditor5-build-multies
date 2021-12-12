@@ -1,6 +1,6 @@
 {
   "name": "@hlx/ckeditor5-build-multies",
-  "version": "31.0.4",
+  "version": "31.1.0",
   "description": "The classic, decoupled, and inline editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -33,8 +33,7 @@
     "build:dev": "webpack --mode development",
     "lint": "eslint -c ./.eslintrc.js --fix --ext .jsx,.js,.vue,.ts,.tsx",
     "preversion": "npm run build:prod",
-    "clean:depe": "rm -rf node_modules package-lock.json yarn.lock && npm cache clean --force",
-    "clean:packages": "rm -rf plugins/node_modules plugins/package-lock.json plugins/yarn.lock && npm cache clean --force"
+    "clean:depe": "rm -rf node_modules package-lock.json yarn.lock && npm cache clean --force"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-core": "31.1.0",
