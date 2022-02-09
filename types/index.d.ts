@@ -4,7 +4,7 @@ import type { EditorWithUI } from '@ckeditor/ckeditor5-core/src/editor/editorwit
 import type { ElementApi } from '@ckeditor/ckeditor5-core/src/editor/utils/elementapimixin';
 import type { Emitter } from '@ckeditor/ckeditor5-utils/src/emittermixin';
 import type { Observable } from '@ckeditor/ckeditor5-utils/src/observablemixin';
-import type { BalloonMceUI, ClassicMceUI, DecoupledMceUI, InlineMceUI } from './ui';
+import type { BalloonMceUI, ClassicMceUI, InlineMceUI } from './ui';
 import type { HlxMceConfig } from './configuration';
 
 export * from './configuration';

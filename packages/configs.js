@@ -1,14 +1,14 @@
 import { Essentials } from '@ckeditor/ckeditor5-essentials/src';
 import { Alignment } from '@ckeditor/ckeditor5-alignment/src';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat/src';
-import { Bold, Italic, Strikethrough, Underline, Subscript, Superscript } from '@ckeditor/ckeditor5-basic-styles/src';
+import { Bold, Italic, Strikethrough, Subscript, Superscript, Underline } from '@ckeditor/ckeditor5-basic-styles/src';
 import { Font } from '@ckeditor/ckeditor5-font/src';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote/src';
 import { Heading } from '@ckeditor/ckeditor5-heading/src';
 import ImageBlock from '@ckeditor/ckeditor5-image/src/imageblock';
-import { ImageCaption, ImageStyle, ImageToolbar, ImageResize, ImageUpload } from '@ckeditor/ckeditor5-image/src';
+import { ImageCaption, ImageResize, ImageStyle, ImageToolbar, ImageUpload } from '@ckeditor/ckeditor5-image/src';
 import { Link, LinkImage } from '@ckeditor/ckeditor5-link/src';
-import { List, ListStyle } from '@ckeditor/ckeditor5-list/src';
+import { List } from '@ckeditor/ckeditor5-list/src';
 import { MediaEmbed, MediaEmbedToolbar } from '@ckeditor/ckeditor5-media-embed/src';
 import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed/src';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph/src';
@@ -61,7 +61,6 @@ export const builtins = [
 	Link,
 	LinkImage,
 	List,
-	ListStyle,
 	MediaEmbed,
 	MediaEmbedToolbar,
 	HtmlEmbed,

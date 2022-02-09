@@ -1,6 +1,6 @@
 import { computed, defineComponent, nextTick, onMounted, ref, unref } from 'vue';
 import CKInspector from '@ckeditor/ckeditor5-inspector';
-import HlxMceBuilds from '@hlx/ckeditor5-build-multies';
+import HlxMceBuilds from '@hlx/mce';
 import type { HlxMceConfig, MceBase } from '../../types';
 import { presetData } from './data';
 

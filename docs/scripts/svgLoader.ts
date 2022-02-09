@@ -2,8 +2,7 @@ import { getExtractedSVG } from 'svg-inline-loader';
 import type { Plugin } from 'rollup';
 import fs from 'fs';
 
-//TODO: remove this once https://github.com/vitejs/vite/pull/2909 gets merged
-export const svgLoader: (options?: {
+interface SvgLoaderOpt {
 	classPrefix?: string;
 	idPrefix?: string;
 	removeSVGTagAttrs?: boolean;
@@ -11,7 +10,10 @@ export const svgLoader: (options?: {
 	removeTags?: boolean;
 	warnTagAttrs?: boolean;
 	removingTagAttrs?: boolean;
-}) => Plugin = (options?: {}) => {
+}
+
+//TODO: remove this once https://github.com/vitejs/vite/pull/2909 gets merged
+export const svgLoader: (_opt?: SvgLoaderOpt) => Plugin = (options?: {}) => {
 	return {
 		name: 'vite-svg-patch-plugin',
 		transform: function (code, id) {
