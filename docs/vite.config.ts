@@ -14,8 +14,8 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			vue: 'vue/dist/vue.esm-bundler.js',
-			'@hlx/ckeditor5-build-multies': path.join(__dirname, '../packages/index.js'),
-			'@hlx/ckeditor5-build-multies/es': path.join(__dirname, '../packages'),
+			'@hlx/mce': path.join(__dirname, '../packages/index.js'),
+			'@hlx/mce/*': path.join(__dirname, '../packages'),
 		},
 	},
 	plugins: [vueJsx({ mergeProps: true, enableObjectSlots: true }), vue(), svgLoader()],
