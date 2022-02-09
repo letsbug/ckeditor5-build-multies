@@ -4,6 +4,7 @@
 
 - "@hlx/mce" namespace imports ([7503576](https://gitlab.cqnews.net/technology/hualongxin/web/mce/commit/750357616e8dcec1978e7db1f117f5d0c4ae250c))
 - "@hlx/mce" namespace usages ([9bcc611](https://gitlab.cqnews.net/technology/hualongxin/web/mce/commit/9bcc61189fa7daab196755fe5171e6f7b14ebabc))
+- commitlint types ([f7f879c](https://gitlab.cqnews.net/technology/hualongxin/web/mce/commit/f7f879c355686fcf392f04da3d7125a42d9e470e))
 
 ### Features
 
