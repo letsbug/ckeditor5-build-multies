@@ -1,86 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>CKEditor 5 – classic editor build – development sample</title>
-	<link rel="stylesheet" href="./build/content-style.css">
-	<style>
-		body {
-			max-width: 800px;
-			margin: 20px auto;
-		}
-	</style>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>CKEditor 5 – classic editor build – development sample</title>
+		<link rel="stylesheet" href="./build/content-style.css" />
+		<style>
+			body {
+				max-width: 800px;
+				margin: 20px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>CKEditor 5 – classic editor build – development sample <a id="content">获取内容</a></h3>
 
-<h3>CKEditor 5 – classic editor build – development sample <a id="content">获取内容</a></h3>
+		<div id="editor" class="ck-content">
+			<h4>Sample&nbsp;&nbsp;&nbsp;&nbsp;</h4>
 
-<div id="editor" class="ck-content">
-	<h4>Sample&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+			<figure class="media">
+				<oembed url="https://www.youtube.com/watch?v=H08tGjXNHO4"></oembed>
+			</figure>
 
-	<figure class="media">
-		<oembed url="https://www.youtube.com/watch?v=H08tGjXNHO4"></oembed>
-	</figure>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
-	<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+			<p id="spaceDemo">
+				&nbsp;&nbsp;&nbsp;This is an instance &nbsp;&nbsp;of the &nbsp;&nbsp;&nbsp;<a
+					href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor"
+					>&nbsp;&nbsp;classic editor build&nbsp;</a
+				>&nbsp;&nbsp;.&nbsp;&nbsp;
+			</p>
 
-	<p id="spaceDemo">&nbsp;&nbsp;&nbsp;This is an instance &nbsp;&nbsp;of the &nbsp;&nbsp;&nbsp;<a
-		href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor">&nbsp;&nbsp;classic
-		editor build&nbsp;</a>&nbsp;&nbsp;.&nbsp;&nbsp;</p>
+			<figure class="image">
+				<img src="./docs/public/sample.jpg" alt="Autumn fields" />
+			</figure>
 
-	<figure class="image">
-		<img src="./docs/public/sample.jpg" alt="Autumn fields" />
-	</figure>
+			<p>
+				You can use this sample to validate whether your <br /><a
+					href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html"
+					>custom build</a
+				><br />
+				works fine.
+			</p>
 
-	<p>You can use this sample to validate whether your <br><a
-		href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html">custom build</a><BR /> works fine.</p>
+			<p>
+				这一个段落用来测试 Shift + Enter 转 Enter的<span style="color: red">功能</span> <br />
+				换行了 <br />
+				又换行了 <br />
+				最后一行 <br /><br /><br />
+			</p>
 
-	<p>这一个段落用来测试 Shift + Enter 转 Enter的<span style="color: red;">功能</span> <br> 换行了 <br> 又换行了 <br> 最后一行 <br><br><br></p>
+			<p>
+				这一个段落用来测试多段落 Shift + Enter 转 Enter的<span style="color: red">功能</span> <br />
+				换行了 <br />
+				又换行了 <br />
+				最后一行 <br /><br /><br />
+			</p>
+		</div>
 
-	<p>这一个段落用来测试多段落 Shift + Enter 转 Enter的<span style="color: red;">功能</span> <br> 换行了 <br> 又换行了 <br> 最后一行 <br><br><br></p>
-</div>
+		<script src="./build/hlx-mce.js"></script>
+		<script>
+			const extensions = [
+				{
+					name: 'testButton1',
+					label: '测试按钮1',
+					icon: '<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6.91 10.54c.26-.23.64-.21.88.03l3.36 3.14 2.23-2.06a.64.64 0 0 1 .87 0l2.52 2.97V4.5H3.2v10.12l3.71-4.08zm10.27-7.51c.6 0 1.09.47 1.09 1.05v11.84c0 .59-.49 1.06-1.09 1.06H2.79c-.6 0-1.09-.47-1.09-1.06V4.08c0-.58.49-1.05 1.1-1.05h14.38zm-5.22 5.56a1.96 1.96 0 1 1 3.4-1.96 1.96 1.96 0 0 1-3.4 1.96z"/></svg>',
+					command: (selected) => {
+						// eslint-disable-next-line no-console
+						console.log('clicked "测试按钮1"', selected);
+					},
+				},
+			];
 
-<script src="./build/ckeditor.js"></script>
-<script>
-	const extensions = [
-		{
-			name: 'testButton1',
-			label: '测试按钮1',
-			icon: '<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6.91 10.54c.26-.23.64-.21.88.03l3.36 3.14 2.23-2.06a.64.64 0 0 1 .87 0l2.52 2.97V4.5H3.2v10.12l3.71-4.08zm10.27-7.51c.6 0 1.09.47 1.09 1.05v11.84c0 .59-.49 1.06-1.09 1.06H2.79c-.6 0-1.09-.47-1.09-1.06V4.08c0-.58.49-1.05 1.1-1.05h14.38zm-5.22 5.56a1.96 1.96 0 1 1 3.4-1.96 1.96 1.96 0 0 1-3.4 1.96z"/></svg>',
-			command: (selected) => {
-				// eslint-disable-next-line no-console
-				console.log('clicked "测试按钮1"', selected);
-			},
-		},
-	];
+			const extToolbar = extensions.map((v) => v.name);
 
-	const extToolbar = extensions.map((v) => v.name);
+			HlxMce.classic
+				.create(document.querySelector('#editor'), {
+					extensions,
+					toolbar: {
+						items: [...HlxMce.classic.defaultConfig.toolbar.items, '|'].concat(extToolbar),
+						shouldNotGroupWhenFull: true,
+					},
+					image: {
+						toolbar: [...HlxMce.classic.defaultConfig.image.toolbar].concat(extToolbar),
+					},
+					mediaEmbed: {
+						toolbar: extToolbar,
+						// previewsInData: true
+					},
+				})
+				.then((editor) => {
+					window.editor = editor;
+				})
+				.catch((error) => {
+					console.error('There was a problem initializing the editor.', error);
+				});
 
-	HlxMceBuilds.classic.create(document.querySelector('#editor'), {
-		extensions,
-		toolbar: {
-			items: [...HlxMceBuilds.classic.defaultConfig.toolbar.items, '|'].concat(extToolbar),
-			shouldNotGroupWhenFull: true,
-		},
-		image: {
-			toolbar: [...HlxMceBuilds.classic.defaultConfig.image.toolbar].concat(extToolbar),
-		},
-		mediaEmbed: {
-			toolbar: extToolbar,
-			// previewsInData: true
-		},
-	})
-		.then((editor) => {
-			window.editor = editor;
-		})
-		.catch((error) => {
-			console.error('There was a problem initializing the editor.', error);
-		});
-
-	document.querySelector('#content').addEventListener('click', function () {
-		console.log(window.editor.getData());
-	});
-</script>
-
-</body>
+			document.querySelector('#content').addEventListener('click', function () {
+				console.log(window.editor.getData());
+			});
+		</script>
+	</body>
 </html>
