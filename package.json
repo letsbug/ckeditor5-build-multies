@@ -48,7 +48,8 @@
     "build:dev": "webpack --mode development",
     "lint": "eslint --fix --ext .jsx,.js,.vue,.ts,.tsx",
     "preversion": "npm run build:prod",
-    "clean:depe": "rimraf node_modules package-lock.json yarn.lock && npm cache clean --force"
+    "clean:depe": "rimraf node_modules package-lock.json yarn.lock && npm cache clean --force",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-core": "32.0.0",

@@ -4,7 +4,8 @@ build/
 package-lock.json
 
 # Editor directories and files
-.idea
+.idea/**/*
+!.idea/icon.svg
 .vscode
 *.suo
 *.ntvs*
