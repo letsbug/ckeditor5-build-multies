@@ -49,7 +49,7 @@
     "serve:dev": "vite serve docs --host 0.0.0.0",
     "build:prod": "npm run lint && webpack --mode production",
     "build:dev": "webpack --mode development",
-    "rel": "hlx rel",
+    "rel": "hlx rel -a",
     "prerel": "npm run build:prod && hlx pub",
     "prepare": "husky install"
   },
