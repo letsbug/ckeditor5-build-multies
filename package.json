@@ -45,11 +45,12 @@
     "clean:depe": "rimraf node_modules package-lock.json yarn.lock && npm cache clean --force",
     "clean:builds": "rimraf dist build",
     "svgo": "svgo -f plugins/theme/icons --config=./svgo.yml",
+    "lint": "eslint --fix --ext .jsx,.js,.vue,.ts,.tsx",
     "serve:dev": "vite serve docs --host 0.0.0.0",
     "build:prod": "npm run lint && webpack --mode production",
     "build:dev": "webpack --mode development",
-    "lint": "eslint --fix --ext .jsx,.js,.vue,.ts,.tsx",
-    "preversion": "npm run build:prod",
+    "rel": "hlx rel",
+    "prerel": "npm run build:prod && hlx pub",
     "prepare": "husky install"
   },
   "dependencies": {
