@@ -5,7 +5,7 @@ import type { ElementApi } from '@ckeditor/ckeditor5-core/src/editor/utils/eleme
 import type { Emitter } from '@ckeditor/ckeditor5-utils/src/emittermixin';
 import type { Observable } from '@ckeditor/ckeditor5-utils/src/observablemixin';
 import type { BalloonMceUI, ClassicMceUI, InlineMceUI } from './ui';
-import type { HlxMceConfig } from './configuration';
+import type { MceConfig } from './configuration';
 
 export * from './configuration';
 
@@ -18,13 +18,13 @@ export type { PositioningFunc, InlineMceUIView, ClassicMceUIView, DecoupledMceUI
  */
 export interface MceBase extends Editor, Observable, DataApi, EditorWithUI, ElementApi, Emitter {
 	builtinPlugins: Array<typeof Plugin | typeof ContextPlugin | string>;
-	defaultConfig?: HlxMceConfig;
-	create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceBase>;
+	defaultConfig?: MceConfig;
+	create(sourceElementOrData: HTMLElement | string, config?: MceConfig): Promise<MceBase>;
 
 	readonly ui: EditorUI;
 	readonly sourceElement: HTMLElement;
 
-	(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig);
+	(sourceElementOrData: HTMLElement | string, config?: MceConfig);
 
 	getData(options?: { rootName?: string; trim?: 'empty' | 'none' }): string;
 	setData(data: string): void;
@@ -35,7 +35,7 @@ export interface MceBase extends Editor, Observable, DataApi, EditorWithUI, Elem
  * Inline Mce
  */
 export interface MceInline extends MceBase {
-	create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceInline>;
+	create(sourceElementOrData: HTMLElement | string, config?: MceConfig): Promise<MceInline>;
 	readonly ui: InlineMceUI;
 }
 
@@ -43,7 +43,7 @@ export interface MceInline extends MceBase {
  * Classic Mce
  */
 export interface MceClassic extends MceBase {
-	create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceClassic>;
+	create(sourceElementOrData: HTMLElement | string, config?: MceConfig): Promise<MceClassic>;
 	readonly ui: ClassicMceUI;
 }
 
@@ -51,14 +51,14 @@ export interface MceClassic extends MceBase {
  * Classic Mce
  */
 export interface MceBalloon extends MceBase {
-	create(sourceElementOrData: HTMLElement | string, config?: HlxMceConfig): Promise<MceBalloon>;
+	create(sourceElementOrData: HTMLElement | string, config?: MceConfig): Promise<MceBalloon>;
 	readonly ui: BalloonMceUI;
 }
 
-declare const HlxMceBuilds: {
+declare const HlxMce: {
 	inline: MceInline;
 	classic: MceClassic;
 	balloon: MceBalloon;
 };
 
-export default HlxMceBuilds;
+export default HlxMce;

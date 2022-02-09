@@ -56,7 +56,7 @@ export interface FigureAttrConfig {
 	// rawHtml: string | string[];
 }
 
-export interface HlxMceConfig extends EditorConfig {
+export interface MceConfig extends EditorConfig {
 	figureAttributes?: FigureAttrConfig;
 	fontColor?: FontColorConfig;
 	mediaEmbed?: MediaEmbedConfig;

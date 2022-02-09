@@ -22,12 +22,12 @@ module.exports = {
 
 	output: {
 		// The name under which the editor will be exported.
-		library: 'HlxMceBuilds',
+		library: 'HlxMce',
 
 		path: path.resolve(__dirname, 'build'),
-		filename: 'ckeditor.js',
+		filename: 'hlx-mce.js',
 		libraryTarget: 'umd',
-		libraryExport: 'default'
+		libraryExport: 'default',
 	},
 
 	optimization: {
@@ -37,46 +37,35 @@ module.exports = {
 				terserOptions: {
 					output: {
 						// Preserve CKEditor 5 license comments.
-						comments: /^!/
-					}
+						comments: /^!/,
+					},
 				},
-				extractComments: false
-			})
-		]
+				extractComments: false,
+			}),
+		],
 	},
 
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: 'content-style.css'
+			filename: 'content-style.css',
 		}),
 		new CKEditorWebpackPlugin({
 			// UI language. Language codes follow the https://en.wikipedia.org/wiki/ISO_639-1 format.
 			// When changing the built-in language, remember to also change it in the editor's configuration (src/ckeditor.js).
 			language: 'zh-cn',
-			additionalLanguages: 'all'
+			additionalLanguages: 'all',
 		}),
 		new webpack.BannerPlugin({
 			banner: bundler.getLicenseBanner(),
-			raw: true
-		})
+			raw: true,
+		}),
 	],
 
 	module: {
 		rules: [
-			// {
-			// test: /ckeditor5-[^\/\\]+[\/\\].+\.js$/,
-			// use: [
-			//   {
-			// 	loader: 'babel-loader',
-			// 	options: {
-			// 	  presets: [require('@babel/preset-env')]
-			// 	}
-			//   }
-			// ]
-			// },
 			{
 				test: /\.svg$/,
-				use: ['raw-loader']
+				use: ['raw-loader'],
 			},
 			{
 				test: /\.css$/,
@@ -88,14 +77,14 @@ module.exports = {
 						options: {
 							postcssOptions: styles.getPostCssConfig({
 								themeImporter: {
-									themePath: require.resolve('@ckeditor/ckeditor5-theme-lark')
+									themePath: require.resolve('@ckeditor/ckeditor5-theme-lark'),
 								},
-								minify: true
-							})
-						}
-					}
-				]
-			}
-		]
-	}
+								minify: true,
+							}),
+						},
+					},
+				],
+			},
+		],
+	},
 };

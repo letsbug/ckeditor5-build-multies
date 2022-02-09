@@ -1,7 +1,7 @@
 import { computed, defineComponent, nextTick, onMounted, ref, unref } from 'vue';
 import CKInspector from '@ckeditor/ckeditor5-inspector';
-import HlxMceBuilds from '@hlx/mce';
-import type { HlxMceConfig, MceBase } from '../../types';
+import HlxMce from '@hlx/mce';
+import type { MceConfig, MceBase } from '../../types';
 import { presetData } from './data';
 
 const navConf = [
@@ -20,7 +20,7 @@ const App = defineComponent({
 
 		const type = ref('classic');
 		const config = computed(() => {
-			const baseConf: HlxMceConfig = {
+			const baseConf: MceConfig = {
 				toolbar: {
 					viewportTopOffset: 80,
 				},
@@ -31,8 +31,8 @@ const App = defineComponent({
 
 		const initial = async () => {
 			// eslint-disable-next-line no-console
-			// console.log(HlxMceBuilds[type.value].builtinPlugins);
-			ckInstance = await HlxMceBuilds[type.value].create(unref(ckContent), config);
+			// console.log(HlxMce[type.value].builtinPlugins);
+			ckInstance = await HlxMce[type.value].create(unref(ckContent), config);
 			CKInspector.attach(ckInstance);
 		};
 
