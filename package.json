@@ -34,12 +34,11 @@
     "type": "git",
     "url": "https://github.com/letsbug/ckeditor5-build-multies.git"
   },
-  "main": "./build/hlx-mce.js",
+  "main": "./dist/hlx-mce.js",
   "types": "./types/index.d.ts",
   "files": [
     "dist",
-    "types",
-    "src"
+    "types"
   ],
   "scripts": {
     "clean:depe": "rimraf node_modules package-lock.json yarn.lock && npm cache clean --force",
