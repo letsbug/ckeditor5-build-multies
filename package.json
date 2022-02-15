@@ -34,10 +34,10 @@
     "type": "git",
     "url": "https://github.com/letsbug/ckeditor5-build-multies.git"
   },
-  "main": "./build/ckeditor.js",
+  "main": "./build/hlx-mce.js",
   "types": "./types/index.d.ts",
   "files": [
-    "build",
+    "dist",
     "types",
     "src"
   ],
@@ -47,8 +47,8 @@
     "svgo": "svgo -f plugins/theme/icons --config=./svgo.yml",
     "lint": "eslint --fix --ext .jsx,.js,.vue,.ts,.tsx",
     "serve:dev": "vite serve docs --host 0.0.0.0",
-    "build:prod": "npm run lint && webpack --mode production",
-    "build:dev": "webpack --mode development",
+    "build:prod": "npm run lint && npm run clean:builds && webpack --mode production",
+    "build:dev": "npm run clean:builds && webpack --mode development",
     "upd": "hlx up --auto-release",
     "rel": "hlx rel -a",
     "pub": "hlx pub",

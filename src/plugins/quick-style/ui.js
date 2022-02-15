@@ -5,7 +5,7 @@ import { Plugin } from '@ckeditor/ckeditor5-core';
 import { createDropdown, SplitButtonView } from '@ckeditor/ckeditor5-ui';
 import { ATTRIBUTE, STORAGE_KEY } from './index';
 import { QuickStyleForm } from './ui/form';
-import Icon from '../../theme/icons/magic-wand.svg';
+import Icon from '../../icons/magic-wand.svg';
 
 export class QuickStyleUI extends Plugin {
 	/**

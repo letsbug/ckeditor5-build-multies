@@ -14,8 +14,8 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			vue: 'vue/dist/vue.esm-bundler.js',
-			'@hlx/mce': path.join(__dirname, '../packages/index.js'),
-			'@hlx/mce/*': path.join(__dirname, '../packages'),
+			'@hlx/mce': path.join(__dirname, '../src/index.js'),
+			'@hlx/mce/*': path.join(__dirname, '../src'),
 		},
 	},
 	plugins: [vueJsx({ mergeProps: true, enableObjectSlots: true }), vue(), svgLoader()],

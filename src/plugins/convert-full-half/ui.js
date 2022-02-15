@@ -5,8 +5,8 @@
 import { Plugin } from '@ckeditor/ckeditor5-core';
 import { ATTRIBUTE } from './index';
 import { ButtonView } from '@ckeditor/ckeditor5-ui';
-import HalfIcon from '../../theme/icons/full-to-half.svg';
-import FullIcon from '../../theme/icons/half-to-full.svg';
+import HalfIcon from '../../icons/full-to-half.svg';
+import FullIcon from '../../icons/half-to-full.svg';
 
 // eslint-disable-next-line no-undef
 const icons = new Map([

@@ -4,7 +4,7 @@
 import { Plugin } from '@ckeditor/ckeditor5-core';
 import { ButtonView } from '@ckeditor/ckeditor5-ui';
 import { ATTRIBUTE } from './index';
-import trimIcon from '../../theme/icons/trim.svg';
+import trimIcon from '../../icons/trim.svg';
 
 export class ClearSpaceUI extends Plugin {
 	/**

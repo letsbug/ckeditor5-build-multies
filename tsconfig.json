@@ -6,8 +6,8 @@
 		"baseUrl": "./",
 		"outDir": "dist/**/*.js",
 		"paths": {
-			"@hlx/mce": ["packages/index.js"],
-			"@hlx/mce/*": ["packages/*"]
+			"@hlx/mce": ["src/index.js"],
+			"@hlx/mce/*": ["src/*"]
 		},
 		"strictNullChecks": false,
 		"moduleResolution": "node",

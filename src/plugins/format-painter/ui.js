@@ -1,7 +1,7 @@
 import { Plugin } from '@ckeditor/ckeditor5-core';
 import { ButtonView } from '@ckeditor/ckeditor5-ui';
 import { ATTRIBUTE } from './index';
-import BrushIcon from '../../theme/icons/brush.svg';
+import BrushIcon from '../../icons/brush.svg';
 
 export class FormatPainterUI extends Plugin {
 	/**

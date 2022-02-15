@@ -1,18 +1,17 @@
 /**
- * @module indent-first/ui
+ * @module clear-empty/ui
  */
-
 import { Plugin } from '@ckeditor/ckeditor5-core';
 import { ButtonView } from '@ckeditor/ckeditor5-ui';
 import { ATTRIBUTE } from './index';
-import indentFirst from '../../theme/icons/indent-first.svg';
+import clearEmptyIcon from '../../icons/clear-empty.svg';
 
-export class IndentFirstUi extends Plugin {
+export class ClearEmptyUI extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
 	static get pluginName() {
-		return 'IndentFirstUI';
+		return 'ClearEmptyUI';
 	}
 
 	/**
@@ -20,21 +19,19 @@ export class IndentFirstUi extends Plugin {
 	 */
 	init() {
 		const editor = this.editor;
-
 		editor.ui.componentFactory.add(ATTRIBUTE, (locale) => {
 			const command = editor.commands.get(ATTRIBUTE);
 			const buttonView = new ButtonView(locale);
 
 			buttonView.set({
-				label: '首行缩进',
-				icon: indentFirst,
+				// label: '清除多余空格和空行',
+				label: '清除空行（无可避免会清除有意的断行）',
+				icon: clearEmptyIcon,
 				tooltip: true,
-				isToggleable: true,
 			});
 
 			buttonView.bind('isOn', 'isEnabled').to(command, 'value', 'isEnabled');
 
-			// Execute command.
 			this.listenTo(buttonView, 'execute', () => {
 				editor.execute(ATTRIBUTE);
 				editor.editing.view.focus();

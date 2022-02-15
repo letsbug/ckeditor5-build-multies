@@ -4,7 +4,7 @@
 import { Plugin } from '@ckeditor/ckeditor5-core';
 import { ATTRIBUTE } from './index';
 import { ButtonView } from '@ckeditor/ckeditor5-ui';
-import buttonIcon from '../../theme/icons/soft-break-to-enter.svg';
+import buttonIcon from '../../icons/soft-break-to-enter.svg';
 
 export class SoftBreakToEnterUI extends Plugin {
 	/**

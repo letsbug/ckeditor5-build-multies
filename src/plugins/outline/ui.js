@@ -1,7 +1,7 @@
 import { Plugin } from '@ckeditor/ckeditor5-core';
 import { ButtonView } from '@ckeditor/ckeditor5-ui';
 
-import outlineIcon from '../../theme/icons/outline.svg';
+import outlineIcon from '../../icons/outline.svg';
 
 const OUTLINE = 'outline';
 

@@ -6,7 +6,7 @@ import { createDropdown, addListToDropdown, Model } from '@ckeditor/ckeditor5-ui
 import { Collection } from '@ckeditor/ckeditor5-utils';
 import { isSupported, normalizeOptions } from '../utils';
 import { ATTRIBUTE } from './index';
-import LineHeightIcon from '../../../theme/icons/line-height.svg';
+import LineHeightIcon from '../../../icons/line-height.svg';
 
 export class LineHeightUI extends Plugin {
 	/**

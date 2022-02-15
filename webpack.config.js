@@ -18,13 +18,13 @@ module.exports = {
 	devtool: 'source-map',
 	performance: { hints: false },
 
-	entry: [/*require.resolve('regenerator-runtime/runtime.js'),*/ path.resolve(__dirname, 'packages', 'index.js')],
+	entry: [/*require.resolve('regenerator-runtime/runtime.js'),*/ path.resolve(__dirname, 'src', 'index.js')],
 
 	output: {
 		// The name under which the editor will be exported.
 		library: 'HlxMce',
 
-		path: path.resolve(__dirname, 'build'),
+		path: path.resolve(__dirname, 'dist'),
 		filename: 'hlx-mce.js',
 		libraryTarget: 'umd',
 		libraryExport: 'default',
@@ -51,7 +51,7 @@ module.exports = {
 		}),
 		new CKEditorWebpackPlugin({
 			// UI language. Language codes follow the https://en.wikipedia.org/wiki/ISO_639-1 format.
-			// When changing the built-in language, remember to also change it in the editor's configuration (src/ckeditor.js).
+			// When changing the built-in language, remember to also change it in the editor's configuration (packages/index.js).
 			language: 'zh-cn',
 			additionalLanguages: 'all',
 		}),
