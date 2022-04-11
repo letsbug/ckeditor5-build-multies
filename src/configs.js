@@ -1,4 +1,5 @@
 import { Essentials } from '@ckeditor/ckeditor5-essentials/src';
+import { BalloonToolbar, BlockToolbar } from '@ckeditor/ckeditor5-ui';
 import { Alignment } from '@ckeditor/ckeditor5-alignment/src';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat/src';
 import { Bold, Italic, Strikethrough, Underline, Subscript, Superscript } from '@ckeditor/ckeditor5-basic-styles/src';
@@ -34,10 +35,12 @@ import { Extensions } from '../packages/src/extensions';
 import { SimpleAdapter } from '../packages/src/simple-adapter';
 import { Counter } from '../packages/src/counter';
 import { FindReplace } from '../packages/src/find-replace';
-import { Outline } from "../packages/src/outline";
+import { Outline } from '../packages/src/outline';
 
 export const builtins = [
 	Essentials,
+	BlockToolbar,
+	BalloonToolbar,
 	Alignment,
 	Autoformat,
 	Bold,

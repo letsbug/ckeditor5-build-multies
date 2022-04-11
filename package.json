@@ -63,6 +63,7 @@
     "@ckeditor/ckeditor5-typing": "^29.2.0",
     "@ckeditor/ckeditor5-upload": "^29.2.0",
     "@ckeditor/ckeditor5-utils": "^29.2.0",
+    "@hlx/cli": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
     "css-loader": "^5.2.7",
@@ -95,6 +96,7 @@
     "url": "https://github.com/letsbug/ckeditor5-build-multies.git"
   },
   "scripts": {
+    "clean": "rimraf node_modules package-lock.json yarn.lock dist && npm cache clean --force",
     "build:prod": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "lint": "eslint --quiet '**/*.js' --fix",

@@ -3,6 +3,11 @@ node_modules/
 build/
 package-lock.json
 
+# local env files
+.env
+.env.local
+.env.*.local
+
 # Editor directories and files
 .idea
 .vscode
