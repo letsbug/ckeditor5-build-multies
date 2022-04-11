@@ -73,7 +73,7 @@
     "@ckeditor/ckeditor5-editor-classic": "32.0.0",
     "@ckeditor/ckeditor5-editor-decoupled": "32.0.0",
     "@ckeditor/ckeditor5-editor-inline": "32.0.0",
-    "@ckeditor/ckeditor5-essentials": "32.0.0",
+    "@ckeditor/ckeditor5-essentials": "33.0.0",
     "@ckeditor/ckeditor5-find-and-replace": "32.0.0",
     "@ckeditor/ckeditor5-font": "32.0.0",
     "@ckeditor/ckeditor5-heading": "32.0.0",
