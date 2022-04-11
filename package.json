@@ -95,7 +95,7 @@
     "@ckeditor/ckeditor5-typing": "32.0.0",
     "@ckeditor/ckeditor5-upload": "32.0.0",
     "@ckeditor/ckeditor5-utils": "32.0.0",
-    "@commitlint/cli": "16.2.1",
+    "@commitlint/cli": "16.2.3",
     "@commitlint/config-conventional": "16.2.1",
     "@hlx/cli": "^1.0.0-beta.5",
     "@hlx/eslint-config-vue": "^1.0.1-beta.8",
