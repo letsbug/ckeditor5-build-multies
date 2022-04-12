@@ -124,7 +124,7 @@
     "vue": "3.2.31",
     "vue-loader": "17.0.0",
     "vue-tsc": "0.34.5",
-    "webpack": "5.70.0",
+    "webpack": "5.72.0",
     "webpack-cli": "4.9.2"
   }
 }
