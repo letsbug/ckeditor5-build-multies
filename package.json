@@ -72,7 +72,7 @@
     "@ckeditor/ckeditor5-editor-balloon": "34.0.0",
     "@ckeditor/ckeditor5-editor-classic": "33.0.0",
     "@ckeditor/ckeditor5-editor-decoupled": "34.0.0",
-    "@ckeditor/ckeditor5-editor-inline": "33.0.0",
+    "@ckeditor/ckeditor5-editor-inline": "34.0.0",
     "@ckeditor/ckeditor5-essentials": "34.0.0",
     "@ckeditor/ckeditor5-find-and-replace": "32.0.0",
     "@ckeditor/ckeditor5-font": "32.0.0",
