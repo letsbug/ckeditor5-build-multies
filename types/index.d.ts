@@ -29,6 +29,8 @@ export interface MceBase extends Editor, Observable, DataApi, EditorWithUI, Elem
 	getData(options?: { rootName?: string; trim?: 'empty' | 'none' }): string;
 	setData(data: string): void;
 	updateSourceElement(): void;
+	enableReadOnlyMode(lockId: string): void;
+	disableReadOnlyMode(lockId: string): void;
 }
 
 /**
