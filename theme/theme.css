@@ -7,3 +7,10 @@
 .ck.ck-block-toolbar-button {
 	transform: translateX(calc(-1 * var(--ck-spacing-large)));
 }
+
+/* Fix: 在IE浏览器中，`max-width: 100%` 失效的问题 */
+.ck-content .image {
+	table-layout: fixed;
+	max-width: 100%;
+	width: 100%;
+}

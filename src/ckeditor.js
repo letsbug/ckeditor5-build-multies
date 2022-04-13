@@ -1,3 +1,4 @@
+import '../theme/theme.css';
 import ClassicBuild from './build-classic';
 import InlineBuild from './build-inline';
 import DocumentBuild from './build-decoupled-document';
