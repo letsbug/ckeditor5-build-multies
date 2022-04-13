@@ -1,3 +1,9 @@
+# [3.1.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.0.0...3.1.0) (2022-04-13)
+
+### Features
+
+- 添加`enableReadOnlyMode`、`enableReadOnlyMode`类型属性 ([de01954](https://github.com/letsbug/ckeditor5-build-multies/commit/de0195430158f57572fe58fad724bf6d1164ef2c))
+
 # [3.0.0](https://github.com/letsbug/ckeditor5-build-multies/compare/2.0.1...3.0.0) (2022-04-13)
 
 ### Bug Fixes
