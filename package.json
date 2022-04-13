@@ -71,7 +71,7 @@
     "@ckeditor/ckeditor5-easy-image": "33.0.0",
     "@ckeditor/ckeditor5-editor-balloon": "34.0.0",
     "@ckeditor/ckeditor5-editor-classic": "33.0.0",
-    "@ckeditor/ckeditor5-editor-decoupled": "33.0.0",
+    "@ckeditor/ckeditor5-editor-decoupled": "34.0.0",
     "@ckeditor/ckeditor5-editor-inline": "33.0.0",
     "@ckeditor/ckeditor5-essentials": "33.0.0",
     "@ckeditor/ckeditor5-find-and-replace": "32.0.0",
