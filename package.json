@@ -85,7 +85,7 @@
     "@ckeditor/ckeditor5-link": "34.0.0",
     "@ckeditor/ckeditor5-list": "34.0.1",
     "@ckeditor/ckeditor5-media-embed": "34.1.0",
-    "@ckeditor/ckeditor5-page-break": "34.0.0",
+    "@ckeditor/ckeditor5-page-break": "34.1.0",
     "@ckeditor/ckeditor5-paragraph": "34.0.0",
     "@ckeditor/ckeditor5-paste-from-office": "34.0.0",
     "@ckeditor/ckeditor5-remove-format": "34.0.0",
