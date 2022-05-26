@@ -88,7 +88,7 @@
     "@ckeditor/ckeditor5-page-break": "34.1.0",
     "@ckeditor/ckeditor5-paragraph": "34.1.0",
     "@ckeditor/ckeditor5-paste-from-office": "34.1.0",
-    "@ckeditor/ckeditor5-remove-format": "34.0.0",
+    "@ckeditor/ckeditor5-remove-format": "34.1.0",
     "@ckeditor/ckeditor5-source-editing": "34.1.0",
     "@ckeditor/ckeditor5-table": "34.0.0",
     "@ckeditor/ckeditor5-theme-lark": "34.0.0",
