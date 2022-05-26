@@ -74,7 +74,7 @@
     "@ckeditor/ckeditor5-editor-decoupled": "34.0.0",
     "@ckeditor/ckeditor5-editor-inline": "34.0.0",
     "@ckeditor/ckeditor5-essentials": "34.1.0",
-    "@ckeditor/ckeditor5-find-and-replace": "34.0.0",
+    "@ckeditor/ckeditor5-find-and-replace": "34.1.0",
     "@ckeditor/ckeditor5-font": "34.0.0",
     "@ckeditor/ckeditor5-heading": "34.0.0",
     "@ckeditor/ckeditor5-highlight": "34.0.0",
