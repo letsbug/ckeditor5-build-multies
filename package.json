@@ -94,7 +94,7 @@
     "@ckeditor/ckeditor5-theme-lark": "34.0.0",
     "@ckeditor/ckeditor5-typing": "34.0.0",
     "@ckeditor/ckeditor5-upload": "34.0.0",
-    "@ckeditor/ckeditor5-utils": "34.0.0",
+    "@ckeditor/ckeditor5-utils": "34.1.0",
     "@commitlint/cli": "17.0.1",
     "@commitlint/config-conventional": "17.0.0",
     "@hlx/cli": "^1.0.0",
