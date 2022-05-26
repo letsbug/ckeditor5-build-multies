@@ -55,7 +55,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-core": "34.0.0",
+    "@ckeditor/ckeditor5-core": "34.1.0",
     "@ckeditor/ckeditor5-engine": "34.0.0",
     "@ckeditor/ckeditor5-ui": "34.0.0",
     "@ckeditor/ckeditor5-widget": "34.0.0",
