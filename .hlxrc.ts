@@ -1,4 +1,4 @@
-import { defineConfig, IpUrl } from '@hlx/cli';
+import { defineConfig } from '@hlx/cli';
 
 export default defineConfig({
 	namespace: 'hualongxin',
