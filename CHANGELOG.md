@@ -1,3 +1,13 @@
+# [3.2.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.1.0...3.2.0) (2022-06-11)
+
+### Bug Fixes
+
+- delete unused types imports ([472ff57](https://github.com/letsbug/ckeditor5-build-multies/commit/472ff57eb808bc087ffaddd56fb034771b6500a6))
+- **deps:** update dependency @ckeditor/ckeditor5-core to v34.1.0 ([87a00c8](https://github.com/letsbug/ckeditor5-build-multies/commit/87a00c81e67282fa89ec54003f681aaccf31f3d7))
+- **deps:** update dependency @ckeditor/ckeditor5-engine to v34.1.0 ([7368f23](https://github.com/letsbug/ckeditor5-build-multies/commit/7368f23bc371c79c01d08175b41817e2947d1cfb))
+- **deps:** update dependency @ckeditor/ckeditor5-ui to v34.1.0 ([878e0a7](https://github.com/letsbug/ckeditor5-build-multies/commit/878e0a7446365377cd2cf8f3ad14a0d4941fc5cc))
+- **deps:** update dependency @ckeditor/ckeditor5-widget to v34.1.0 ([95942c4](https://github.com/letsbug/ckeditor5-build-multies/commit/95942c430ad233c1ebe469882606ade2b5f762cf))
+
 # [3.1.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.0.0...3.1.0) (2022-04-13)
 
 ### Features
