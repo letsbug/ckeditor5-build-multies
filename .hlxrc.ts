@@ -5,6 +5,7 @@ export default defineConfig({
 	// upgrade: {
 	//   increment: 'prerelease'
 	// },
+	remote: 'hlw',
 	release: {
 		token: process.env.HLX_GITLAB_TOKEN,
 		useHttp: true,
