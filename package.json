@@ -101,7 +101,7 @@
     "@commitlint/config-conventional": "17.0.2",
     "@hlx/cli": "^1.1.2",
     "@hlx/eslint-config-vue": "^1.1.0",
-    "@types/ckeditor__ckeditor5-core": "^33.0.3",
+    "@types/ckeditor__ckeditor5-core": "33.0.3",
     "@typescript-eslint/eslint-plugin": "5.27.1",
     "@typescript-eslint/parser": "5.27.1",
     "@vitejs/plugin-vue": "2.3.3",
