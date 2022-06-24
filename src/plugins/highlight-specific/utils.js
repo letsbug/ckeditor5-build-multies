@@ -46,7 +46,9 @@ export function rangeToText(range) {
 }
 
 export function findInsertIndex(resultsList, markerToInsert) {
-	const result = resultsList.find(({ marker }) => markerToInsert.getStart().isBefore(marker.getStart()));
+	const result = resultsList.find(({ marker }) =>
+		markerToInsert.getStart().isBefore(marker.getStart())
+	);
 
 	return result ? resultsList.getIndex(result) : resultsList.length;
 }

@@ -4,7 +4,16 @@
  */
 
 // global configs
-import { builtins, fontFamily, fontSize, toolbarer, image, language, table, htmlEmbed } from './configs';
+import {
+	builtins,
+	fontFamily,
+	fontSize,
+	toolbarer,
+	image,
+	language,
+	table,
+	htmlEmbed,
+} from './configs';
 
 // The editor creator to use.
 import { BalloonEditor as BalloonEditorBase } from '@ckeditor/ckeditor5-editor-balloon';

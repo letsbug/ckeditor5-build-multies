@@ -1,5 +1,10 @@
 import type { EditorUI } from '@ckeditor/ckeditor5-core';
-import type { BalloonMceUIView, ClassicMceUIView, DecoupledMceUIView, InlineMceUIView } from './view';
+import type {
+	BalloonMceUIView,
+	ClassicMceUIView,
+	DecoupledMceUIView,
+	InlineMceUIView,
+} from './view';
 
 /**
  * Inline Mce UI

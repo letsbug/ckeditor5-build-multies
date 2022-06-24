@@ -58,7 +58,9 @@ export class ParagraphSpacingUI extends Plugin {
 			Default: '默认间距',
 		};
 
-		const configs = editor.config.get(ATTRIBUTE + '.options').filter((option) => isSupported(option));
+		const configs = editor.config
+			.get(ATTRIBUTE + '.options')
+			.filter((option) => isSupported(option));
 		let unit = editor.config.get(ATTRIBUTE + '.unit') || 'px';
 
 		if (!configs.includes('Default')) {

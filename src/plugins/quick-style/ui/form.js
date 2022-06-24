@@ -1,4 +1,11 @@
-import { View, ButtonView, SwitchButtonView, ViewCollection, FocusCycler, submitHandler } from '@ckeditor/ckeditor5-ui';
+import {
+	View,
+	ButtonView,
+	SwitchButtonView,
+	ViewCollection,
+	FocusCycler,
+	submitHandler,
+} from '@ckeditor/ckeditor5-ui';
 import { KeystrokeHandler, FocusTracker } from '@ckeditor/ckeditor5-utils';
 
 import checkIcon from '@ckeditor/ckeditor5-core/theme/icons/check.svg';

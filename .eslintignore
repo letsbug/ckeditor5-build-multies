@@ -2,6 +2,7 @@ build
 /*.js
 /*.html
 
+dist
 tests
 node_modules
 

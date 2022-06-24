@@ -10,10 +10,16 @@ export class ParagraphSpacingCommand extends Command {
 	 * @inheritDoc
 	 */
 	refresh() {
-		const firstBlock = findFirst(this.editor.model.document.selection.getSelectedBlocks(), allowedBlock);
+		const firstBlock = findFirst(
+			this.editor.model.document.selection.getSelectedBlocks(),
+			allowedBlock
+		);
 
 		this.isEnabled = !!firstBlock && this._canSetAttribute(firstBlock);
-		this.value = this.isEnabled && firstBlock.hasAttribute(ATTRIBUTE) ? firstBlock.getAttribute(ATTRIBUTE) : 'Default';
+		this.value =
+			this.isEnabled && firstBlock.hasAttribute(ATTRIBUTE)
+				? firstBlock.getAttribute(ATTRIBUTE)
+				: 'Default';
 	}
 
 	/**
@@ -26,7 +32,9 @@ export class ParagraphSpacingCommand extends Command {
 		const value = options.value;
 
 		model.change((writer) => {
-			const blocks = Array.from(doc.selection.getSelectedBlocks()).filter((block) => this._canSetAttribute(block));
+			const blocks = Array.from(doc.selection.getSelectedBlocks()).filter((block) =>
+				this._canSetAttribute(block)
+			);
 			const currentSpacing = blocks[0].getAttribute(ATTRIBUTE);
 			const removeSpacing = currentSpacing === value || typeof value === 'undefined';
 

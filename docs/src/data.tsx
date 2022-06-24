@@ -24,7 +24,9 @@ export const presetData = (
 
 		<p>
 			You can use this sample to validate whether your <br />
-			<a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html">custom build</a>
+			<a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/development/custom-builds.html">
+				custom build
+			</a>
 			<br /> works fine.
 		</p>
 

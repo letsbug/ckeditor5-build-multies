@@ -4,7 +4,16 @@
  */
 
 // global configs
-import { builtins, fontSize, toolbarer, image, language, table, fontFamily, htmlEmbed } from './configs';
+import {
+	builtins,
+	fontSize,
+	toolbarer,
+	image,
+	language,
+	table,
+	fontFamily,
+	htmlEmbed,
+} from './configs';
 import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 
 // The editor creator to use.

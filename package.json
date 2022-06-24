@@ -47,11 +47,12 @@
     "svgo": "svgo -f plugins/theme/icons --config=./svgo.yml",
     "lint": "eslint . --fix --ext .jsx,.js,.vue,.ts,.tsx",
     "serve:dev": "vite serve docs --host 0.0.0.0",
-    "build:prod": "pnpm run clean:builds && webpack --mode production",
+    "build:prod": "pnpm run lint && pnpm run clean:builds && webpack --mode production",
     "build:dev": "pnpm run clean:builds && webpack --mode development",
     "upd": "hlx up",
     "rel": "hlx rel",
     "pub": "hlx pub",
+    "prepub": "pnpm run build",
     "prepare": "husky install"
   },
   "peerDependencies": {

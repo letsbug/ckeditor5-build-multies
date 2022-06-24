@@ -11,7 +11,12 @@ export * from './configuration';
 
 export type { InlineMceUI, ClassicMceUI, DecoupledMceUI, BalloonMceUI } from './ui';
 
-export type { PositioningFunc, InlineMceUIView, ClassicMceUIView, DecoupledMceUIView } from './view';
+export type {
+	PositioningFunc,
+	InlineMceUIView,
+	ClassicMceUIView,
+	DecoupledMceUIView,
+} from './view';
 
 /**
  * Base MCE

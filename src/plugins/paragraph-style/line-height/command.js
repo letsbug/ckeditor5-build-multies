@@ -10,10 +10,16 @@ export class LineHeightCommand extends Command {
 	 * @inheritDoc
 	 */
 	refresh() {
-		const firstBlock = findFirst(this.editor.model.document.selection.getSelectedBlocks(), allowedBlock);
+		const firstBlock = findFirst(
+			this.editor.model.document.selection.getSelectedBlocks(),
+			allowedBlock
+		);
 
 		this.isEnabled = !!firstBlock && this._canSetLineHeight(firstBlock);
-		this.value = this.isEnabled && firstBlock.hasAttribute(ATTRIBUTE) ? firstBlock.getAttribute(ATTRIBUTE) : 'Default';
+		this.value =
+			this.isEnabled && firstBlock.hasAttribute(ATTRIBUTE)
+				? firstBlock.getAttribute(ATTRIBUTE)
+				: 'Default';
 	}
 
 	/**
@@ -25,7 +31,9 @@ export class LineHeightCommand extends Command {
 		const value = options.value;
 
 		model.change((writer) => {
-			const blocks = Array.from(doc.selection.getSelectedBlocks()).filter((block) => this._canSetLineHeight(block));
+			const blocks = Array.from(doc.selection.getSelectedBlocks()).filter((block) =>
+				this._canSetLineHeight(block)
+			);
 			const currentLineHeight = blocks[0].getAttribute(ATTRIBUTE);
 			const removeLineHeight = currentLineHeight === value || typeof value === 'undefined';
 

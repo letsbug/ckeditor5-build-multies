@@ -125,7 +125,11 @@ class Adapter {
 			const response = xhr.response;
 
 			if (!response || response.error) {
-				return reject(response && response.error && response.error.message ? response.error.message : genericErrorText);
+				return reject(
+					response && response.error && response.error.message
+						? response.error.message
+						: genericErrorText
+				);
 			}
 
 			resolve(response.url ? { default: response.url } : response.urls);

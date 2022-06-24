@@ -3,8 +3,8 @@
 
 module.exports = {
 	tabWidth: 2,
-	printWidth: 120,
+	printWidth: 100,
 	singleQuote: true,
 	semi: true,
-	endOfLine: 'auto' // 换行符
+	endOfLine: 'lf', // 换行符
 };

@@ -35,7 +35,13 @@ export class QuickStyleCommand extends Command {
 			'clearSpace',
 			'indentFirst',
 		];
-		const needReset = ['removeFormat', 'clearLinks', 'convertFullHalf', 'clearSpace', 'indentFirst'];
+		const needReset = [
+			'removeFormat',
+			'clearLinks',
+			'convertFullHalf',
+			'clearSpace',
+			'indentFirst',
+		];
 
 		sorted
 			.filter((op) => Object.keys(options).includes(op))

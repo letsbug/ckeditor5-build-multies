@@ -50,7 +50,10 @@ export class ConvertFullHalfCommand extends Command {
 				}
 
 				const text = walker.item.data;
-				const matcher = new RegExp(`[${dictionary[{ full: 'full', half: 'halfEscaped' }[type]]}]`, 'g');
+				const matcher = new RegExp(
+					`[${dictionary[{ full: 'full', half: 'halfEscaped' }[type]]}]`,
+					'g'
+				);
 				const matched = text.match(matcher);
 				if (!matched || !matched.length) {
 					continue;
@@ -62,7 +65,10 @@ export class ConvertFullHalfCommand extends Command {
 				const end = textNode.data.lastIndexOf(text);
 				const range = writer.createRange(
 					writer.createPositionAt(textNode.parent, ~start ? base + start : textNode.startOffset),
-					writer.createPositionAt(textNode.parent, ~end ? base + end + text.length : textNode.endOffset)
+					writer.createPositionAt(
+						textNode.parent,
+						~end ? base + end + text.length : textNode.endOffset
+					)
 				);
 				let replace = text;
 
@@ -77,7 +83,10 @@ export class ConvertFullHalfCommand extends Command {
 						dictionary[{ full: 'half', half: 'full' }[type]].charAt(position)
 					);
 				}
-				model.insertContent(writer.createText(replace, Object.fromEntries(textNode.getAttributes())), range);
+				model.insertContent(
+					writer.createText(replace, Object.fromEntries(textNode.getAttributes())),
+					range
+				);
 			}
 
 			writer.setSelection(this.range);

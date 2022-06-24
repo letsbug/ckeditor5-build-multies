@@ -58,7 +58,9 @@ class FigureAttributes extends Plugin {
 		editor.model.schema.extend(modelElName, { allowAttributes: [modelAttribute] });
 
 		editor.conversion.for('upcast').add(this._upcast(viewElName, viewAttribute, modelAttribute));
-		editor.conversion.for('downcast').add(this._downcast(modelElName, viewElName, viewAttribute, modelAttribute));
+		editor.conversion
+			.for('downcast')
+			.add(this._downcast(modelElName, viewElName, viewAttribute, modelAttribute));
 	}
 
 	/**
@@ -75,7 +77,11 @@ class FigureAttributes extends Plugin {
 					return;
 				}
 
-				conversionApi.writer.setAttribute(modelAttribute, viewItem.getAttribute(viewAttribute) ?? '', modelElement);
+				conversionApi.writer.setAttribute(
+					modelAttribute,
+					viewItem.getAttribute(viewAttribute) ?? '',
+					modelElement
+				);
 			});
 		};
 	}
@@ -94,7 +100,11 @@ class FigureAttributes extends Plugin {
 					return;
 				}
 
-				conversionApi.writer.setAttribute(viewAttr, modelElement.getAttribute(modelAttr) ?? '', viewElement);
+				conversionApi.writer.setAttribute(
+					viewAttr,
+					modelElement.getAttribute(modelAttr) ?? '',
+					viewElement
+				);
 			});
 	}
 

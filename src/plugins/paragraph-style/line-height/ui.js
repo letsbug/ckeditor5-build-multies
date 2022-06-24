@@ -58,7 +58,9 @@ export class LineHeightUI extends Plugin {
 			Default: '默认行高',
 		};
 
-		const configs = editor.config.get(ATTRIBUTE + '.options').filter((option) => isSupported(option));
+		const configs = editor.config
+			.get(ATTRIBUTE + '.options')
+			.filter((option) => isSupported(option));
 		let unit = editor.config.get(ATTRIBUTE + '.unit') || null;
 
 		if (!configs.includes('Default')) {
