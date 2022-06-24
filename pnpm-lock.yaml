@@ -6,8 +6,8 @@ specifiers:
   '@ckeditor/ckeditor5-basic-styles': 34.1.0
   '@ckeditor/ckeditor5-block-quote': 34.1.0
   '@ckeditor/ckeditor5-core': 34.1.0
-  '@ckeditor/ckeditor5-dev-utils': 30.3.0
-  '@ckeditor/ckeditor5-dev-webpack-plugin': 30.3.0
+  '@ckeditor/ckeditor5-dev-utils': 30.3.1
+  '@ckeditor/ckeditor5-dev-webpack-plugin': 30.3.1
   '@ckeditor/ckeditor5-easy-image': 34.1.0
   '@ckeditor/ckeditor5-editor-balloon': 34.1.0
   '@ckeditor/ckeditor5-editor-classic': 34.1.0
@@ -41,7 +41,7 @@ specifiers:
   '@commitlint/cli': 17.0.2
   '@commitlint/config-conventional': 17.0.2
   '@hlx/cli': ^1.1.2
-  '@hlx/eslint-config-vue': ^1.1.0
+  '@hlx/eslint-config-vue': ^1.4.0
   '@types/ckeditor__ckeditor5-core': 33.0.3
   '@typescript-eslint/eslint-plugin': 5.29.0
   '@typescript-eslint/parser': 5.29.0
@@ -83,8 +83,8 @@ devDependencies:
   '@ckeditor/ckeditor5-autoformat': 34.1.0
   '@ckeditor/ckeditor5-basic-styles': 34.1.0
   '@ckeditor/ckeditor5-block-quote': 34.1.0
-  '@ckeditor/ckeditor5-dev-utils': 30.3.0_webpack@5.73.0
-  '@ckeditor/ckeditor5-dev-webpack-plugin': 30.3.0_webpack@5.73.0
+  '@ckeditor/ckeditor5-dev-utils': 30.3.1_3o2jfq6vfqxns3sz6wn2nnc3ei
+  '@ckeditor/ckeditor5-dev-webpack-plugin': 30.3.1_3o2jfq6vfqxns3sz6wn2nnc3ei
   '@ckeditor/ckeditor5-easy-image': 34.1.0
   '@ckeditor/ckeditor5-editor-balloon': 34.1.0
   '@ckeditor/ckeditor5-editor-classic': 34.1.0
@@ -527,14 +527,14 @@ packages:
       '@ckeditor/ckeditor5-utils': 34.1.0
       lodash-es: 4.17.21
 
-  /@ckeditor/ckeditor5-dev-utils/30.3.0_webpack@5.73.0:
+  /@ckeditor/ckeditor5-dev-utils/30.3.1_3o2jfq6vfqxns3sz6wn2nnc3ei:
     resolution:
-      { integrity: sha512-B5UKYuN4L4O0oCNgjxNbUK8djwko2ffADR7xfuDi9XS4+HfnsiSUHbdkUWrAjYMZU0/BIeIaE5XfDguta28L3A== }
+      { integrity: sha512-NiDSytdOXQ3iPwRBx6Q3f0kTZtmqGnRrvQe5BBl+7vJqLuKuwFKNn8aWItVI9t8B4PXYlapnKzDRdOAFFP1khw== }
     engines: { node: '>=14.0.0', npm: '>=5.7.1' }
     peerDependencies:
       webpack: ^4.43.0 || ^5.24.0
     dependencies:
-      '@ckeditor/ckeditor5-dev-webpack-plugin': 30.3.0_webpack@5.73.0
+      '@ckeditor/ckeditor5-dev-webpack-plugin': 30.3.1_3o2jfq6vfqxns3sz6wn2nnc3ei
       acorn: 6.4.2
       acorn-walk: 6.2.0
       chalk: 3.0.0
@@ -557,19 +557,21 @@ packages:
       style-loader: 2.0.0_webpack@5.73.0
       terser-webpack-plugin: 4.2.3_webpack@5.73.0
       through2: 3.0.2
+      ts-loader: 9.3.1_3o2jfq6vfqxns3sz6wn2nnc3ei
       webpack: 5.73.0_webpack-cli@4.10.0
     transitivePeerDependencies:
       - bluebird
+      - typescript
     dev: true
 
-  /@ckeditor/ckeditor5-dev-webpack-plugin/30.3.0_webpack@5.73.0:
+  /@ckeditor/ckeditor5-dev-webpack-plugin/30.3.1_3o2jfq6vfqxns3sz6wn2nnc3ei:
     resolution:
-      { integrity: sha512-+APlN08+l0KxZQGNcbxyChVZfOoXAYRWbJodzzrqHcu2Shq+j3Cuza6njiU4DLJwxHUrx3EmdXcYUXAFtJue9Q== }
+      { integrity: sha512-UZGqVilIsSpH44boickJz10a3yG+ojdMkLo0aKXmeoNBC2LdXBC+riWXeh9LaqG4MyKKSwK3xIdL85YFyziWDQ== }
     engines: { node: '>=14.0.0', npm: '>=5.7.1' }
     peerDependencies:
       webpack: ^4.43.0 || ^5.24.0
     dependencies:
-      '@ckeditor/ckeditor5-dev-utils': 30.3.0_webpack@5.73.0
+      '@ckeditor/ckeditor5-dev-utils': 30.3.1_3o2jfq6vfqxns3sz6wn2nnc3ei
       chalk: 4.1.2
       rimraf: 3.0.2
       semver: 7.3.7
@@ -577,6 +579,7 @@ packages:
       webpack-sources: 2.3.1
     transitivePeerDependencies:
       - bluebird
+      - typescript
     dev: true
 
   /@ckeditor/ckeditor5-easy-image/34.1.0:
@@ -7056,6 +7059,22 @@ packages:
     resolution:
       { integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw== }
     engines: { node: '>=8' }
+    dev: true
+
+  /ts-loader/9.3.1_3o2jfq6vfqxns3sz6wn2nnc3ei:
+    resolution:
+      { integrity: sha512-OkyShkcZTsTwyS3Kt7a4rsT/t2qvEVQuKCTg4LJmpj9fhFR7ukGdZwV6Qq3tRUkqcXtfGpPR7+hFKHCG/0d3Lw== }
+    engines: { node: '>=12.0.0' }
+    peerDependencies:
+      typescript: '*'
+      webpack: ^5.0.0
+    dependencies:
+      chalk: 4.1.2
+      enhanced-resolve: 5.9.3
+      micromatch: 4.0.5
+      semver: 7.3.7
+      typescript: 4.7.4
+      webpack: 5.73.0_webpack-cli@4.10.0
     dev: true
 
   /ts-node/10.8.1_qiyc72axg2v44xl4yovan2v55u:
