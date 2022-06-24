@@ -8,11 +8,16 @@ export interface SimpleUploadConfig {
 	key?: string;
 }
 
+export interface CounterStats {
+	characters: number;
+	doubles: number;
+}
+
 export interface CounterConfig {
 	container?: HTMLElement;
 	characters?: boolean;
 	doubles?: boolean;
-	onUpdate?: Function;
+	onUpdate?: (stats: CounterStats) => void;
 }
 
 export interface FontColorConfig {
