@@ -1,7 +1,8 @@
-build/
+build
 /*.js
 /*.html
 
-tests/
+tests
+node_modules
 
 package-lock.json

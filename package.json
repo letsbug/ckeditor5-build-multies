@@ -1,6 +1,6 @@
 {
   "name": "@hlx/mce",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "The classic, decoupled, and inline editor build of CKEditor 5 – the best browser-based rich text editor.",
   "keywords": [
     "ckeditor5-build",
@@ -47,12 +47,11 @@
     "svgo": "svgo -f plugins/theme/icons --config=./svgo.yml",
     "lint": "eslint . --fix --ext .jsx,.js,.vue,.ts,.tsx",
     "serve:dev": "vite serve docs --host 0.0.0.0",
-    "build:prod": "npm run lint && npm run clean:builds && webpack --mode production",
-    "build:dev": "npm run clean:builds && webpack --mode development",
+    "build:prod": "pnpm run clean:builds && webpack --mode production",
+    "build:dev": "pnpm run clean:builds && webpack --mode development",
     "upd": "hlx up",
     "rel": "hlx rel",
     "pub": "hlx pub",
-    "prepub": "npm run build:prod",
     "prepare": "husky install"
   },
   "peerDependencies": {

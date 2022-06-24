@@ -1,3 +1,5 @@
+## [3.2.1](https://github.com/letsbug/ckeditor5-build-multies/compare/3.2.0...3.2.1) (2022-06-24)
+
 # [3.2.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.1.0...3.2.0) (2022-06-11)
 
 ### Bug Fixes
