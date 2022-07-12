@@ -98,7 +98,7 @@
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
     "@hlx/cli": "^2.0.0-alpha.4",
-    "@hlx/eslint-config-vue": "^1.4.0",
+    "@hlx/eslint-config": "^2.1.7",
     "@types/ckeditor__ckeditor5-core": "33.0.3",
     "@typescript-eslint/eslint-plugin": "5.30.6",
     "@typescript-eslint/parser": "5.30.6",

@@ -14,7 +14,7 @@ module.exports = defineConfig({
 		es6: true,
 	},
 
-	extends: ['@hlx/eslint-config-vue'],
+	extends: ['@hlx/eslint-config/vue-latest'],
 
 	rules: {
 		'no-console': [2, { allow: ['warn', 'error'] }],
