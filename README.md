@@ -16,54 +16,7 @@
 - [Basic API](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/basic-api.html).
 - [Configuration](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/configuration.html).
 
-## Quick start
-
-安装构建:
-
-首先，本包发布在自建 npm 私有仓库，并未在互联网各大公共开源 npm 仓库发布，安装依赖之前，需要将你的镜像源切换为自建私有镜像源。
-
-```shell
-# 该仓库以 https://registry.npmjs.org/ 作为主要代理仓库，
-# 以 https://registry.npm.taobao.org/ 作为备用代理仓库
-# 以 http://10.3.196.23:8081/repository/npm-hosted/ 作为自建私有仓库
-# 以 http://10.3.196.23:8081/repository/npm-hlw/ 作为仓库组合的聚合
-npm config set --registry=http://10.3.196.23:8081/repository/npm-hlw/
-```
-
-然后就可以像平常一样安装依赖
-
-```shell
-$ npm i -S @hlx/ckeditor5-build-full
-```
-
-```shell
-$ yarn add --dev @hlx/cli@beta
-```
-
-```shell
-$ pnpm add -D @hlx/cli@beta
-```
-
-> 注意，慎用`yarn`和`cnpm`等三方包管理，除`pnpm`外，都太过简陋，依赖检测缺失，社区简单甚至没有社区。
-> node 社区对包管理器的扩展插件开发(如`nrm`, `npm-check`, `depcheck`等)，
-> 他们也基本全都基于官方原始的`npm`，并没有支持三方。完全依赖三方作者，可靠性低。功能、BUG 反馈从到修复和上线效率也相当低下。
-
-推荐使用`nrm`来集中管理 node 镜像仓库，镜像源切换快速且直观
-
-```shell
-$ npm i -g nrm
-$ nrm add hlw http://10.3.196.23:8081/repository/npm-hlw/
-$ nrm use hlw
-$ nrm ls
-  npm ----------- https://registry.npmjs.org/
-  yarn ---------- https://registry.yarnpkg.com/
-  tencent ------- https://mirrors.cloud.tencent.com/npm/
-  cnpm ---------- https://r.cnpmjs.org/
-  taobao -------- https://registry.npmmirror.com/
-  npmMirror ----- https://skimdb.npmjs.com/registry/
-  hlw-hosted ---- http://10.3.196.23:8081/repository/npm-hosted/
-* hlw ----------- http://10.3.196.23:8081/repository/npm-hlw/
-```
+## Usages
 
 cdn 使用:
 
