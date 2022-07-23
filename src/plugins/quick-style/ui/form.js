@@ -27,7 +27,7 @@ export const fields = [
 
 function generateObserver() {
 	const obj = {};
-	fields.forEach(({ name }) => (obj[name] = false));
+	for (const { name } of fields) obj[name] = false;
 	return obj;
 }
 /**
@@ -43,7 +43,7 @@ function checkFields(obj) {
 /**
  * The quick style form view controller class.
  *
- * @extends {View}
+ * @augments {View}
  */
 export class QuickStyleForm extends View {
 	constructor(local) {
@@ -68,7 +68,7 @@ export class QuickStyleForm extends View {
 		/**
 		 * The value of quickStyle form values
 		 *
-		 * @member {Boolean} #quickStyle
+		 * @member {boolean} #quickStyle
 		 * @observable
 		 */
 		this.set('quickStyleFormValue', generateObserver());
@@ -163,13 +163,13 @@ export class QuickStyleForm extends View {
 			view: this,
 		});
 
-		this.fieldsViews.forEach((v) => {
+		for (const v of this.fieldsViews) {
 			// Register the view as focusable.
 			this._focusables.add(v);
 
 			// Register the view in the focus tracker.
 			this.focusTracker.add(v.element);
-		});
+		}
 
 		// Start listening for the keystrokes coming from #element.
 		this.keystrokes.listenTo(this.element);
@@ -189,11 +189,11 @@ export class QuickStyleForm extends View {
 	resetFormStatus(status) {
 		const validStatus = checkFields(status);
 
-		this.fieldsViews.forEach((view) => {
+		for (const view of this.fieldsViews) {
 			const val = validStatus ? status[view.name] : false;
 			view.isOn = val;
 			this.quickStyleFormValue[view.name] = val;
-		});
+		}
 	}
 
 	_createSwitches(label, name) {

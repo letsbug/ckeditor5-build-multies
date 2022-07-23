@@ -181,7 +181,7 @@ export const language = 'zh-cn';
 
 export function toolbarer(preset) {
 	return preset
-		.replace(/[\s]+/g, '')
+		.replace(/\s+/g, '')
 		.split(',')
 		.filter((bar) => !!bar);
 }

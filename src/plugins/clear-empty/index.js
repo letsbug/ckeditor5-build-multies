@@ -23,4 +23,6 @@ class ClearEmpty extends Plugin {
 	}
 }
 
-export { ATTRIBUTE, ClearEmptyUI, ClearEmptyEditing, ClearEmpty };
+export { ATTRIBUTE, ClearEmpty };
+export { ClearEmptyUI } from './ui';
+export { ClearEmptyEditing } from './editing';

@@ -18,7 +18,7 @@ body {
 
 #app {
 	height: 100%;
-	display: flex;
+	padding-top: 80px;
 	flex-direction: column;
 	overflow: hidden;
 }
@@ -29,9 +29,15 @@ body {
 	background-color: #1f9961;
 	color: white;
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
 }
 
-.navi, .ck-decoupled-toolbar, .ck-main {
+.navi,
+.ck-decoupled-toolbar,
+.ck-main {
 	width: 1080px;
 	margin: 0 auto;
 }
@@ -58,10 +64,8 @@ body {
 }
 
 .main-wrapper {
-	flex: 1;
-	height: 0;
-	padding-top: 24px;
-	padding-bottom: 24px;
+	height: 100%;
+	padding-bottom: 54px;
 }
 
 .main {
@@ -76,7 +80,8 @@ body {
 	top: 0;
 }
 
-.ck-main.build-classic, .ck-main.build-inline {
+.ck-main.build-classic,
+.ck-main.build-inline {
 	width: 800px;
 }
 

@@ -32,7 +32,7 @@ export class ParagraphSpacingCommand extends Command {
 		const value = options.value;
 
 		model.change((writer) => {
-			const blocks = Array.from(doc.selection.getSelectedBlocks()).filter((block) =>
+			const blocks = [...doc.selection.getSelectedBlocks()].filter((block) =>
 				this._canSetAttribute(block)
 			);
 			const currentSpacing = blocks[0].getAttribute(ATTRIBUTE);

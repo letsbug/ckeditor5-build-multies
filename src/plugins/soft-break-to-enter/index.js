@@ -24,4 +24,6 @@ class SoftBreakToEnter extends Plugin {
 	}
 }
 
-export { ATTRIBUTE, SoftBreakToEnterUI, SoftBreakToEnterEditing, SoftBreakToEnter };
+export { ATTRIBUTE, SoftBreakToEnter };
+export { SoftBreakToEnterUI } from './ui';
+export { SoftBreakToEnterEditing } from './editing';

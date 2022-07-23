@@ -8,7 +8,6 @@ import { Plugin } from '@ckeditor/ckeditor5-core';
 class FigureAttributes extends Plugin {
 	/**
 	 * @inheritDoc
-	 *
 	 * @param editor
 	 */
 	constructor(editor) {
@@ -49,6 +48,10 @@ class FigureAttributes extends Plugin {
 	 * - Adds proper schema rules.
 	 * - Adds an upcast converter.
 	 * - Adds a downcast converter.
+	 *
+	 * @param viewElName
+	 * @param modelElName
+	 * @param viewAttribute
 	 */
 	_setupConversion(viewElName, modelElName, viewAttribute) {
 		const editor = this.editor;
@@ -65,6 +68,10 @@ class FigureAttributes extends Plugin {
 
 	/**
 	 * Returns the custom attribute upcast converter.
+	 *
+	 * @param viewElName
+	 * @param viewAttribute
+	 * @param modelAttribute
 	 */
 	_upcast(viewElName, viewAttribute, modelAttribute) {
 		return (dispatcher) => {
@@ -88,6 +95,11 @@ class FigureAttributes extends Plugin {
 
 	/**
 	 * Returns the custom attribute downcast converter.
+	 *
+	 * @param modelElName
+	 * @param viewElName
+	 * @param viewAttr
+	 * @param modelAttr
 	 */
 	_downcast(modelElName, viewElName, viewAttr, modelAttr) {
 		return (dispatcher) =>
@@ -110,17 +122,21 @@ class FigureAttributes extends Plugin {
 
 	/**
 	 * Helper method that searches for a given view element in all children of the model element.
+	 *
+	 * @param viewElement
+	 * @param viewElName
+	 * @param conversionApi
 	 */
 	_findViewChild(viewElement, viewElName, conversionApi) {
-		const viewChildren = Array.from(conversionApi.writer.createRangeIn(viewElement).getItems());
+		const viewChildren = [...conversionApi.writer.createRangeIn(viewElement).getItems()];
 		return viewChildren.find((item) => item.is('element', viewElName));
 	}
 
 	_executable(attributes) {
-		if (typeof attributes === 'string' && attributes.length) {
+		if (typeof attributes === 'string' && attributes.length > 0) {
 			return true;
 		}
-		return attributes instanceof Array && attributes.length;
+		return Array.isArray(attributes) && attributes.length > 0;
 	}
 }
 

@@ -32,8 +32,8 @@ export class LineHeightEditing extends Plugin {
 		// Filter out unsupported options.
 		const enabledOptions = editor.config
 			.get('lineHeight.options')
-			.map((option) => String(option))
-			.filter(isSupported); // filter
+			.map(String)
+			.filter((element) => isSupported(element)); // filter
 		let unit = editor.config.get('lineHeight.unit') || null;
 		if (unit && unit !== 'px') {
 			unit = null;

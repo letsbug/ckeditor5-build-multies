@@ -52,7 +52,7 @@ export class OutlineCommand extends Command {
 	 * For the collapsed selection returns the selection attribute.
 	 *
 	 * @private
-	 * @returns {Boolean} The attribute value.
+	 * @returns {boolean} The attribute value.
 	 */
 	_getValueFromFirstAllowedNode() {
 		const model = this.editor.model;

@@ -7,18 +7,18 @@ export class HighlightSpecificState {
 	 * @param {HighlightSpecificConfig} config
 	 */
 	constructor(model, config) {
-		Object.keys(config).forEach((color) => {
+		for (const color of Object.keys(config)) {
 			this.set(color, new Collection());
-		});
+		}
 
 		// this.results.on('change', (eventInfo));
 	}
 
 	clear(model, color) {
 		model.change((writer) => {
-			[...this[color]].forEach(({ marker }) => {
+			for (const { marker } of this[color]) {
 				writer.removeMarker(marker);
-			});
+			}
 		});
 
 		this[color].clear();

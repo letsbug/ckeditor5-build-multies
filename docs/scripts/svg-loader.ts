@@ -1,6 +1,6 @@
 import { getExtractedSVG } from 'svg-inline-loader';
-import type { Plugin } from 'rollup';
-import fs from 'fs';
+import type { Plugin } from 'vite';
+import fs from 'node:fs';
 
 interface SvgLoaderOpt {
 	classPrefix?: string;

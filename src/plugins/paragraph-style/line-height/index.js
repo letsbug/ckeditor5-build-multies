@@ -23,4 +23,6 @@ class LineHeight extends Plugin {
 	}
 }
 
-export { ATTRIBUTE, LineHeightUI, LineHeightEditing, LineHeight };
+export { ATTRIBUTE, LineHeight };
+export { LineHeightUI } from './ui';
+export { LineHeightEditing } from './editing';

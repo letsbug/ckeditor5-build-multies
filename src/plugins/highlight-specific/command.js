@@ -4,7 +4,6 @@ import { updateResultFromRange } from './utils';
 export class HighlightSpecificCommand extends Command {
 	/**
 	 * @inheritDoc
-	 *
 	 * @param {module:core/editor/editor~Editor} editor
 	 * @param state
 	 */
@@ -21,13 +20,13 @@ export class HighlightSpecificCommand extends Command {
 	}
 
 	/**
-	 * @param {Object} options
+	 * @param {object} options
 	 * @param {Array<string>} options.words
 	 * @param {string} [options.color]
 	 * @fires execute
 	 */
 	execute(options) {
-		if (!(options?.words instanceof Array) || !options?.words.length) {
+		if (!Array.isArray(options?.words) || !options?.words.length) {
 			return;
 		}
 		const { editor } = this;
@@ -41,13 +40,13 @@ export class HighlightSpecificCommand extends Command {
 			return;
 		}
 
-		if (this._state[color].length) {
+		if (this._state[color].length > 0) {
 			this._state.clear(model, color);
 		}
 
-		words.forEach((word) => {
+		for (const word of words) {
 			if (!word) {
-				return;
+				continue;
 			}
 			const results = model.document.getRootNames().reduce((currResult, rootName) => {
 				return updateResultFromRange(
@@ -59,8 +58,8 @@ export class HighlightSpecificCommand extends Command {
 				);
 			}, null);
 
-			this._state[color].addMany(Array.from(results));
-		});
+			this._state[color].addMany([...results]);
+		}
 
 		/*const results = */
 		// console.warn(results);

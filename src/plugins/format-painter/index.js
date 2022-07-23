@@ -7,7 +7,7 @@ const ATTRIBUTE = 'formatPainter';
 class FormatPainter extends Plugin {
 	/**
 	 * @inheritDoc
-	 * @return {string}
+	 * @returns {string}
 	 */
 	static get pluginName() {
 		return 'FormatPainter';
@@ -15,11 +15,13 @@ class FormatPainter extends Plugin {
 
 	/**
 	 * @inheritDoc
-	 * @return {(FormatPainterUI|FormatPainterEditing)[]}
+	 * @returns {(FormatPainterUI|FormatPainterEditing)[]}
 	 */
 	static get requires() {
 		return [FormatPainterUI, FormatPainterEditing];
 	}
 }
 
-export { ATTRIBUTE, FormatPainterUI, FormatPainterEditing, FormatPainter };
+export { ATTRIBUTE, FormatPainter };
+export { FormatPainterUI } from './ui';
+export { FormatPainterEditing } from './editing';

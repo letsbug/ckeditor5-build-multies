@@ -6,7 +6,7 @@ import BrushIcon from '../../icons/brush.svg';
 export class FormatPainterUI extends Plugin {
 	/**
 	 * @inheritDoc
-	 * @return {string}
+	 * @returns {string}
 	 */
 	static get pluginName() {
 		return 'FormatPainterUI';

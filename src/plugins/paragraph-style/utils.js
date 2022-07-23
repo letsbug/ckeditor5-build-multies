@@ -14,7 +14,7 @@ export function buildDefinition(options, unit, prop) {
 	const definition = {
 		model: {
 			key: prop,
-			values: options.slice(),
+			values: [...options],
 		},
 		view: {},
 	};
@@ -40,9 +40,9 @@ function optionDefinition(option, unit, prop) {
 		return { model: undefined, title: prop === 'line-height' ? '默认行高' : '默认间距' };
 	}
 
-	const size = parseFloat(option);
+	const size = Number.parseFloat(option);
 
-	if (isNaN(size)) {
+	if (Number.isNaN(size)) {
 		return;
 	}
 

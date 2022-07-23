@@ -36,8 +36,8 @@ export class ParagraphSpacingEditing extends Plugin {
 		// Filter out unsupported options.
 		const enabledOptions = editor.config
 			.get('paragraphSpacing.options')
-			.map((option) => String(option))
-			.filter(isSupported); // filter
+			.map(String)
+			.filter((element) => isSupported(element)); // filter
 		let unit = editor.config.get('paragraphSpacing.unit') || 'px';
 		if (unit && unit !== 'px' && unit !== '%') {
 			unit = 'px';

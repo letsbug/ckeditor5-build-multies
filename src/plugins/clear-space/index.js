@@ -23,4 +23,6 @@ class ClearSpace extends Plugin {
 	}
 }
 
-export { ATTRIBUTE, ClearSpaceUI, ClearSpaceEditing, ClearSpace };
+export { ATTRIBUTE, ClearSpace };
+export { ClearSpaceUI } from './ui';
+export { ClearSpaceEditing } from './editing';

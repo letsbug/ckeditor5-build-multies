@@ -8,7 +8,7 @@ import { findFirst, EXCLIDEBLOCK } from '../utils';
 /**
  * The indent-first command plugin.
  *
- * @extends module:core/command~Command
+ * @augments module:core/command~Command
  */
 export class IndentFirstCommand extends Command {
 	/**
@@ -23,11 +23,8 @@ export class IndentFirstCommand extends Command {
 		this.isEnabled = !!first && this._executable(this.editor.model.schema, first);
 
 		// 设置按钮状态
-		if (this.isEnabled && first.hasAttribute(ATTRIBUTE)) {
-			this.value = first.getAttribute(ATTRIBUTE);
-		} else {
-			this.value = null;
-		}
+		this.value =
+			this.isEnabled && first.hasAttribute(ATTRIBUTE) ? first.getAttribute(ATTRIBUTE) : null;
 	}
 
 	/**
@@ -61,7 +58,7 @@ export class IndentFirstCommand extends Command {
 	 * Elements that need to be excluded during command execution and condition judgment
 	 *
 	 * @param block
-	 * @return {boolean}
+	 * @returns {boolean}
 	 * @private
 	 */
 	_exclude(block) {

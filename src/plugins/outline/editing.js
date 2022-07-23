@@ -13,7 +13,7 @@ export class OutlineEditing extends Plugin {
 
 	/**
 	 * @inheritDoc
-	 * @return {Promise<void> | void}
+	 * @returns {Promise<void> | void}
 	 */
 	init() {
 		const editor = this.editor;
@@ -28,7 +28,7 @@ export class OutlineEditing extends Plugin {
 			view: {
 				name: 'span',
 				styles: {
-					border: /[\s\S]+/,
+					border: /[\S\s]+/,
 				},
 			},
 			model: {
@@ -52,8 +52,8 @@ export class OutlineEditing extends Plugin {
 	/**
 	 * outline border style css helper, responsible for upcasting data to the model.
 	 *
-	 * @param {String} styleAttr
-	 * @return {function(*): String}
+	 * @param {string} styleAttr
+	 * @returns {function(*): string}
 	 * @private
 	 */
 	_renderUpcastAttribute(styleAttr) {
@@ -63,8 +63,8 @@ export class OutlineEditing extends Plugin {
 	/**
 	 * Fixes the border value string
 	 *
-	 * @param {String} value
-	 * @return {String}
+	 * @param {string} value
+	 * @returns {string}
 	 * @private
 	 */
 	_normalizeBorderCode(value) {

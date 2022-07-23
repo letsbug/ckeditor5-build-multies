@@ -8,7 +8,6 @@ import { OutlineEditing } from './editing';
 class Outline extends Plugin {
 	/**
 	 * @inheritDoc
-	 * @return {(OutlineUi|OutlineEditing)[]}
 	 */
 	static get requires() {
 		return [OutlineUi, OutlineEditing];

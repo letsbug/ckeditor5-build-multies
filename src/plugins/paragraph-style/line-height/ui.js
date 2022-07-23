@@ -96,7 +96,7 @@ export class LineHeightUI extends Plugin {
 			}
 
 			def.model.bind('isOn').to(command, 'value', (value) => {
-				const newValue = value ? parseFloat(value) : value;
+				const newValue = value ? Number.parseFloat(value) : value;
 				return (value === 'Default' && option.model === undefined) || newValue === option.model;
 			});
 

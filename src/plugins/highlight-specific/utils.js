@@ -5,17 +5,17 @@ export function updateResultFromRange(range, model, start, word, color) {
 	const results = start || new Collection();
 
 	model.change((writer) => {
-		[...range].forEach(({ type, item }) => {
+		for (const { type, item } of range) {
 			if (type !== 'elementStart' || !model.schema.checkChild(item, '$text')) {
-				return;
+				continue;
 			}
 
 			const foundItems = findByTextCb(rangeToText(model.createRangeIn(item)), word);
 			if (!foundItems) {
-				return;
+				continue;
 			}
 
-			foundItems.forEach((foundItem) => {
+			for (const foundItem of foundItems) {
 				const resultId = `highlightSpecific:${color}:${uid()}`;
 				const marker = writer.addMarker(resultId, {
 					usingOperation: false,
@@ -29,15 +29,15 @@ export function updateResultFromRange(range, model, start, word, color) {
 				const index = findInsertIndex(results, marker);
 
 				results.add({ id: resultId, label: foundItem.label, marker }, index);
-			});
-		});
+			}
+		}
 	});
 
 	return results;
 }
 
 export function rangeToText(range) {
-	return Array.from(range.getItems()).reduce((mergeText, node) => {
+	return [...range.getItems()].reduce((mergeText, node) => {
 		if (!(node.is('text') || node.is('textProxy'))) {
 			return `${mergeText}\n`;
 		}
@@ -73,6 +73,6 @@ export function findByTextCb(searchTerm, searchText) {
 	const matcher = new RegExp(query, 'gui');
 
 	const matches = [...searchTerm.matchAll(matcher)];
-	return matches.map(regexpMatchToResult);
+	return matches.map((element) => regexpMatchToResult(element));
 	// if () {}
 }

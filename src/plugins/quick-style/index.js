@@ -24,4 +24,6 @@ class QuickStyle extends Plugin {
 	}
 }
 
-export { ATTRIBUTE, STORAGE_KEY, QuickStyleUI, QuickStyleEditing, QuickStyle };
+export { ATTRIBUTE, STORAGE_KEY, QuickStyle };
+export { QuickStyleUI } from './ui';
+export { QuickStyleEditing } from './editing';

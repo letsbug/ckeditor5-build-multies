@@ -29,13 +29,13 @@ export class ClearSpaceCommand extends Command {
 					continue;
 				}
 
-				const childes = Array.from(block.getChildren());
-				if (!childes.length) {
+				const childes = [...block.getChildren()];
+				if (childes.length === 0) {
 					continue;
 				}
 				const replace = [];
 
-				childes.forEach((node, i) => {
+				for (const [i, node] of childes.entries()) {
 					const attrs = Object.fromEntries(node.getAttributes());
 					if (node.is('$text')) {
 						let text = node.data.replace(new RegExp(`[${empties}]+`, 'g'), ' ');
@@ -53,9 +53,9 @@ export class ClearSpaceCommand extends Command {
 					}
 
 					writer.remove(node);
-				});
+				}
 
-				replace.forEach((n) => writer.append(n, block));
+				for (const n of replace) writer.append(n, block);
 			}
 		});
 	}
@@ -74,7 +74,7 @@ export class ClearSpaceCommand extends Command {
 	 * Whether is empty
 	 *
 	 * @param block
-	 * @returns {Boolean|boolean|*}
+	 * @returns {boolean | boolean | *}
 	 */
 	_isEmpty(block) {
 		return block.isEmpty || (block.data && block.data.trim() === '');
@@ -87,9 +87,7 @@ export class ClearSpaceCommand extends Command {
 	 * @returns {boolean}
 	 */
 	_has(block) {
-		const text = Array.from(block.getChildren())
-			.map((c) => c.data)
-			.join('');
+		const text = [...block.getChildren()].map((c) => c.data).join('');
 
 		return (
 			new RegExp(`^[${empties}]+`).test(text) ||
@@ -102,7 +100,7 @@ export class ClearSpaceCommand extends Command {
 	 * Identify whether the clearSpace button can be executed
 	 *
 	 * @param iterator
-	 * @return {boolean}
+	 * @returns {boolean}
 	 */
 	_executable(iterator) {
 		const first = findFirst(

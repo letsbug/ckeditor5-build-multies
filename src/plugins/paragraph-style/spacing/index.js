@@ -24,4 +24,6 @@ class ParagraphSpacing extends Plugin {
 	}
 }
 
-export { ATTRIBUTE, ParagraphSpacingUI, ParagraphSpacingEditing, ParagraphSpacing };
+export { ATTRIBUTE, ParagraphSpacing };
+export { ParagraphSpacingUI } from './ui';
+export { ParagraphSpacingEditing } from './editing';

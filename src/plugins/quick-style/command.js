@@ -13,7 +13,6 @@ export class QuickStyleCommand extends Command {
 
 	/**
 	 * @inheritDoc
-	 *
 	 * @param {object} [options]
 	 * @param {boolean} [options.removeFormat] Whether or not to format text
 	 * @param {boolean} [options.indentFirst] Whether to indent the first line
@@ -35,29 +34,28 @@ export class QuickStyleCommand extends Command {
 			'clearSpace',
 			'indentFirst',
 		];
-		const needReset = [
+		const needReset = new Set([
 			'removeFormat',
 			'clearLinks',
 			'convertFullHalf',
 			'clearSpace',
 			'indentFirst',
-		];
+		]);
 
-		sorted
-			.filter((op) => Object.keys(options).includes(op))
-			.forEach((option) => {
-				if (!options[option]) {
-					return;
-				}
+		for (const option of sorted.filter((op) => Object.keys(options).includes(op))) {
+			if (!options[option]) {
+				continue;
+			}
 
-				if (needReset.includes(option)) {
-					editor.execute('selectAll');
-				}
-				if (option === 'clearLinks') {
-					return this.clearLinks();
-				}
-				editor.execute(option, params[option] || null);
-			});
+			if (needReset.has(option)) {
+				editor.execute('selectAll');
+			}
+			if (option === 'clearLinks') {
+				this.clearLinks();
+				continue;
+			}
+			editor.execute(option, params[option] || null);
+		}
 	}
 
 	clearLinks() {

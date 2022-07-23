@@ -31,7 +31,7 @@ export class LineHeightCommand extends Command {
 		const value = options.value;
 
 		model.change((writer) => {
-			const blocks = Array.from(doc.selection.getSelectedBlocks()).filter((block) =>
+			const blocks = [...doc.selection.getSelectedBlocks()].filter((block) =>
 				this._canSetLineHeight(block)
 			);
 			const currentLineHeight = blocks[0].getAttribute(ATTRIBUTE);

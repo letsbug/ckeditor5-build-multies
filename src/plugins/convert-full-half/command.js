@@ -55,7 +55,7 @@ export class ConvertFullHalfCommand extends Command {
 					'g'
 				);
 				const matched = text.match(matcher);
-				if (!matched || !matched.length) {
+				if (!matched || matched.length === 0) {
 					continue;
 				}
 
@@ -107,7 +107,7 @@ export class ConvertFullHalfCommand extends Command {
 
 			const text = walker.item.data;
 			const matched = text.match(new RegExp(`[${dictionary.full}${dictionary.halfEscaped}]`));
-			if (matched && matched.length) {
+			if (matched && matched.length > 0) {
 				this.value = dictionary.full.includes(matched[0]) ? 'full' : 'half';
 				return true;
 			}

@@ -21,9 +21,9 @@ const App = defineComponent({
 		const type = ref('classic');
 		const config = computed(() => {
 			const baseConf: MceConfig = {
-				toolbar: {
-					viewportTopOffset: 80,
-				},
+				ui: {
+					viewportOffset: { top: 80 },
+				} as any,
 			};
 
 			return baseConf;

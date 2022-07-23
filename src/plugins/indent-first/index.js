@@ -24,4 +24,6 @@ class IndentFirst extends Plugin {
 	}
 }
 
-export { ATTRIBUTE, IndentFirstUi, IndentFirstEditing, IndentFirst };
+export { ATTRIBUTE, IndentFirst };
+export { IndentFirstUi } from './ui';
+export { IndentFirstEditing } from './editing';

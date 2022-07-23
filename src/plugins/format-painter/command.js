@@ -26,8 +26,8 @@ export class FormatPainterCommand extends Command {
 		}
 
 		const range = model.createRange(start, end);
-		const formatNodes = Array.from(range.getWalker()).filter((walker) => !!walker.item.textNode);
-		if (!formatNodes.length) {
+		const formatNodes = [...range.getWalker()].filter((walker) => !!walker.item.textNode);
+		if (formatNodes.length === 0) {
 			this._reset();
 			return;
 		}
@@ -38,10 +38,10 @@ export class FormatPainterCommand extends Command {
 
 	/**
 	 * @inheritDoc
-	 *
-	 * @param {Object} options
+	 * @param {object} options
 	 * @param {'copy'|'apply'|'reset'} options.type
 	 */
+	// eslint-disable-next-line unicorn/no-object-as-default-parameter
 	execute(options = { type: 'reset' }) {
 		const { type } = options;
 		if (type === 'reset') {
@@ -77,7 +77,7 @@ export class FormatPainterCommand extends Command {
 
 	_copy() {
 		let attrs = {};
-		this.formatNodes.forEach((node) => {
+		for (const node of this.formatNodes) {
 			const _attrs = Object.fromEntries(node.item.textNode.getAttributes());
 			const _keys = Object.keys(_attrs);
 			// eslint-disable-next-line no-prototype-builtins
@@ -85,15 +85,15 @@ export class FormatPainterCommand extends Command {
 				delete _attrs.linkHref;
 			}
 
-			_keys.forEach((key) => {
+			for (const key of _keys) {
 				// eslint-disable-next-line no-prototype-builtins
 				if (attrs.hasOwnProperty(key)) delete _attrs[key];
-			});
+			}
 
-			if (_keys.length) {
+			if (_keys.length > 0) {
 				attrs = Object.assign({}, attrs, _attrs);
 			}
-		});
+		}
 		this.waiting = attrs;
 		// TODO change copied cursor icon
 	}
@@ -124,7 +124,7 @@ export class FormatPainterCommand extends Command {
 	}
 
 	_setAttributes(writer, itemOrRange) {
-		if (!Object.keys(this.waiting).length) {
+		if (Object.keys(this.waiting).length === 0) {
 			writer.clearAttributes(itemOrRange);
 		}
 		writer.setAttributes(this.waiting, itemOrRange);

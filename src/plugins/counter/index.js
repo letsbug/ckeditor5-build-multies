@@ -40,7 +40,7 @@ import { View, Template } from '@ckeditor/ckeditor5-ui';
  * 		<paragraph>12345</paragraph>
  * 		// Words: 1, Characters: 5
  *
- * @extends module:core/plugin~Plugin
+ * @augments module:core/plugin~Plugin
  */
 class Counter extends Plugin {
 	/**
@@ -54,15 +54,16 @@ class Counter extends Plugin {
 		 *
 		 * @observable
 		 * @readonly
-		 * @member {Number} module:counter/index~Counter#characters
+		 * @member {number} module:counter/index~Counter#characters
 		 */
 		this.set('characters', 0);
 
 		/**
 		 * The number of double byte characters in the editor.
+		 *
 		 * @observable
 		 * @readonly
-		 * @member {Number} module:counter/index~Counter#doubles
+		 * @member {number} module:counter/index~Counter#doubles
 		 */
 		this.set('doubles', 0);
 
@@ -88,7 +89,7 @@ class Counter extends Plugin {
 		 * @observable
 		 * @private
 		 * @readonly
-		 * @member {String} module:counter/index~Counter#_charactersLabel
+		 * @member {string} module:counter/index~Counter#_charactersLabel
 		 */
 		this.set('_charactersLabel');
 
@@ -98,7 +99,7 @@ class Counter extends Plugin {
 		 * @observable
 		 * @private
 		 * @readonly
-		 * @member {String} module:counter/index~Counter#_doublesLabel
+		 * @member {string} module:counter/index~Counter#_doublesLabel
 		 */
 		this.set('_doublesLabel');
 
@@ -106,7 +107,7 @@ class Counter extends Plugin {
 		 * The configuration of this plugin.
 		 *
 		 * @private
-		 * @type {Object}
+		 * @type {object}
 		 */
 		this._config = editor.config.get('counter') || {};
 
@@ -142,7 +143,7 @@ class Counter extends Plugin {
 		}
 
 		if (isElement(this._config.container)) {
-			this._config.container.appendChild(this.CounterContainer);
+			this._config.container.append(this.CounterContainer);
 		}
 	}
 
@@ -233,7 +234,7 @@ class Counter extends Plugin {
 	 * Determines the plain text in the current editor's model.
 	 *
 	 * @private
-	 * @return {String}
+	 * @returns {string}
 	 */
 	_getPlains() {
 		return modelElementToPlainText(this.editor.model.document.getRoot());
@@ -243,7 +244,7 @@ class Counter extends Plugin {
 	 * Determines the number of characters in the current editor's model.
 	 *
 	 * @private
-	 * @returns {String}
+	 * @returns {string}
 	 */
 	_getCharacters() {
 		return this._getPlains().replace(/\n/g, '');
@@ -253,12 +254,12 @@ class Counter extends Plugin {
 	 * Determines the number of double bytes characters in the current editor's model
 	 *
 	 * @private
-	 * @return {Number}
+	 * @returns {number}
 	 */
 	_getDoubles() {
 		const plains = this._getCharacters();
 		// eslint-disable-next-line no-control-regex
-		const reg = new RegExp('[^\x00-\xff]', 'g');
+		const reg = new RegExp('[^\u0000-\u00FF]', 'g');
 		const res = plains.match(reg);
 		return plains.length + (res ? res.length : 0);
 	}
@@ -281,15 +282,16 @@ class Counter extends Plugin {
 	}
 }
 
-export { modelElementToPlainText, Counter };
+export { Counter };
+export { modelElementToPlainText } from './utils';
 
 /**
  * An event fired after {@link #words} and {@link #characters} are updated.
  *
  * @event update
- * @param {Object} data
- * @param {Number} data.words The number of words in the current model.
- * @param {Number} data.characters The number of characters in the current model.
+ * @param {object} data
+ * @param {number} data.words The number of words in the current model.
+ * @param {number} data.characters The number of characters in the current model.
  */
 
 /**
@@ -331,7 +333,7 @@ export { modelElementToPlainText, Counter };
  *			<div class="ck-counter__characters">Characters: 4</div>
  *		</div>
  *
- * @member {Boolean} module:counter/index~WordCountConfig#displayCharacters
+ * @member {boolean} module:counter/index~WordCountConfig#displayCharacters
  */
 
 /**

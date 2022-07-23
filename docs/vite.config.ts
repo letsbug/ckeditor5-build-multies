@@ -1,15 +1,14 @@
-import path from 'path';
+import path from 'node:path';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-import { svgLoader } from './scripts/svgLoader';
+import { svgLoader } from './scripts/svg-loader';
 import { styles } from '@ckeditor/ckeditor5-dev-utils';
 
 // https://vitejs.dev/config/
 export default defineConfig({
 	server: {
-		force: true,
-		port: 18011,
+		port: 18_011,
 	},
 	resolve: {
 		alias: {

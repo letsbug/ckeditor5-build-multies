@@ -5,7 +5,7 @@ import { FormatPainterCommand } from './command';
 export class FormatPainterEditing extends Plugin {
 	/**
 	 * @inheritDoc
-	 * @return {string}
+	 * @returns {string}
 	 */
 	static get pluginName() {
 		return 'formatPainterEditing';

@@ -24,4 +24,6 @@ class ConvertFullHalf extends Plugin {
 	}
 }
 
-export { ATTRIBUTE, ConvertFullHalfUI, ConvertFullHalfEditing, ConvertFullHalf };
+export { ATTRIBUTE, ConvertFullHalf };
+export { ConvertFullHalfUI } from './ui';
+export { ConvertFullHalfEditing } from './editing';

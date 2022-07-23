@@ -170,7 +170,7 @@ class Adapter {
 		const data = new FormData();
 
 		/**
-		 * @override module:upload/adapters/simpleuploadadapter~Adapter#_sendRequest
+		 * @override
 		 */
 		data.append(this.options.key || 'file', file);
 
