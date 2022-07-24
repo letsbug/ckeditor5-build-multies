@@ -13,13 +13,7 @@ import { Font } from '@ckeditor/ckeditor5-font/src';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote/src';
 import { Heading } from '@ckeditor/ckeditor5-heading/src';
 import ImageBlock from '@ckeditor/ckeditor5-image/src/imageblock';
-import {
-	ImageCaption,
-	ImageResize,
-	ImageStyle,
-	ImageToolbar,
-	ImageUpload,
-} from '@ckeditor/ckeditor5-image/src';
+import { ImageResize, ImageStyle, ImageToolbar, ImageUpload } from '@ckeditor/ckeditor5-image/src';
 import { Link, LinkImage } from '@ckeditor/ckeditor5-link/src';
 import { List } from '@ckeditor/ckeditor5-list/src';
 import { MediaEmbed, MediaEmbedToolbar } from '@ckeditor/ckeditor5-media-embed/src';
@@ -50,6 +44,8 @@ import { FigureAttributes } from './plugins/figure-attributes';
 import { BalloonToolbar, BlockToolbar } from '@ckeditor/ckeditor5-ui';
 import { HighlightSpecific } from './plugins/highlight-specific';
 import { Outline } from './plugins/outline';
+import { ImageCaption } from './plugins/image-caption';
+import { Extensions } from './plugins/extensions';
 
 export const builtins = [
 	Essentials,
@@ -66,7 +62,6 @@ export const builtins = [
 	Heading,
 	Indent,
 	ImageBlock,
-	ImageCaption,
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
@@ -104,6 +99,8 @@ export const builtins = [
 	ConvertFullHalf,
 	Counter,
 	HighlightSpecific,
+	ImageCaption,
+	Extensions,
 ];
 
 export const fontSize = {

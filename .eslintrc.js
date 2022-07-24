@@ -6,14 +6,6 @@ const { defineConfig } = require('eslint-define-config');
  * @type {import('eslint/lib/shared/types').ConfigData}
  */
 module.exports = defineConfig({
-	root: true,
-
-	env: {
-		browser: true,
-		node: true,
-		es6: true,
-	},
-
 	extends: ['@hlx/eslint-config/vue-latest'],
 
 	rules: {

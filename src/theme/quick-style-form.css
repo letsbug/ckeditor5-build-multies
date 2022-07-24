@@ -6,7 +6,8 @@
 		margin-left: 0 !important;
 	}
 
-	& > .ck.ck-button.ck-on, & > a.ck.ck-button.ck-on {
+	& > .ck.ck-button.ck-on,
+	& > a.ck.ck-button.ck-on {
 		background-color: transparent !important;
 	}
 }

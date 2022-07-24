@@ -1,5 +1,6 @@
 import type { Element } from '@ckeditor/ckeditor5-engine';
 import type { EditorConfig } from '@ckeditor/ckeditor5-core/src/editor/editorconfig';
+import type { ImageConfig as CkImageConfig } from '@ckeditor/ckeditor5-image/src/image';
 
 export interface SimpleUploadConfig {
 	headers?: Record<string, string>;
@@ -61,6 +62,10 @@ export interface FigureAttrConfig {
 	// rawHtml: string | string[];
 }
 
+export interface ImageConfig extends CkImageConfig {
+	defaultCaption?: string | ((image: Element) => string);
+}
+
 export interface MceConfig extends EditorConfig {
 	figureAttributes?: FigureAttrConfig;
 	fontColor?: FontColorConfig;
@@ -68,5 +73,6 @@ export interface MceConfig extends EditorConfig {
 	simpleUpload?: SimpleUploadConfig;
 	lineHeight?: LineHeightConfig;
 	counter?: CounterConfig;
+	image?: ImageConfig;
 	extensions?: Array<ExtensionsConfig>;
 }

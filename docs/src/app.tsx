@@ -11,6 +11,7 @@ const navConf = [
 ];
 
 let ckInstance: MceBase | null = null;
+const icon = `<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6.91 10.54c.26-.23.64-.21.88.03l3.36 3.14 2.23-2.06a.64.64 0 0 1 .87 0l2.52 2.97V4.5H3.2v10.12l3.71-4.08zm10.27-7.51c.6 0 1.09.47 1.09 1.05v11.84c0 .59-.49 1.06-1.09 1.06H2.79c-.6 0-1.09-.47-1.09-1.06V4.08c0-.58.49-1.05 1.1-1.05h14.38zm-5.22 5.56a1.96 1.96 0 1 1 3.4-1.96 1.96 1.96 0 0 1-3.4 1.96z"/></svg>`;
 
 const App = defineComponent({
 	setup() {
@@ -21,18 +22,23 @@ const App = defineComponent({
 		const type = ref('classic');
 		const config = computed(() => {
 			const baseConf: MceConfig = {
-				ui: {
-					viewportOffset: { top: 80 },
-				} as any,
+				ui: { viewportOffset: { top: 80 } } as any,
+				extensions: [{ name: 'extDemo', icon, command: extCommand, label: 'Ext Demo' }],
+				toolbar: { items: [...HlxMce[type.value].defaultConfig.toolbar.items, '|', 'extDemo'] },
+				image: {
+					defaultCaption: (image) => {
+						// eslint-disable-next-line no-console
+						console.log('toggled a caption view for:', image);
+						return 'This is a default filled caption. You can modify and switch at will, after modification switch is able to save the modification yo!';
+					},
+				},
 			};
 
 			return baseConf;
 		});
 
 		const initial = async () => {
-			// eslint-disable-next-line no-console
-			// console.log(HlxMce[type.value].builtinPlugins);
-			ckInstance = await HlxMce[type.value].create(unref(ckContent), config);
+			ckInstance = await HlxMce[type.value].create(unref(ckContent), config.value);
 			CKInspector.attach(ckInstance);
 		};
 
@@ -50,14 +56,19 @@ const App = defineComponent({
 			await initial();
 		};
 
-		// const log = () => {
-		// 	ckInstance.execute('highlightSpecific', { words: ['this'] });
-		// };
-		//
-		// const checkResult = () => {
-		// 	// eslint-disable-next-line no-console
-		// 	console.log(ckInstance.getData());
-		// };
+		const extCommand = () => {
+			// eslint-disable-next-line no-console
+			console.log('The "Ext Demo" extension execute!');
+		};
+
+		const highlight = () => {
+			ckInstance.execute('highlightSpecific', { words: ['this'] });
+		};
+
+		const checkResult = () => {
+			// eslint-disable-next-line no-console
+			console.log(ckInstance.getData());
+		};
 
 		onMounted(async () => {
 			await initial();
@@ -83,8 +94,10 @@ const App = defineComponent({
 					</div>
 
 					<div class="main-wrapper">
-						{/*<button onClick={log}>log highlight specific operate</button>
-						<button onClick={checkResult}>log which highlight specific marker in data</button>*/}
+						<div class="actions">
+							<button onClick={highlight}>highlight "this" words</button>
+							<button onClick={checkResult}>log which highlight specific marker in data</button>
+						</div>
 
 						<div ref={ckRoot} class="main">
 							<div ref={ckToolbar} class="ck-decoupled-toolbar" />

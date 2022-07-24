@@ -37,6 +37,7 @@ body {
 
 .navi,
 .ck-decoupled-toolbar,
+.actions,
 .ck-main {
 	width: 1080px;
 	margin: 0 auto;
@@ -68,8 +69,17 @@ body {
 	padding-bottom: 54px;
 }
 
+.actions {
+	margin-bottom: 30px;
+}
+
+.actions button {
+	margin-right: 10px;
+}
+
 .main {
 	height: 100%;
+	padding-bottom: 80px;
 	overflow-x: hidden;
 	overflow-y: auto;
 }

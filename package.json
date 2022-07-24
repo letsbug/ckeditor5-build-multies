@@ -43,6 +43,7 @@
     "clean:builds": "rimraf dist build",
     "svgo": "svgo -f plugins/theme/icons --config=./svgo.yml",
     "lint": "eslint . --fix --ext .jsx,.js,.vue,.ts,.tsx",
+    "format": "prettier --write .",
     "serve:dev": "vite serve docs --host 0.0.0.0",
     "build:prod": "pnpm run lint && pnpm run clean:builds && webpack --mode production",
     "build:dev": "pnpm run clean:builds && webpack --mode development",
@@ -57,7 +58,9 @@
     "@ckeditor/ckeditor5-engine": "34.2.0",
     "@ckeditor/ckeditor5-ui": "34.2.0",
     "@ckeditor/ckeditor5-widget": "34.2.0",
-    "@types/ckeditor__ckeditor5-core": "^33.0.3"
+    "@types/ckeditor__ckeditor5-core": "^33.0.3",
+    "@types/ckeditor__ckeditor5-engine": "*",
+    "@types/ckeditor__ckeditor5-image": "*"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-alignment": "34.2.0",

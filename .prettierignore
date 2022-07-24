@@ -1,0 +1,17 @@
+.DS_Store
+.gitignore
+.prettierignore
+.editorconfig
+.eslintignore
+.gitattributes
+.pnpm-debug.log
+.npmrc
+.nvmrc
+
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+dist
+
+**/node_modules
