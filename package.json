@@ -105,7 +105,7 @@
     "@vitejs/plugin-vue": "3.0.1",
     "@vitejs/plugin-vue-jsx": "2.0.0",
     "@vue/compiler-sfc": "3.2.37",
-    "conventional-changelog-cli": "^2.2.2",
+    "conventional-changelog-cli": "2.2.2",
     "css-loader": "6.7.1",
     "eslint": "8.20.0",
     "eslint-define-config": "1.5.1",
