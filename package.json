@@ -50,7 +50,7 @@
     "upd": "hlx up",
     "rel": "hlx rel",
     "pub": "hlx pub",
-    "prepub": "pnpm run build",
+    "prepub": "pnpm run build:prod",
     "prepare": "husky install"
   },
   "dependencies": {
