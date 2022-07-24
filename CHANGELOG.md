@@ -1,3 +1,9 @@
+# [3.3.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.2.1...3.3.0) (2022-07-24)
+
+### Features
+
+- add extensions to support custom ui buttons ([fab0896](https://github.com/letsbug/ckeditor5-build-multies/commit/fab0896c644f472bb324f7f87c55d9d52eb27afd))
+
 ## [3.2.1](https://github.com/letsbug/ckeditor5-build-multies/compare/3.2.0...3.2.1) (2022-06-24)
 
 # [3.2.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.1.0...3.2.0) (2022-06-11)
