@@ -1,3 +1,9 @@
+# [3.4.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.3.0...3.4.0) (2022-07-25)
+
+### Bug Fixes
+
+- overrides builtin `paste-from-office` plugin to fix paste from `WPS` ([30116ba](https://github.com/letsbug/ckeditor5-build-multies/commit/30116ba3fb9942e4026b0fbe0c1ae4c587298d3e))
+
 # [3.3.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.2.1...3.3.0) (2022-07-24)
 
 ### Features
