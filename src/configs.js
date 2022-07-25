@@ -20,7 +20,6 @@ import { MediaEmbed, MediaEmbedToolbar } from '@ckeditor/ckeditor5-media-embed/s
 import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed/src';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph/src';
 import { PageBreak } from '@ckeditor/ckeditor5-page-break/src';
-import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office/src';
 import { Table, TableToolbar } from '@ckeditor/ckeditor5-table/src';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing/src';
 import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format/src';
@@ -45,6 +44,7 @@ import { BalloonToolbar, BlockToolbar } from '@ckeditor/ckeditor5-ui';
 import { HighlightSpecific } from './plugins/highlight-specific';
 import { Outline } from './plugins/outline';
 import { ImageCaption } from './plugins/image-caption';
+import { PasteFromOffice } from './plugins/paste-from-office';
 import { Extensions } from './plugins/extensions';
 
 export const builtins = [

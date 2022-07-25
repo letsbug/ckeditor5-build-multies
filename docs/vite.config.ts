@@ -8,6 +8,7 @@ import { styles } from '@ckeditor/ckeditor5-dev-utils';
 // https://vitejs.dev/config/
 export default defineConfig({
 	server: {
+		host: true,
 		port: 18_011,
 	},
 	resolve: {

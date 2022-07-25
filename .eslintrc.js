@@ -17,6 +17,11 @@ module.exports = defineConfig({
 		'import/named': 'off',
 		// 'import/no-unresolved': ['error', { allowModules:  }],
 
+		'unicorn/prefer-dom-node-text-content': 'off',
+		'unicorn/explicit-length-check': 'off',
+		'unicorn/prefer-regexp-test': 'off',
+		'unicorn/prefer-query-selector': 'off',
+
 		'@typescript-eslint/no-var-requires': 'off',
 		'@typescript-eslint/ban-types': 'off',
 		'@typescript-eslint/no-explicit-any': 'off',
