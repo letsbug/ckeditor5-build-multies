@@ -109,7 +109,7 @@
     "conventional-changelog-cli": "^2.2.2",
     "css-loader": "6.7.1",
     "eslint": "8.20.0",
-    "eslint-define-config": "1.5.1",
+    "eslint-define-config": "1.6.0",
     "husky": "8.0.1",
     "lodash-es": "4.17.21",
     "mini-css-extract-plugin": "2.6.1",
