@@ -1,3 +1,9 @@
+# [3.5.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.4.0...3.5.0) (2022-08-14)
+
+### Bug Fixes
+
+- `figureAttributes` 插件在接受数组类型的配置时，编辑器崩溃。 ([545ccb5](https://github.com/letsbug/ckeditor5-build-multies/commit/545ccb5ea4eca2e2eb63446d3bef3776d1c72dc3))
+
 # [3.4.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.3.0...3.4.0) (2022-07-25)
 
 ### Bug Fixes
