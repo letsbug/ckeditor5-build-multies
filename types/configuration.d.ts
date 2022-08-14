@@ -55,11 +55,11 @@ export interface LineHeightConfig {
 }
 
 export interface FigureAttrConfig {
-	image: string | string[];
-	table: string | string[];
+	image?: string | string[];
+	table?: string | string[];
 	// TODO 'media' and 'rawHtml' not yet complete...
-	// media: string | string[];
-	// rawHtml: string | string[];
+	// media?: string | string[];
+	// rawHtml?: string | string[];
 }
 
 export interface ImageConfig extends CkImageConfig {

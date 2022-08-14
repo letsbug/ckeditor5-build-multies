@@ -20,7 +20,7 @@ import { MediaEmbed, MediaEmbedToolbar } from '@ckeditor/ckeditor5-media-embed/s
 import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed/src';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph/src';
 import { PageBreak } from '@ckeditor/ckeditor5-page-break/src';
-import { Table, TableToolbar } from '@ckeditor/ckeditor5-table/src';
+import { Table, TableToolbar, TableColumnResize } from '@ckeditor/ckeditor5-table/src';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing/src';
 import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format/src';
 import { Indent } from '@ckeditor/ckeditor5-indent/src';
@@ -77,6 +77,7 @@ export const builtins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
+	TableColumnResize,
 	TextTransformation,
 	Subscript,
 	Superscript,

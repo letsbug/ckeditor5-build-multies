@@ -24,18 +24,23 @@ class FigureAttributes extends Plugin {
 	 */
 	afterInit() {
 		const plugins = this.editor.plugins;
-		const { table, image } = this.options;
+		const table = this._convertAttributes(this.options.table);
+		const image = this._convertAttributes(this.options.image);
 
-		if (!!table && plugins.has('Table') && this._executable(table)) {
-			this._setupConversion('table', 'table', table);
+		if (table.length > 0 && plugins.has('Table')) {
+			for (const tableAttribute of table) {
+				this._setupConversion('table', 'table', tableAttribute);
+			}
 		}
 
-		if (image && this._executable(image)) {
-			if (plugins.has('ImageBlock')) {
-				this._setupConversion('img', 'imageBlock', image);
-			}
-			if (plugins.has('ImageInline')) {
-				this._setupConversion('img', 'imageInline', image);
+		if (image.length > 0 && (plugins.has('ImageBlock') || plugins.has('ImageInline'))) {
+			for (const imageAttribute of image) {
+				if (plugins.has('ImageBlock')) {
+					this._setupConversion('img', 'imageBlock', imageAttribute);
+				}
+				if (plugins.has('ImageInline')) {
+					this._setupConversion('img', 'imageInline', imageAttribute);
+				}
 			}
 		}
 	}
@@ -132,11 +137,12 @@ class FigureAttributes extends Plugin {
 		return viewChildren.find((item) => item.is('element', viewElName));
 	}
 
-	_executable(attributes) {
+	_convertAttributes(attributes) {
 		if (typeof attributes === 'string' && attributes.length > 0) {
-			return true;
+			return [attributes];
 		}
-		return Array.isArray(attributes) && attributes.length > 0;
+
+		return Array.isArray(attributes) && attributes.length > 0 ? attributes : [];
 	}
 }
 
