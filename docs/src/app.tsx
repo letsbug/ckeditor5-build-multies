@@ -22,7 +22,7 @@ const App = defineComponent({
 		const type = ref('classic');
 		const config = computed(() => {
 			const baseConf: MceConfig = {
-				ui: { viewportOffset: { top: 80 } } as any,
+				ui: { viewportOffset: { top: 133 } } as any,
 				extensions: [{ name: 'extDemo', icon, command: extCommand, label: 'Ext Demo' }],
 				toolbar: { items: [...HlxMce[type.value].defaultConfig.toolbar.items, '|', 'extDemo'] },
 				image: {
@@ -65,8 +65,12 @@ const App = defineComponent({
 			console.log('The "Ext Demo" extension execute!');
 		};
 
-		const highlight = () => {
+		const highlightYellow = () => {
 			ckInstance.execute('highlightSpecific', { words: ['this'] });
+		};
+
+		const highlightRed = () => {
+			ckInstance.execute('highlightSpecific', { words: ['Shift'], color: 'red' });
 		};
 
 		const checkResult = () => {
@@ -99,7 +103,8 @@ const App = defineComponent({
 
 					<div class="main-wrapper">
 						<div class="actions">
-							<button onClick={highlight}>highlight "this" words</button>
+							<button onClick={highlightYellow}>highlight "this" words by yellow</button>
+							<button onClick={highlightRed}>highlight "Shift" words by red</button>
 							<button onClick={checkResult}>log which highlight specific marker in data</button>
 						</div>
 
