@@ -13,7 +13,7 @@ class AttributeWhitelist extends Plugin {
 	constructor(editor) {
 		super(editor);
 
-		this.options = this.editor.config.get('attributeWhitelist') ?? {};
+		this.options = this.editor.config.get('attributeWhitelist') ?? [];
 	}
 
 	/**
