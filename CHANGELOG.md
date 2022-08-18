@@ -1,3 +1,9 @@
+# [4.0.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.5.0...4.0.0) (2022-08-18)
+
+### Bug Fixes
+
+- add highlight usages demo ([2ac846c](https://github.com/letsbug/ckeditor5-build-multies/commit/2ac846cf5ed608e474ce5611445215d7e958e00d))
+
 # [3.5.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.4.0...3.5.0) (2022-08-14)
 
 ### Bug Fixes
