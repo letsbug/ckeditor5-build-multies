@@ -1,3 +1,9 @@
+## [4.0.1](https://github.com/letsbug/ckeditor5-build-multies/compare/4.0.0...4.0.1) (2022-08-18)
+
+### Bug Fixes
+
+- define attributeWhitelist config error ([10bd441](https://github.com/letsbug/ckeditor5-build-multies/commit/10bd441b2947357d5cfe9fbb29409383b8e92d16))
+
 # [4.0.0](https://github.com/letsbug/ckeditor5-build-multies/compare/3.5.0...4.0.0) (2022-08-18)
 
 ### Bug Fixes
