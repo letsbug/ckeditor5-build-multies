@@ -39,7 +39,7 @@ import { QuickStyle } from './plugins/quick-style';
 import { ConvertFullHalf } from './plugins/convert-full-half';
 import { SimpleAdapter } from './plugins/simple-adapter';
 import { Counter } from './plugins/counter';
-import { FigureAttributes } from './plugins/figure-attributes';
+import { AttributeWhitelist } from './plugins/attribute-whitelist';
 import { BalloonToolbar, BlockToolbar } from '@ckeditor/ckeditor5-ui';
 import { HighlightSpecific } from './plugins/highlight-specific';
 import { Outline } from './plugins/outline';
@@ -88,7 +88,7 @@ export const builtins = [
 
 	// custom plugins with @hlw/ckeditor5-plugins
 	Outline,
-	FigureAttributes,
+	AttributeWhitelist,
 	IndentFirst,
 	ParagraphSpacing,
 	LineHeight,

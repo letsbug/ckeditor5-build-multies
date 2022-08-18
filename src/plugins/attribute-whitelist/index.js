@@ -5,7 +5,7 @@
  */
 import { Plugin } from '@ckeditor/ckeditor5-core';
 
-class FigureAttributes extends Plugin {
+class AttributeWhitelist extends Plugin {
 	/**
 	 * @inheritDoc
 	 * @param editor
@@ -13,7 +13,7 @@ class FigureAttributes extends Plugin {
 	constructor(editor) {
 		super(editor);
 
-		this.options = this.editor.config.get('figureAttributes') ?? {};
+		this.options = this.editor.config.get('attributeWhitelist') ?? {};
 	}
 
 	/**
@@ -24,25 +24,46 @@ class FigureAttributes extends Plugin {
 	 */
 	afterInit() {
 		const plugins = this.editor.plugins;
-		const table = this._convertAttributes(this.options.table);
-		const image = this._convertAttributes(this.options.image);
 
-		if (table.length > 0 && plugins.has('Table')) {
-			for (const tableAttribute of table) {
-				this._setupConversion('table', 'table', tableAttribute);
+		const options = this.options?.reduce((pre, { name, model }) => {
+			if (model === 'image') {
+				return [...pre, { name, model: 'imageBlock' }, { name, model: 'imageInline' }];
 			}
+			return [...pre, { name, model }];
+		}, []);
+
+		for (const { name, model } of options) {
+			const pluginName = model.charAt(0).toUpperCase() + model.slice(1);
+			if (!plugins.has(pluginName)) {
+				continue;
+			}
+			const viewElName = ['imageBlock', 'imageInline'].includes(model) ? 'img' : model;
+			this._setupConversion(viewElName, model, name);
 		}
 
-		if (image.length > 0 && (plugins.has('ImageBlock') || plugins.has('ImageInline'))) {
-			for (const imageAttribute of image) {
-				if (plugins.has('ImageBlock')) {
-					this._setupConversion('img', 'imageBlock', imageAttribute);
-				}
-				if (plugins.has('ImageInline')) {
-					this._setupConversion('img', 'imageInline', imageAttribute);
-				}
-			}
-		}
+		// for (const { name, model } of this.options) {
+		// 	const pluginName = model === 'image' ?
+		// 	const viewElName = ['image', 'imageBlock', 'imageInline'].includes('model') ? 'img' : model;
+		// }
+		// const table = this._convertAttributes(this.options.table);
+		// const image = this._convertAttributes(this.options.image);
+		//
+		// if (table.length > 0 && plugins.has('Table')) {
+		// 	for (const tableAttribute of table) {
+		// 		this._setupConversion('table', 'table', tableAttribute);
+		// 	}
+		// }
+		//
+		// if (image.length > 0 && (plugins.has('ImageBlock') || plugins.has('ImageInline'))) {
+		// 	for (const imageAttribute of image) {
+		// 		if (plugins.has('ImageBlock')) {
+		// 			this._setupConversion('img', 'imageBlock', imageAttribute);
+		// 		}
+		// 		if (plugins.has('ImageInline')) {
+		// 			this._setupConversion('img', 'imageInline', imageAttribute);
+		// 		}
+		// 	}
+		// }
 	}
 
 	/**
@@ -146,4 +167,10 @@ class FigureAttributes extends Plugin {
 	}
 }
 
-export { FigureAttributes };
+export { AttributeWhitelist };
+
+/**
+ * @typedef AttributeWhitelistOption
+ * @property {string} name - 属性名
+ * @property {string} model - 对应视图模型
+ */

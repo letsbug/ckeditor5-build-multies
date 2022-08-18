@@ -54,12 +54,14 @@ export interface LineHeightConfig {
 	unit?: 'px';
 }
 
-export interface FigureAttrConfig {
-	image?: string | string[];
-	table?: string | string[];
-	// TODO 'media' and 'rawHtml' not yet complete...
-	// media?: string | string[];
-	// rawHtml?: string | string[];
+export interface AttributeWhitelistConfig {
+	name: string;
+	model: 'image' | 'imageBlock' | 'imageInline' | 'table';
+	// TODO Just only supported 'image' & 'table' ...
+	// | 'mediaEmbed'
+	// | 'rawHtml'
+	// | 'paragraph'
+	// | 'codeBlock';
 }
 
 export interface ImageConfig extends CkImageConfig {
@@ -67,7 +69,7 @@ export interface ImageConfig extends CkImageConfig {
 }
 
 export interface MceConfig extends EditorConfig {
-	figureAttributes?: FigureAttrConfig;
+	attributeWhitelist?: AttributeWhitelistConfig[];
 	fontColor?: FontColorConfig;
 	mediaEmbed?: MediaEmbedConfig;
 	simpleUpload?: SimpleUploadConfig;

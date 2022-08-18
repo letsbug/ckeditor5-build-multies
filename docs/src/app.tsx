@@ -32,10 +32,12 @@ const App = defineComponent({
 						return 'This is a default filled caption. You can modify and switch at will, after modification switch is able to save the modification yo!';
 					},
 				},
-				figureAttributes: {
-					image: ['data-id', 'data-origin', 'data-title'],
-					table: 'data-table-demo',
-				},
+				attributeWhitelist: [
+					{ name: 'data-id', model: 'image' },
+					{ name: 'data-origin', model: 'image' },
+					{ name: 'data-title', model: 'image' },
+					{ name: 'data-table-demo', model: 'table' },
+				],
 			};
 
 			return baseConf;
