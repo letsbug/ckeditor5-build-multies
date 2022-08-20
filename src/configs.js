@@ -20,7 +20,14 @@ import { MediaEmbed, MediaEmbedToolbar } from '@ckeditor/ckeditor5-media-embed/s
 import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed/src';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph/src';
 import { PageBreak } from '@ckeditor/ckeditor5-page-break/src';
-import { Table, TableToolbar, TableColumnResize } from '@ckeditor/ckeditor5-table/src';
+import {
+	Table,
+	TableToolbar,
+	TableColumnResize,
+	TableProperties,
+	TableCellProperties,
+	TableCaption,
+} from '@ckeditor/ckeditor5-table/src';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing/src';
 import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format/src';
 import { Indent } from '@ckeditor/ckeditor5-indent/src';
@@ -51,6 +58,9 @@ export const builtins = [
 	Essentials,
 	BlockToolbar,
 	BalloonToolbar,
+	FindAndReplace,
+
+	TextTransformation,
 	Alignment,
 	Autoformat,
 	Bold,
@@ -61,13 +71,18 @@ export const builtins = [
 	BlockQuote,
 	Heading,
 	Indent,
+	Subscript,
+	Superscript,
+
 	ImageBlock,
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
 	ImageResize,
+
 	Link,
 	LinkImage,
+
 	List,
 	MediaEmbed,
 	MediaEmbedToolbar,
@@ -75,16 +90,17 @@ export const builtins = [
 	Paragraph,
 	PageBreak,
 	PasteFromOffice,
+
 	Table,
 	TableToolbar,
 	TableColumnResize,
-	TextTransformation,
-	Subscript,
-	Superscript,
+	TableProperties,
+	TableCellProperties,
+	TableCaption,
+
 	SimpleAdapter,
 	RemoveFormat,
 	Highlight,
-	FindAndReplace,
 
 	// custom plugins with @hlw/ckeditor5-plugins
 	Outline,

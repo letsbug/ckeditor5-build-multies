@@ -5,9 +5,9 @@ import type { MceConfig, MceBase } from '../../types';
 import { presetData } from './data';
 
 const navConf = [
-	{ name: 'Classic Build', type: 'classic' },
-	{ name: 'Balloon Build', type: 'balloon' },
-	{ name: 'Inline Build', type: 'inline' },
+	{ name: 'Classic Mode', type: 'classic' },
+	{ name: 'Balloon Mode', type: 'balloon' },
+	{ name: 'Inline Mode', type: 'inline' },
 ];
 
 let ckInstance: MceBase | null = null;
@@ -88,9 +88,9 @@ const App = defineComponent({
 			const mainClass = {
 				'ck-main': true,
 				// 'build-decoupled': type.value === 'BuildDecoupled',
-				'build-balloon': type.value === 'BuildBalloon',
-				'build-classic': type.value === 'BuildClassic',
-				'build-inline': type.value === 'BuildInline',
+				'build-balloon': type.value === 'balloon',
+				'build-classic': type.value === 'classic',
+				'build-inline': type.value === 'inline',
 			};
 			const navs = navConf.map((n) => (
 				<li class={{ active: n.type === type.value }} onClick={() => checkType(n.type)}>

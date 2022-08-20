@@ -91,8 +91,7 @@ body {
 	top: 0;
 }
 
-.ck-main.build-classic,
-.ck-main.build-inline {
+.ck-main {
 	width: 800px;
 }
 
