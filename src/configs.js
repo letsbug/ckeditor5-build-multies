@@ -13,7 +13,13 @@ import { Font } from '@ckeditor/ckeditor5-font/src';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote/src';
 import { Heading } from '@ckeditor/ckeditor5-heading/src';
 import ImageBlock from '@ckeditor/ckeditor5-image/src/imageblock';
-import { ImageResize, ImageStyle, ImageToolbar, ImageUpload } from '@ckeditor/ckeditor5-image/src';
+import {
+	ImageResize,
+	ImageStyle,
+	ImageToolbar,
+	ImageUpload,
+	ImageInsert,
+} from '@ckeditor/ckeditor5-image/src';
 import { Link, LinkImage } from '@ckeditor/ckeditor5-link/src';
 import { List } from '@ckeditor/ckeditor5-list/src';
 import { MediaEmbed, MediaEmbedToolbar } from '@ckeditor/ckeditor5-media-embed/src';
@@ -79,6 +85,7 @@ export const builtins = [
 	ImageToolbar,
 	ImageUpload,
 	ImageResize,
+	ImageInsert,
 
 	Link,
 	LinkImage,
