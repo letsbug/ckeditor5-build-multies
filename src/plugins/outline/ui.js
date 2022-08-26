@@ -5,12 +5,12 @@ import outlineIcon from '../../icons/outline.svg';
 
 const OUTLINE = 'outline';
 
-export class OutlineUi extends Plugin {
+export class OutlineUI extends Plugin {
 	/**
 	 * @inheritDoc
 	 */
 	static get pluginName() {
-		return 'OutlineUi';
+		return 'OutlineUI';
 	}
 
 	init() {

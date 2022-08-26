@@ -2,7 +2,7 @@
  * @module outline/index
  */
 import { Plugin } from '@ckeditor/ckeditor5-core';
-import { OutlineUi } from './ui';
+import { OutlineUI } from './ui';
 import { OutlineEditing } from './editing';
 
 class Outline extends Plugin {
@@ -10,7 +10,7 @@ class Outline extends Plugin {
 	 * @inheritDoc
 	 */
 	static get requires() {
-		return [OutlineUi, OutlineEditing];
+		return [OutlineUI, OutlineEditing];
 	}
 
 	/**

@@ -17,14 +17,8 @@ export class OutlineEditing extends Plugin {
 	 */
 	init() {
 		const editor = this.editor;
-		const conversion = editor.conversion;
-		editor.model.schema.extend('$text', { allowAttributes: OUTLINE });
-		editor.model.schema.setAttributeProperties(OUTLINE, {
-			isFormatting: true,
-			copyOnEnter: true,
-		});
 
-		conversion.for('upcast').elementToAttribute({
+		editor.conversion.for('upcast').elementToAttribute({
 			view: {
 				name: 'span',
 				styles: {
@@ -37,14 +31,24 @@ export class OutlineEditing extends Plugin {
 			},
 		});
 
-		conversion.for('downcast').attributeToElement({
+		editor.conversion.for('downcast').attributeToElement({
 			model: OUTLINE,
 			view: (val, { writer }) => {
-				return writer.createAttributeElement('span', { style: 'border: solid 1px #000000;' });
+				return writer.createAttributeElement(
+					'span',
+					{ style: 'border: solid 1px #000000;' },
+					{ priority: 7 }
+				);
 			},
 		});
 
 		editor.commands.add(OUTLINE, new OutlineCommand(editor));
+
+		editor.model.schema.extend('$text', { allowAttributes: OUTLINE });
+		editor.model.schema.setAttributeProperties(OUTLINE, {
+			isFormatting: true,
+			copyOnEnter: true,
+		});
 
 		editor.keystrokes.set('CTRL+SHIFT+O', OUTLINE);
 	}
@@ -57,7 +61,9 @@ export class OutlineEditing extends Plugin {
 	 * @private
 	 */
 	_renderUpcastAttribute(styleAttr) {
-		return (viewEl) => this._normalizeBorderCode(viewEl.getStyle(styleAttr));
+		return (viewEl) => {
+			return this._normalizeBorderCode(viewEl.getStyle(styleAttr));
+		};
 	}
 
 	/**
@@ -68,6 +74,6 @@ export class OutlineEditing extends Plugin {
 	 * @private
 	 */
 	_normalizeBorderCode(value) {
-		return value.replace(/\s/g, '');
+		return value?.replace(/\s/g, '');
 	}
 }
