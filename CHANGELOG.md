@@ -1,3 +1,9 @@
+## [4.2.1](https://github.com/letsbug/ckeditor5-build-multies/compare/4.2.0...4.2.1) (2022-08-26)
+
+### Bug Fixes
+
+- 由于插件的`upcast`转换没有进行非空校验，导致向富文本复制内容的时候，有几率使富文本卡死 ([134039f](https://github.com/letsbug/ckeditor5-build-multies/commit/134039f15e64d60c0f9fc97f83b51af5e4d93a27))
+
 # [4.2.0](https://github.com/letsbug/ckeditor5-build-multies/compare/4.1.0...4.2.0) (2022-08-23)
 
 ### Features
