@@ -54,14 +54,16 @@ export interface LineHeightConfig {
 	unit?: 'px';
 }
 
-export interface AttributeWhitelistConfig {
-	name: string;
-	model: 'image' | 'imageBlock' | 'imageInline' | 'table';
-	// TODO Just only supported 'image' & 'table' ...
-	// | 'mediaEmbed'
-	// | 'rawHtml'
-	// | 'paragraph'
-	// | 'codeBlock';
+export interface HtmlSupportConfigItem {
+	name: string | RegExp;
+	styles?: Record<string, true | string | RegExp> | Array<string> | true;
+	classes?: Array<string | RegExp> | true;
+	attributes?: Record<string, true | string | RegExp> | Array<string> | true;
+}
+
+export interface HtmlSupportConfig {
+	allow?: Array<HtmlSupportConfigItem>;
+	disallow?: Array<HtmlSupportConfigItem>;
 }
 
 export interface ImageConfig extends CkImageConfig {
@@ -69,7 +71,7 @@ export interface ImageConfig extends CkImageConfig {
 }
 
 export interface MceConfig extends EditorConfig {
-	attributeWhitelist?: AttributeWhitelistConfig[];
+	htmlSupport?: HtmlSupportConfig;
 	fontColor?: FontColorConfig;
 	mediaEmbed?: MediaEmbedConfig;
 	simpleUpload?: SimpleUploadConfig;

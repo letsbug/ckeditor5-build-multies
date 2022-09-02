@@ -22,6 +22,12 @@ const App = defineComponent({
 		const type = ref('classic');
 		const config = computed(() => {
 			const baseConf: MceConfig = {
+				htmlSupport: {
+					allow: [
+						{ name: 'img', attributes: ['data-id', 'data-origin', 'data-title'] },
+						{ name: 'table', attributes: ['data-table-demo'] },
+					],
+				},
 				ui: { viewportOffset: { top: 133 } } as any,
 				extensions: [{ name: 'extDemo', icon, command: extCommand, label: 'Ext Demo' }],
 				toolbar: { items: [...HlxMce[type.value].defaultConfig.toolbar.items, '|', 'extDemo'] },
@@ -32,12 +38,6 @@ const App = defineComponent({
 						return 'This is a default filled caption. You can modify and switch at will, after modification switch is able to save the modification yo!';
 					},
 				},
-				attributeWhitelist: [
-					{ name: 'data-id', model: 'image' },
-					{ name: 'data-origin', model: 'image' },
-					{ name: 'data-title', model: 'image' },
-					{ name: 'data-table-demo', model: 'table' },
-				],
 			};
 
 			return baseConf;
