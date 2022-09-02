@@ -1,5 +1,4 @@
 import { Essentials } from '@ckeditor/ckeditor5-essentials/src';
-import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
 import { Alignment } from '@ckeditor/ckeditor5-alignment/src';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat/src';
 import {
@@ -53,6 +52,7 @@ import { QuickStyle } from './plugins/quick-style';
 import { ConvertFullHalf } from './plugins/convert-full-half';
 import { SimpleAdapter } from './plugins/simple-adapter';
 import { Counter } from './plugins/counter';
+import { AttributeWhitelist } from './plugins/attribute-whitelist';
 import { BalloonToolbar, BlockToolbar } from '@ckeditor/ckeditor5-ui';
 import { HighlightSpecific } from './plugins/highlight-specific';
 import { Outline } from './plugins/outline';
@@ -62,7 +62,6 @@ import { Extensions } from './plugins/extensions';
 
 export const builtins = [
 	Essentials,
-	GeneralHtmlSupport,
 	BlockToolbar,
 	BalloonToolbar,
 	FindAndReplace,
@@ -112,6 +111,7 @@ export const builtins = [
 
 	// custom plugins with @hlw/ckeditor5-plugins
 	Outline,
+	AttributeWhitelist,
 	IndentFirst,
 	ParagraphSpacing,
 	LineHeight,

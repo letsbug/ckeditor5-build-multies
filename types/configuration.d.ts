@@ -54,16 +54,21 @@ export interface LineHeightConfig {
 	unit?: 'px';
 }
 
-export interface HtmlSupportConfigItem {
-	name: string | RegExp;
-	styles?: Record<string, true | string | RegExp> | Array<string> | true;
-	classes?: Array<string | RegExp> | true;
-	attributes?: Record<string, true | string | RegExp> | Array<string> | true;
-}
+export interface AttributeWhitelistConfig {
+	/**
+	 * 属性名，只能是小写连字字符串(kebab-case)
+	 */
+	name: string;
 
-export interface HtmlSupportConfig {
-	allow?: Array<HtmlSupportConfigItem>;
-	disallow?: Array<HtmlSupportConfigItem>;
+	/**
+	 * 想要扩展的富文本模型别名
+	 */
+	model: 'image' | 'imageBlock' | 'imageInline' | 'table';
+	// TODO Just only supported 'image' & 'table' ...
+	// | 'mediaEmbed'
+	// | 'rawHtml'
+	// | 'paragraph'
+	// | 'codeBlock';
 }
 
 export interface ImageConfig extends CkImageConfig {
@@ -71,7 +76,7 @@ export interface ImageConfig extends CkImageConfig {
 }
 
 export interface MceConfig extends EditorConfig {
-	htmlSupport?: HtmlSupportConfig;
+	attributeWhitelist?: AttributeWhitelistConfig[];
 	fontColor?: FontColorConfig;
 	mediaEmbed?: MediaEmbedConfig;
 	simpleUpload?: SimpleUploadConfig;

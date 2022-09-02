@@ -24,9 +24,9 @@ export const presetData = (
 			<img
 				src="/sample.jpg"
 				alt="Autumn fields"
-				data-id="DatasetForId"
-				data-origin="DatasetForOrigin"
-				data-title="DatasetForTitle"
+				data-id="dataset for id"
+				data-origin="dataset for origin"
+				data-title="dataset for title"
 			/>
 		</figure>
 
