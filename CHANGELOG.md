@@ -1,3 +1,9 @@
+## [4.3.1](https://github.com/letsbug/ckeditor5-build-multies/compare/4.3.0...4.3.1) (2022-09-02)
+
+### Bug Fixes
+
+- attribute lost when inserted ([3ea4d92](https://github.com/letsbug/ckeditor5-build-multies/commit/3ea4d92c194c88027be9a1cd84faac1a4885f708))
+
 # [4.3.0](https://github.com/letsbug/ckeditor5-build-multies/compare/4.2.1...4.3.0) (2022-09-02)
 
 ### Features
