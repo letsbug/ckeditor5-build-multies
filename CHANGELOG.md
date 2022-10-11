@@ -1,3 +1,9 @@
+## [4.3.2](https://github.com/letsbug/ckeditor5-build-multies/compare/4.3.1...4.3.2) (2022-10-11)
+
+### Bug Fixes
+
+- adding `.browserlistrc` config file to fix errors in lower version browsers ([d3094c8](https://github.com/letsbug/ckeditor5-build-multies/commit/d3094c8d7d81c4dc55233870942ba8fff5380cd9))
+
 ## [4.3.1](https://github.com/letsbug/ckeditor5-build-multies/compare/4.3.0...4.3.1) (2022-09-02)
 
 ### Bug Fixes
