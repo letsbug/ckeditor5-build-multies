@@ -51,7 +51,8 @@
     "rel": "hlx rel",
     "pub": "hlx pub",
     "prepub": "pnpm run build:prod",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "reinstall": "pnpm run clean:deps && pnpm i"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-core": "35.1.0",
