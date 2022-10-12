@@ -274,20 +274,26 @@ function mapListStyleDefinition(value) {
 	}
 
 	switch (value) {
-		case 'alpha-upper':
+		case 'alpha-upper': {
 			return 'upper-alpha';
-		case 'alpha-lower':
+		}
+		case 'alpha-lower': {
 			return 'lower-alpha';
-		case 'roman-upper':
+		}
+		case 'roman-upper': {
 			return 'upper-roman';
-		case 'roman-lower':
+		}
+		case 'roman-lower': {
 			return 'lower-roman';
+		}
 		case 'circle':
 		case 'disc':
-		case 'square':
+		case 'square': {
 			return value;
-		default:
+		}
+		default: {
 			return null;
+		}
 	}
 }
 
