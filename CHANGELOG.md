@@ -1,3 +1,9 @@
+## [4.3.3](https://github.com/letsbug/ckeditor5-build-multies/compare/4.3.2...4.3.3) (2022-11-29)
+
+### Features
+
+- builtin package update to 35.3.2 ([da15f01](https://github.com/letsbug/ckeditor5-build-multies/commit/da15f01499f2e1bace7dcdcfd39a1e2fdc98f9f9))
+
 ## [4.3.2](https://github.com/letsbug/ckeditor5-build-multies/compare/4.3.1...4.3.2) (2022-10-11)
 
 ### Bug Fixes
