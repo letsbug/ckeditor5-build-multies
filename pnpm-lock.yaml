@@ -7,8 +7,8 @@ specifiers:
   '@ckeditor/ckeditor5-block-quote': 35.4.0
   '@ckeditor/ckeditor5-clipboard': 35.4.0
   '@ckeditor/ckeditor5-core': 35.4.0
+  '@ckeditor/ckeditor5-dev-translations': ^32.0.2
   '@ckeditor/ckeditor5-dev-utils': 32.0.1
-  '@ckeditor/ckeditor5-dev-webpack-plugin': 31.1.13
   '@ckeditor/ckeditor5-easy-image': 35.4.0
   '@ckeditor/ckeditor5-editor-balloon': 35.4.0
   '@ckeditor/ckeditor5-editor-classic': 35.4.0
@@ -92,8 +92,8 @@ devDependencies:
   '@ckeditor/ckeditor5-basic-styles': 35.4.0
   '@ckeditor/ckeditor5-block-quote': 35.4.0
   '@ckeditor/ckeditor5-clipboard': 35.4.0
+  '@ckeditor/ckeditor5-dev-translations': 32.0.2
   '@ckeditor/ckeditor5-dev-utils': 32.0.1_3fkjkrd3audxnith3e7fo4fnxi
-  '@ckeditor/ckeditor5-dev-webpack-plugin': 31.1.13_3fkjkrd3audxnith3e7fo4fnxi
   '@ckeditor/ckeditor5-easy-image': 35.4.0
   '@ckeditor/ckeditor5-editor-balloon': 35.4.0
   '@ckeditor/ckeditor5-editor-classic': 35.4.0
@@ -502,8 +502,8 @@ packages:
       '@ckeditor/ckeditor5-utils': 35.4.0
       lodash-es: 4.17.21
 
-  /@ckeditor/ckeditor5-dev-translations/32.0.1:
-    resolution: {integrity: sha512-5gZirsSGCG9QXSfca8Un+2BIWDpD+VFnuYMGYFTSBrA49Xhvf8/SrAJfmCRPaXt0sROq55ynJoJpHa5U9txKRw==}
+  /@ckeditor/ckeditor5-dev-translations/32.0.2:
+    resolution: {integrity: sha512-CQwNLMMVRSMGGfjMfSMWJSMcOQrx7Wc6WcYrA/WdxsxEy3TMDqvPEItjx7AIhWBam5PNNDVEiq4APiLXNDdR3w==}
     engines: {node: '>=14.0.0', npm: '>=5.7.1'}
     dependencies:
       '@babel/parser': 7.20.5
@@ -514,43 +514,6 @@ packages:
       webpack-sources: 2.3.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@ckeditor/ckeditor5-dev-utils/31.1.13_3fkjkrd3audxnith3e7fo4fnxi:
-    resolution: {integrity: sha512-U/C7ZLY7yeSMWDQNSDG6UyHxoUjOoXpFafpXnF3VrmkBEJ/PD67wUI645AXgRKE5W8jkCyDfueiI0Wq7JHjD9A==}
-    engines: {node: '>=14.0.0', npm: '>=5.7.1'}
-    peerDependencies:
-      webpack: ^4.43.0 || ^5.24.0
-    dependencies:
-      '@babel/parser': 7.20.5
-      '@babel/traverse': 7.20.5
-      '@ckeditor/ckeditor5-dev-webpack-plugin': 31.1.13_3fkjkrd3audxnith3e7fo4fnxi
-      chalk: 3.0.0
-      cli-cursor: 3.1.0
-      cli-spinners: 2.7.0
-      cssnano: 5.1.14_postcss@8.4.20
-      del: 5.1.0
-      escodegen: 1.14.3
-      fs-extra: 8.1.0
-      is-interactive: 1.0.0
-      javascript-stringify: 1.6.0
-      pofile: 1.1.4
-      postcss: 8.4.20
-      postcss-import: 14.1.0_postcss@8.4.20
-      postcss-loader: 4.3.0_qxxfhhrl3yknjjmta266mo3u64
-      postcss-mixins: 9.0.4_postcss@8.4.20
-      postcss-nesting: 10.2.0_postcss@8.4.20
-      raw-loader: 4.0.2_webpack@5.75.0
-      shelljs: 0.8.5
-      style-loader: 2.0.0_webpack@5.75.0
-      terser-webpack-plugin: 4.2.3_webpack@5.75.0
-      through2: 3.0.2
-      ts-loader: 9.4.2_3fkjkrd3audxnith3e7fo4fnxi
-      webpack: 5.75.0_webpack-cli@5.0.1
-    transitivePeerDependencies:
-      - bluebird
-      - supports-color
-      - typescript
     dev: true
 
   /@ckeditor/ckeditor5-dev-utils/32.0.1_3fkjkrd3audxnith3e7fo4fnxi:
@@ -559,7 +522,7 @@ packages:
     peerDependencies:
       webpack: ^4.43.0 || ^5.24.0
     dependencies:
-      '@ckeditor/ckeditor5-dev-translations': 32.0.1
+      '@ckeditor/ckeditor5-dev-translations': 32.0.2
       chalk: 3.0.0
       cli-cursor: 3.1.0
       cli-spinners: 2.7.0
@@ -584,22 +547,6 @@ packages:
       - bluebird
       - supports-color
       - typescript
-    dev: true
-
-  /@ckeditor/ckeditor5-dev-webpack-plugin/31.1.13_3fkjkrd3audxnith3e7fo4fnxi:
-    resolution: {integrity: sha512-XcMjwGO8hb5OQRWzYnX4M0aOuqLqd5Bo5t7chwwXWztvNjlj4pjzb9aRdrnN5DiRLdw26t0EPo2vnx2REe9gZw==}
-    engines: {node: '>=14.0.0', npm: '>=5.7.1'}
-    deprecated: 'This package is no longer maintained. Please, read the migration path: https://github.com/ckeditor/ckeditor5-dev/releases/tag/v32.0.0.'
-    dependencies:
-      '@ckeditor/ckeditor5-dev-utils': 31.1.13_3fkjkrd3audxnith3e7fo4fnxi
-      chalk: 4.1.2
-      rimraf: 3.0.2
-      webpack-sources: 2.3.1
-    transitivePeerDependencies:
-      - bluebird
-      - supports-color
-      - typescript
-      - webpack
     dev: true
 
   /@ckeditor/ckeditor5-easy-image/35.4.0:
@@ -2084,11 +2031,6 @@ packages:
     peerDependencies:
       vite: ^4.0.0
       vue: ^3.0.0
-    peerDependenciesMeta:
-      vite:
-        optional: true
-      vue:
-        optional: true
     dependencies:
       '@babel/core': 7.20.5
       '@babel/plugin-transform-typescript': 7.20.2_@babel+core@7.20.5
@@ -3803,19 +3745,6 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /escodegen/1.14.3:
-    resolution: {integrity: sha512-qFcX0XJkdg+PB3xjZZG/wKSuT1PnQWx57+TVSjIMmILd2yC/6ByYElPwJnslDsuWuSAp4AwJGumarAAmJch5Kw==}
-    engines: {node: '>=4.0'}
-    hasBin: true
-    dependencies:
-      esprima: 4.0.1
-      estraverse: 4.3.0
-      esutils: 2.0.3
-      optionator: 0.8.3
-    optionalDependencies:
-      source-map: 0.6.1
-    dev: true
-
   /eslint-config-prettier/8.5.0_eslint@8.30.0:
     resolution: {integrity: sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==}
     hasBin: true
@@ -3998,12 +3927,6 @@ packages:
       acorn: 8.8.1
       acorn-jsx: 5.3.2_acorn@8.8.1
       eslint-visitor-keys: 3.3.0
-    dev: true
-
-  /esprima/4.0.1:
-    resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
-    engines: {node: '>=4'}
-    hasBin: true
     dev: true
 
   /esquery/1.4.0:
@@ -4809,14 +4732,6 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /levn/0.3.0:
-    resolution: {integrity: sha512-0OO4y2iOHix2W6ujICbKIaEQXvFQHue65vUG3pb5EUomzPI90z9hsA1VsO/dbIIpC53J8gxM9Q4Oho0jrCM/yA==}
-    engines: {node: '>= 0.8.0'}
-    dependencies:
-      prelude-ls: 1.1.2
-      type-check: 0.3.2
-    dev: true
-
   /levn/0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -5298,18 +5213,6 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       mimic-fn: 2.1.0
-    dev: true
-
-  /optionator/0.8.3:
-    resolution: {integrity: sha512-+IW9pACdk3XWmmTXG8m3upGUJst5XRGzxMRjXzAuJ1XnIFNvfhjjIuYkDvysnPQ7qzqVzLt78BCruntqRhWQbA==}
-    engines: {node: '>= 0.8.0'}
-    dependencies:
-      deep-is: 0.1.4
-      fast-levenshtein: 2.0.6
-      levn: 0.3.0
-      prelude-ls: 1.1.2
-      type-check: 0.3.2
-      word-wrap: 1.2.3
     dev: true
 
   /optionator/0.9.1:
@@ -5929,11 +5832,6 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
-    dev: true
-
-  /prelude-ls/1.1.2:
-    resolution: {integrity: sha512-ESF23V4SKG6lVSGZgYNpbsiaAkdab6ZgOxe52p7+Kid3W3u3bxR4Vfd/o21dmN7jSt0IwgZ4v5MUd26FEtXE9w==}
-    engines: {node: '>= 0.8.0'}
     dev: true
 
   /prelude-ls/1.2.1:
@@ -6832,13 +6730,6 @@ packages:
 
   /tweetnacl/0.14.5:
     resolution: {integrity: sha512-KXXFFdAbFXY4geFIwoyNK+f5Z1b7swfXABfL7HXCmoIWMKU3dmS26672A4EeQtDzLKy7SXmfBu51JolvEKwtGA==}
-    dev: true
-
-  /type-check/0.3.2:
-    resolution: {integrity: sha512-ZCmOJdvOWDBYJlzAoFkC+Q0+bUyEOS1ltgp1MGU03fqHG+dbi9tBFU2Rd9QKiDZFAYrhPh2JUf7rZRIuHRKtOg==}
-    engines: {node: '>= 0.8.0'}
-    dependencies:
-      prelude-ls: 1.1.2
     dev: true
 
   /type-check/0.4.0:
