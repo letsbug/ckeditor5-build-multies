@@ -8,7 +8,7 @@ specifiers:
   '@ckeditor/ckeditor5-clipboard': 35.4.0
   '@ckeditor/ckeditor5-core': 35.4.0
   '@ckeditor/ckeditor5-dev-translations': ^32.0.2
-  '@ckeditor/ckeditor5-dev-utils': 32.0.1
+  '@ckeditor/ckeditor5-dev-utils': 32.0.2
   '@ckeditor/ckeditor5-easy-image': 35.4.0
   '@ckeditor/ckeditor5-editor-balloon': 35.4.0
   '@ckeditor/ckeditor5-editor-classic': 35.4.0
@@ -70,7 +70,7 @@ specifiers:
   svgo: 3.0.2
   terser-webpack-plugin: 5.3.6
   typescript: 4.9.4
-  vite: 4.0.2
+  vite: 4.0.3
   vue: 3.2.45
   vue-loader: 17.0.1
   vue-tsc: 1.0.16
@@ -93,7 +93,7 @@ devDependencies:
   '@ckeditor/ckeditor5-block-quote': 35.4.0
   '@ckeditor/ckeditor5-clipboard': 35.4.0
   '@ckeditor/ckeditor5-dev-translations': 32.0.2
-  '@ckeditor/ckeditor5-dev-utils': 32.0.1_3fkjkrd3audxnith3e7fo4fnxi
+  '@ckeditor/ckeditor5-dev-utils': 32.0.2_3fkjkrd3audxnith3e7fo4fnxi
   '@ckeditor/ckeditor5-easy-image': 35.4.0
   '@ckeditor/ckeditor5-editor-balloon': 35.4.0
   '@ckeditor/ckeditor5-editor-classic': 35.4.0
@@ -128,8 +128,8 @@ devDependencies:
   '@hlx/eslint-config': 2.8.12_l5rdqc4k22455lce6ocqroldia
   '@typescript-eslint/eslint-plugin': 5.47.0_ncmi6noazr3nzas7jxykisekym
   '@typescript-eslint/parser': 5.47.0_lzzuuodtsqwxnvqeq4g4likcqa
-  '@vitejs/plugin-vue': 4.0.0_vite@4.0.2+vue@3.2.45
-  '@vitejs/plugin-vue-jsx': 3.0.0_vite@4.0.2+vue@3.2.45
+  '@vitejs/plugin-vue': 4.0.0_vite@4.0.3+vue@3.2.45
+  '@vitejs/plugin-vue-jsx': 3.0.0_vite@4.0.3+vue@3.2.45
   '@vue/compiler-sfc': 3.2.45
   conventional-changelog-cli: 2.2.2
   css-loader: 6.7.3_webpack@5.75.0
@@ -149,7 +149,7 @@ devDependencies:
   svgo: 3.0.2
   terser-webpack-plugin: 5.3.6_webpack@5.75.0
   typescript: 4.9.4
-  vite: 4.0.2
+  vite: 4.0.3
   vue: 3.2.45
   vue-loader: 17.0.1_ceoavo7i67lvjzxxtqa4yhrx7m
   vue-tsc: 1.0.16_typescript@4.9.4
@@ -516,8 +516,8 @@ packages:
       - supports-color
     dev: true
 
-  /@ckeditor/ckeditor5-dev-utils/32.0.1_3fkjkrd3audxnith3e7fo4fnxi:
-    resolution: {integrity: sha512-tOsF6buNMLu26mbIah1bh851CtJ5wRk+8bT6FuTr+D6MHEXcM8AK5Mw8nga/0bzj/doeSLYPQTEQEb3WhEhp8A==}
+  /@ckeditor/ckeditor5-dev-utils/32.0.2_3fkjkrd3audxnith3e7fo4fnxi:
+    resolution: {integrity: sha512-4Eo2p17wcKO/gEabxfHEu4lY+gdPAP9jb7cmr2SqJN/sN/mcn133bhgqTeoj/Hgl2t2DHYB/aMtGTTTc5ni3aw==}
     engines: {node: '>=14.0.0', npm: '>=5.7.1'}
     peerDependencies:
       webpack: ^4.43.0 || ^5.24.0
@@ -2025,7 +2025,7 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vitejs/plugin-vue-jsx/3.0.0_vite@4.0.2+vue@3.2.45:
+  /@vitejs/plugin-vue-jsx/3.0.0_vite@4.0.3+vue@3.2.45:
     resolution: {integrity: sha512-vurkuzgac5SYuxd2HUZqAFAWGTF10diKBwJNbCvnWijNZfXd+7jMtqjPFbGt7idOJUn584fP1Ar9j/GN2jQ3Ew==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -2035,20 +2035,25 @@ packages:
       '@babel/core': 7.20.5
       '@babel/plugin-transform-typescript': 7.20.2_@babel+core@7.20.5
       '@vue/babel-plugin-jsx': 1.1.1_@babel+core@7.20.5
-      vite: 4.0.2
+      vite: 4.0.3
       vue: 3.2.45
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@vitejs/plugin-vue/4.0.0_vite@4.0.2+vue@3.2.45:
+  /@vitejs/plugin-vue/4.0.0_vite@4.0.3+vue@3.2.45:
     resolution: {integrity: sha512-e0X4jErIxAB5oLtDqbHvHpJe/uWNkdpYV83AOG2xo2tEVSzCzewgJMtREZM30wXnM5ls90hxiOtAuVU6H5JgbA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0
       vue: ^3.2.25
+    peerDependenciesMeta:
+      vite:
+        optional: true
+      vue:
+        optional: true
     dependencies:
-      vite: 4.0.2
+      vite: 4.0.3
       vue: 3.2.45
     dev: true
 
@@ -2554,7 +2559,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001439
+      caniuse-lite: 1.0.30001441
       electron-to-chromium: 1.4.284
       node-releases: 2.0.8
       update-browserslist-db: 1.0.10_browserslist@4.21.4
@@ -2666,13 +2671,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.21.4
-      caniuse-lite: 1.0.30001439
+      caniuse-lite: 1.0.30001441
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite/1.0.30001439:
-    resolution: {integrity: sha512-1MgUzEkoMO6gKfXflStpYgZDlFM7M/ck/bgfVCACO5vnAf0fXoNVHdWtqGU+MYca+4bL9Z5bpOVmR33cWW9G2A==}
+  /caniuse-lite/1.0.30001441:
+    resolution: {integrity: sha512-OyxRR4Vof59I3yGWXws6i908EtGbMzVUi3ganaZQHmydk1iwDhRnvaPG2WaR0KcqrDFKrxVZHULT396LEPhXfg==}
     dev: true
 
   /chalk/2.4.2:
@@ -6121,8 +6126,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup/3.7.5:
-    resolution: {integrity: sha512-z0ZbqHBtS/et2EEUKMrAl2CoSdwN7ZPzL17UMiKN9RjjqHShTlv7F9J6ZJZJNREYjBh3TvBrdfjkFDIXFNeuiQ==}
+  /rollup/3.8.0:
+    resolution: {integrity: sha512-+UR6PnUslneJNiJfLSzy4XH6R50ZGF0MS7UCv20ftXrktF/TkvZDwiBtXX65esblLR5p8w6LmXgPwt2f2B8SoQ==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -6839,8 +6844,8 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite/4.0.2:
-    resolution: {integrity: sha512-QJaY3R+tFlTagH0exVqbgkkw45B+/bXVBzF2ZD1KB5Z8RiAoiKo60vSUf6/r4c2Vh9jfGBKM4oBI9b4/1ZJYng==}
+  /vite/4.0.3:
+    resolution: {integrity: sha512-HvuNv1RdE7deIfQb8mPk51UKjqptO/4RXZ5yXSAvurd5xOckwS/gg8h9Tky3uSbnjYTgUm0hVCet1cyhKd73ZA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -6867,7 +6872,7 @@ packages:
       esbuild: 0.16.10
       postcss: 8.4.20
       resolve: 1.22.1
-      rollup: 3.7.5
+      rollup: 3.8.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
