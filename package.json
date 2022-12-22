@@ -39,8 +39,8 @@
     "types"
   ],
   "scripts": {
-    "clean:deps": "rimraf node_modules package-lock.json yarn.lock pnpm-lock.yaml && npm cache clean --force",
-    "clean:builds": "rimraf dist build",
+    "clean:deps": "npx rimraf node_modules package-lock.json yarn.lock pnpm-lock.yaml && npm cache clean --force",
+    "clean:builds": "npx rimraf dist build",
     "svgo": "svgo -f plugins/theme/icons --config=./svgo.yml",
     "lint": "eslint . --fix --ext .jsx,.js,.vue,.ts,.tsx",
     "format": "prettier --write .",
