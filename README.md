@@ -1,14 +1,32 @@
-# CKEditor5-build-full
+# @hlx/mce
 
-此包同时包含了`decoupled`、`inline`、`classic`这 3 个官方构建，且每个构建都使用的是同一个配置清单，功能上使用了 [ckeditor5-plugins](https://github.com/letsbug/ckeditor5-plugins) 插件包，该插件包包含了首行缩进、行高、段落间距、清除空行、清除多余空格、全半角转换、自定义图片上传文件 key、软换行转硬断行、快速排版、自定义扩展等功能。
+基于`CKEditor5`封装的，所见即所得的，适合中文排版的富文本编辑器。
 
-[![npm version](https://badge.fury.io/js/%40ckeditor%2Fckeditor5-build-classic.svg)](https://www.npmjs.com/package/@ckeditor/ckeditor5-build-classic)
-[![Dependency Status](https://david-dm.org/letsbug/ckeditor5-build-full/status.svg)](https://david-dm.org/letsbug/ckeditor5-build-full)
-[![devDependency Status](https://david-dm.org/letsbug/ckeditor5-build-full/dev-status.svg)](https://david-dm.org/letsbug/ckeditor5-build-full?type=dev)
+此包同时包含了`decoupled`、`inline`、`classic`这 3 个官方构建，且每个构建都使用的是同一个配置清单。
 
 此包基于 CKEditor5 进行构建，文档请移步 [build overview](https://ckeditor.com/docs/ckeditor5/latest/builds/index.html) 。
 
 ![CKEditor 5 classic editor build screenshot](./demo.png)
+
+## Builtin Plugins
+
+- **attribute-whitelist**: 配置 html 元素属性白名单
+- **clear-empty**: 清除空行
+- **clear-space**: 清除多余空格，首、尾、文中一个以上(仅保留一个)
+- **convert-full-half**: 全角/半角字符转换
+- **counter**: 字符数/字数统计
+- **extensions**: toolbar 自定义按钮
+- **format-painter**: 格式刷
+- **highlight-specific**: 指定字符/词组高亮
+- **image-caption**: 重写官方插件，修改插件行为
+- **indent-first**: 首行缩进
+- **outline**: 字符轮廓线样式
+- **line-height**: 行高
+- **paragraph-spacing**: 段落间距
+- **paste-from-office**: 重写官方插件，以支持国内的`WPS`环境
+- **quick-style**: 快速排版
+- **simple-adapter**: 图片上传适配器
+- **soft-break-to-enter**: 普通换行转换为段落断行
 
 ## Documentation
 
@@ -21,30 +39,36 @@
 cdn 使用:
 
 ```html
-<div id="editor">
-	<p>This is the editor content.</p>
-</div>
-<script src="./node_modules/@hlw/ckeditor5-build-full/build/ckeditor.js"></script>
-<script>
-	CKEDITOR.BuildClassic.create(document.querySelector('#editor'))
-		.then((editor) => {
-			window.editor = editor;
-		})
-		.catch((error) => {
-			console.error('There was a problem initializing the editor.', error);
-		});
-</script>
+<head>
+	<link rel="stylesheet" href="./node_modules/@hlx/mce/dist/content-style.css" />
+</head>
+<body>
+	<div id="editor">
+		<p>This is the editor content.</p>
+	</div>
+	<script src="./node_modules/@hlw/mce/dist/hlx-mce.js"></script>
+	<script>
+		HlxMce.classic
+			.create(document.querySelector('#editor'))
+			.then((editor) => {
+				window.editor = editor;
+			})
+			.catch((error) => {
+				console.error('There was a problem initializing the editor.', error);
+			});
+	</script>
+</body>
 ```
 
 node+npm 使用:
 
 ```js
-import CKEditor from '@hlw/ckeditor5-build-full';
+import HlxMce from '@hlw/mce';
 
-// 如果你使用的是 CommonJS:
-// const CKEditor = require( '@ckeditor/ckeditor5-build-classic' );
-
-CKEditor.BuildClassic.create(document.querySelector('#editor'))
+HlxMce.classic
+	.create(document.querySelector('#editor'), {
+		/*...config*/
+	})
 	.then((editor) => {
 		window.editor = editor;
 	})
@@ -52,8 +76,6 @@ CKEditor.BuildClassic.create(document.querySelector('#editor'))
 		console.error('There was a problem initializing the editor.', error);
 	});
 ```
-
-**Note:** 如果客观们想更深层次的进行集成，更好的进行自定义构建，本项目也可以作为一种参考，(eg: `src/ckeditor.js`). 官方文档： [Advanced setup guide](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/advanced-setup.html).
 
 ## License
 
