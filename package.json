@@ -111,7 +111,7 @@
     "@vue/compiler-sfc": "3.2.45",
     "conventional-changelog-cli": "^2.2.2",
     "css-loader": "6.7.3",
-    "eslint": "8.31.0",
+    "eslint": "8.33.0",
     "eslint-define-config": "1.13.0",
     "husky": "8.0.3",
     "lodash-es": "4.17.21",
