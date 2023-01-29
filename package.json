@@ -101,7 +101,7 @@
     "@ckeditor/ckeditor5-utils": "36.0.0",
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
-    "@hlx/cli": "^2.0.0-beta.2",
+    "@hlx/cli": "^2.0.0-beta.4",
     "@hlx/eslint-config": "^2.8.12",
     "@typescript-eslint/eslint-plugin": "5.49.0",
     "@typescript-eslint/parser": "5.49.0",
