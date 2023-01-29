@@ -11,7 +11,7 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { bundler, styles } = require('@ckeditor/ckeditor5-dev-utils');
-const CKEditorTranslationsPlugin = require('@ckeditor/ckeditor5-dev-translations');
+const { CKEditorTranslationsPlugin } = require('@ckeditor/ckeditor5-dev-translations');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
