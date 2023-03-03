@@ -61,9 +61,9 @@ export default class ToggleImageCaptionCommand extends Command {
 		// images because toggling the caption when one is selected should convert it into a block image.
 		this.isEnabled = this.editor.plugins.get('ImageUtils').isImage(selectedElement);
 
-		this.value = !this.isEnabled
-			? false
-			: !!imageCaptionUtils.getCaptionFromImageModelElement(selectedElement);
+		this.value = this.isEnabled
+			? !!imageCaptionUtils.getCaptionFromImageModelElement(selectedElement)
+			: false;
 	}
 
 	/**

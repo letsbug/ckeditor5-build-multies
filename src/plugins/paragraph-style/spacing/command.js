@@ -36,7 +36,7 @@ export class ParagraphSpacingCommand extends Command {
 				this._canSetAttribute(block)
 			);
 			const currentSpacing = blocks[0].getAttribute(ATTRIBUTE);
-			const removeSpacing = currentSpacing === value || typeof value === 'undefined';
+			const removeSpacing = currentSpacing === value || value === undefined;
 
 			if (removeSpacing) {
 				removeParagraphSpacingFromSelection(blocks, writer);

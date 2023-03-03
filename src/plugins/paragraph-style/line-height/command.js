@@ -35,7 +35,7 @@ export class LineHeightCommand extends Command {
 				this._canSetLineHeight(block)
 			);
 			const currentLineHeight = blocks[0].getAttribute(ATTRIBUTE);
-			const removeLineHeight = currentLineHeight === value || typeof value === 'undefined';
+			const removeLineHeight = currentLineHeight === value || value === undefined;
 
 			if (removeLineHeight) {
 				removeLineHeightFromSelection(blocks, writer);

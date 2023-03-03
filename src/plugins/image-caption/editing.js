@@ -60,15 +60,15 @@ export default class ImageCaptionEditing extends Plugin {
 		const schema = editor.model.schema;
 
 		// Schema configuration.
-		if (!schema.isRegistered('caption')) {
+		if (schema.isRegistered('caption')) {
+			schema.extend('caption', {
+				allowIn: 'imageBlock',
+			});
+		} else {
 			schema.register('caption', {
 				allowIn: 'imageBlock',
 				allowContentOf: '$block',
 				isLimit: true,
-			});
-		} else {
-			schema.extend('caption', {
-				allowIn: 'imageBlock',
 			});
 		}
 

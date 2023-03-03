@@ -25,5 +25,6 @@ module.exports = defineConfig({
 		'@typescript-eslint/no-var-requires': 'off',
 		'@typescript-eslint/ban-types': 'off',
 		'@typescript-eslint/no-explicit-any': 'off',
+		'tsdoc/syntax': 'off',
 	},
 });

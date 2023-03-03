@@ -28,19 +28,19 @@ export class OutlineCommand extends Command {
 
 		model.change((writer) => {
 			if (selection.isCollapsed) {
-				if (!value) {
-					writer.setSelectionAttribute(this.attributeKey, true);
-				} else {
+				if (value) {
 					writer.removeSelectionAttribute(this.attributeKey);
+				} else {
+					writer.setSelectionAttribute(this.attributeKey, true);
 				}
 			} else {
 				const ranges = model.schema.getValidRanges(selection.getRanges(), this.attributeKey);
 
 				for (const range of ranges) {
-					if (!value) {
-						writer.setAttribute(this.attributeKey, value, range);
-					} else {
+					if (value) {
 						writer.removeAttribute(this.attributeKey, range);
+					} else {
+						writer.setAttribute(this.attributeKey, value, range);
 					}
 				}
 			}
