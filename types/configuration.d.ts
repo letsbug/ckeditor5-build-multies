@@ -1,6 +1,6 @@
 import type { Element } from '@ckeditor/ckeditor5-engine';
 import type { EditorConfig } from '@ckeditor/ckeditor5-core/src/editor/editorconfig';
-import type { ImageConfig as CkImageConfig } from '@ckeditor/ckeditor5-image/src/image';
+import type { ImageConfig as CkImageConfig } from '@ckeditor/ckeditor5-image';
 
 export interface SimpleUploadConfig {
 	headers?: Record<string, string>;

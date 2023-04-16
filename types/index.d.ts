@@ -1,11 +1,11 @@
-import type { ContextPlugin, Editor, EditorUI, Plugin } from '@ckeditor/ckeditor5-core';
+import type { ContextPlugin, Editor, Plugin } from '@ckeditor/ckeditor5-core';
 import type { DataApi } from '@ckeditor/ckeditor5-core/src/editor/utils/dataapimixin';
-import type { EditorWithUI } from '@ckeditor/ckeditor5-core/src/editor/editorwithui';
 import type { ElementApi } from '@ckeditor/ckeditor5-core/src/editor/utils/elementapimixin';
 import type { Emitter } from '@ckeditor/ckeditor5-utils/src/emittermixin';
 import type { Observable } from '@ckeditor/ckeditor5-utils/src/observablemixin';
 import type { BalloonMceUI, ClassicMceUI, InlineMceUI } from './ui';
 import type { MceConfig } from './configuration';
+import type { EditorUI } from '@ckeditor/ckeditor5-ui';
 
 export * from './configuration';
 
@@ -21,7 +21,7 @@ export type {
 /**
  * Base MCE
  */
-export interface MceBase extends Editor, Observable, DataApi, EditorWithUI, ElementApi, Emitter {
+export interface MceBase extends Editor, Observable, DataApi, ElementApi, Emitter {
 	builtinPlugins: Array<typeof Plugin | typeof ContextPlugin | string>;
 	defaultConfig?: MceConfig;
 	create(sourceElementOrData: HTMLElement | string, config?: MceConfig): Promise<MceBase>;

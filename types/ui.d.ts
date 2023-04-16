@@ -1,4 +1,4 @@
-import type { EditorUI } from '@ckeditor/ckeditor5-core';
+import type { EditorUI } from '@ckeditor/ckeditor5-ui';
 import type {
 	BalloonMceUIView,
 	ClassicMceUIView,
