@@ -100,7 +100,7 @@
     "@commitlint/config-conventional": "^17.6.1",
     "@hlx/cli": "^2.0.0",
     "@hlx/eslint-config": "^2.10.0",
-    "@types/node": "^18.15.11",
+    "@types/node": "^20.0.0",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
     "@vitejs/plugin-vue": "^4.1.0",
