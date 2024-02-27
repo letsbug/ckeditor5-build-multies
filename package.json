@@ -96,8 +96,8 @@
     "@ckeditor/ckeditor5-utils": "^37.0.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.1",
-    "@commitlint/config-conventional": "^17.6.1",
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
     "@hlx/cli": "^2.0.0",
     "@hlx/eslint-config": "^2.10.0",
     "@types/node": "^18.15.11",
