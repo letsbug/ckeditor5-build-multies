@@ -23,7 +23,7 @@
     "node": ">=14.0.0",
     "npm": ">=6.0.0"
   },
-  "packageManager": "pnpm@8.0.0",
+  "packageManager": "pnpm@8.15.5",
   "author": "letsbug (https://github.com/letsbug)",
   "license": "Apache 2.0",
   "homepage": "https://github.com/letsbug/ckeditor5-build-multies#readme",
